@@ -1,0 +1,15 @@
+{
+  "name": "sep-test-app",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "App de execução dos roteiros de teste manual do SEP, com persistência em arquivo (data/db.json) via servidor local zero-dependência.",
+  "scripts": {
+    "start": "node server.mjs",
+    "gerar": "node app/gerar-dados.mjs",
+    "check-dados": "node app/gerar-dados.mjs --check"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

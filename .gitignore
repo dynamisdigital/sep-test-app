@@ -1,0 +1,10 @@
+# Node
+node_modules/
+*.log
+
+# Escrita atomica do server (temporario) — o data/db.json final E versionado
+data/db.json.tmp
+
+# Sistema
+.DS_Store
+Thumbs.db
