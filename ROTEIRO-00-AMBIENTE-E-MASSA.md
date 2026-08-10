@@ -7,7 +7,7 @@
 > **Execute pelo [app](./app/index.html)**, não editando este arquivo — as caixas aqui ficam
 > sempre vazias. Desvio não vira caixa marcada: vira **ocorrência** registrada no passo.
 
-_Atualizado em: 2026-07-21._
+_Atualizado em: 2026-08-10._
 
 ## 1. Objetivo
 
@@ -82,6 +82,12 @@ há comando `curl` neste roteiro: importe a collection e use os requests que já
       precisa estar como `http://localhost:8080`. As demais variáveis (`adminAccessToken`,
       `clienteId`...) estão **vazias de propósito** — você as preenche conforme os passos
       mandarem guardar valores.
+
+> **A collection é anterior às Sprints 33 e 34 e não tem tudo.** Falta nela o
+> `GET /api/v1/auth/politica-lockout`, endpoint **público** que a `/account-locked` consome.
+> Enquanto a collection não for renovada, chame-o direto no navegador —
+> `http://localhost:8080/api/v1/auth/politica-lockout` — que ele responde sem token. Renovar a
+> collection é trabalho no repo `docs-SEP`, não neste.
 
 Variáveis de environment que você vai preencher ao longo dos roteiros:
 
@@ -515,6 +521,26 @@ sequências inválidas antes de chegar ao provider.
 Default do `application.yml`: **5 tentativas** inválidas em janela de **15 minutos** →
 bloqueio de **30 minutos**.
 
+A regra exata é "as **5 falhas mais recentes** cabem em 15 minutos", e não "5 falhas em algum
+momento dos últimos 15 minutos" — quem errou 3 vezes ontem e 2 hoje não fica bloqueado. Os 30
+minutos contam **da falha que fechou a janela**, não do momento em que a tela aparece.
+
+Três coisas que mudam o que você vê na tela:
+
+- **A quinta falha arma, a sexta requisição revela.** O backend confere o bloqueio *antes* de
+  conferir a senha, então a quinta tentativa errada ainda responde erro de credencial. Quem
+  recebe o `423` é a requisição seguinte — mesmo que ela venha com a senha certa.
+- **Errar o TOTP conta igual.** A contagem soma senha inválida e código TOTP inválido, e a
+  verificação de TOTP devolve o mesmo `423`. Dá para bloquear a persona sem errar nenhuma senha.
+- **O rate limit por IP é 10/min** no login e no verify de TOTP, o dobro do limite de tentativas.
+  É proposital: com os dois em 5, o `429` chegava antes do `423` e o usuário legítimo nunca ficava
+  sabendo que a conta estava bloqueada. Se você vir `429` durante a jornada de lockout, é outro
+  problema.
+
+Essa relação é **invariante validada no boot**: se o rate limit for configurado menor ou igual ao
+limite de tentativas, a API **não sobe** — e a mensagem de falha aponta a propriedade. Vale saber
+antes de perder tempo diagnosticando "a API não sobe" como problema de banco ou de porta.
+
 Isso importa em duas frentes: a jornada de lockout precisa desses números, e **errar a senha
 cinco vezes durante o roteiro bloqueia a persona por 30 minutos**. Para destravar sem
 esperar, ver §7.
@@ -524,25 +550,32 @@ esperar, ver §7.
 - [ ] **D1** — Reset total (apaga o volume; ambiente do zero):
       _Como:_ **Este passo apaga tudo e não tem desfazer.** O `-v` remove o volume do banco,
       ou seja, todos os usuários e dados que você criou. Só rode quando quiser recomeçar do
-      zero, e faça o **D3** antes para não perder o registro da rodada anterior. Depois de
+      zero, e faça o **D4** antes para não perder o registro da rodada anterior. Depois de
       rodar, reiniciar a API (o terminal do **A3**) para o Flyway recriar as tabelas.
       ```bash
       cd sep-api && docker compose down -v && docker compose up -d postgres
       ```
       _Esperado:_ banco vazio. Toda a §5 e a §6 precisam ser refeitas.
 - [ ] **D2** — Destravar uma conta bloqueada sem reset total: remover as tentativas
-      registradas para o usuário e reiniciar a API.
+      registradas para o usuário.
       _Como:_ Use isto quando errar a senha cinco vezes e a persona ficar bloqueada por 30
-      minutos (§6.4) — é bem mais rápido que o reset total, e não destrói a massa de dados.
-      Apagar as tentativas do usuário no banco e reiniciar a API no terminal do **A3**
-      (`Ctrl+C` e `./gradlew bootRun` de novo). A alternativa é simplesmente esperar os 30
-      minutos passarem.
+      minutos (§6.4) — é bem mais rápido que o reset total, e não destrói a massa de dados. O
+      `DELETE` abaixo **basta**: o bloqueio é recalculado do banco a cada tentativa, e não há
+      nada em memória guardando quem está travado. **Não é preciso reiniciar a API.** A
+      alternativa é simplesmente esperar os 30 minutos passarem.
       ```bash
       docker exec sep-postgres psql -U sep -d sep_dev \
         -c "DELETE FROM login_attempt WHERE username = 'cliente-b@sep.test';"
       ```
-      _Esperado:_ login volta a ser aceito com a senha correta.
-- [ ] **D3** — Antes de uma execução limpa, criar uma **rodada nova** pelo botão `+` do topo
+      _Esperado:_ login volta a ser aceito com a senha correta, sem reiniciar nada.
+- [ ] **D3** — Só se o problema for `429` (rate limit), não `423`: reiniciar a API.
+      _Como:_ O contador de requisições por IP vive **em memória**, não no banco, então o
+      `DELETE` do D2 não o alcança. Reiniciar a API no terminal do **A3** (`Ctrl+C` e
+      `./gradlew bootRun` de novo) zera o contador. Esperar 1 minuto também resolve — a janela
+      do limitador é de 60 segundos. Se a tela mostra **Conta bloqueada temporariamente** ou
+      `423`, o passo certo é o D2, não este.
+      _Esperado:_ as requisições voltam a passar sem `429`.
+- [ ] **D4** — Antes de uma execução limpa, criar uma **rodada nova** pelo botão `+` do topo
       do [app](./app/index.html). A rodada anterior continua registrada.
       _Como:_ Rodando pelo servidor (`npm start`), tudo já está persistido em `data/db.json` —
       basta clicar no `+` no topo para abrir uma rodada nova; a anterior permanece no seletor

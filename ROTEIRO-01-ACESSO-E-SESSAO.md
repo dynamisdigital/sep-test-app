@@ -7,7 +7,7 @@
 > Tudo no navegador. O mobile e o PWA em `localhost:8100` com emulação de dispositivo.
 > Biometria nativa fica no `ROTEIRO-09`, adiado por exigir aparelho.
 
-_Atualizado em: 2026-07-21._
+_Atualizado em: 2026-08-10._
 
 ## Como marcar
 
@@ -343,8 +343,12 @@ Caixa marcada = passo executado **e** conforme. Desvio não vira caixa marcada: 
       _Como:_ No campo **Código**, digitar seis dígitos quaisquer (`000000` serve) e clicar em
       **Verificar**. Erro é o resultado esperado. **Não repita mais de duas vezes**: tentativas
       inválidas contam para o lockout (§6.4 do ROTEIRO-00) e podem travar a persona por 30
-      minutos no meio do roteiro.
-      _Esperado:_ erro; permanece na tela; não autentica.
+      minutos no meio do roteiro. Se acontecer, você cai na **mesma** `/account-locked` da
+      [`J-012.W-N1`](#j-012w-n1---login-inválido-até-o-lockout) — é o mesmo bloqueio de conta,
+      não um erro diferente do MFA. A mensagem de erro distingue código inválido de bloqueio,
+      de rate limit e de queda de rede; se ela acusar "código inválido" nos quatro casos, é
+      ocorrência.
+      _Esperado:_ erro específico do caso; permanece na tela; não autentica.
 - [ ] **P4** — Informar o código TOTP corrente do autenticador.
       _Como:_ Ler o código de 6 dígitos **da conta `cliente-a`** no autenticador — se você
       cadastrou mais de uma conta, confira o nome antes. Como o código muda a cada 30
@@ -368,13 +372,20 @@ Caixa marcada = passo executado **e** conforme. Desvio não vira caixa marcada: 
 | Persona | `cliente-b` |
 | Superfície | Web |
 | Vetor | Tentativas repetidas de senha inválida |
-| Comportamento seguro esperado | Bloqueio após 5 tentativas; erro que não revela se o usuário existe |
+| Comportamento seguro esperado | Cinco falhas armam o bloqueio; a requisição seguinte o revela, mesmo com a senha correta. Erro que não revela se o usuário existe |
 | Pré-condições | `PRE-01` `PRE-02` `PRE-04` `PRE-09` |
-| Política | 5 tentativas / janela de 15 min / bloqueio de 30 min |
+| Política | As **5 falhas mais recentes** cabendo em **15 min** → bloqueio de **30 min**, contados da falha que fechou a janela |
+| Automação equivalente | [`account-locked.spec.ts`](../sep-app/e2e/account-locked.spec.ts) |
 
 > **Esta jornada bloqueia a persona por 30 minutos.** Execute-a por último na sessão, ou
 > tenha o procedimento de destravamento do [`ROTEIRO-00`](./ROTEIRO-00-AMBIENTE-E-MASSA.md)
 > §7 **D2** a mão.
+
+> **Se algum passo daqui falhar, é regressão — não roteiro desatualizado.** Este bloqueio
+> **nunca aconteceu** entre a Sprint 5 e 2026-07-29: a tentativa falha era gravada dentro da
+> transação do login e desfeita pelo erro de credencial, então nada chegava à tabela
+> `login_attempt` e o lockout não tinha o que contar. A correção é recente e esta jornada é o
+> que a guarda.
 
 **Passos**
 
@@ -384,33 +395,76 @@ Caixa marcada = passo executado **e** conforme. Desvio não vira caixa marcada: 
       Se dissesse, um atacante descobriria quais e-mails têm conta só testando a tela.
       Compare mentalmente com a mensagem que vai aparecer no P2 — têm de ser iguais.
       _Esperado:_ erro genérico. **Não** revela que o usuário não existe.
-- [ ] **P2** — Tentar login de `cliente-b` com senha inválida, 4 vezes.
-      _Como:_ `cliente-b@sep.test` com uma senha errada qualquer, **exatamente 4 vezes** —
-      contar. A quinta é o passo seguinte, e é ela que dispara o bloqueio. A mensagem tem de
-      ser a mesma do P1: o sistema não distingue "usuário não existe" de "senha errada".
-      _Esperado:_ mesmo erro genérico a cada tentativa.
-- [ ] **P3** — Quinta tentativa inválida.
-      _Como:_ Mais uma vez com senha errada. Agora a tela muda: em vez do erro no formulário,
-      o navegador vai para uma página própria, **Conta bloqueada temporariamente**, com o
-      número `423` em destaque. Esse 423 é o código HTTP de "recurso trancado".
-      _Esperado:_ conta bloqueada; o web navega para `/account-locked` (o `error.interceptor`
-      trata o HTTP **423**).
-- [ ] **P4** — Tentar login com a senha **correta** durante o bloqueio.
-      _Como:_ Voltar ao login e entrar com `cliente-b@sep.test` /
-      `jornada-ownership-sep-2026` — a senha certa desta vez. Continuar bloqueado é o
-      comportamento correto: se a senha certa destravasse, bastaria o atacante acertar para
-      anular o bloqueio.
-      _Esperado:_ continua bloqueado. A senha certa não destrava antes do prazo.
-- [ ] **P5** — Conferir o audit log:
-      _Como:_ Terminal do banco. Procurar na saída os eventos das tentativas e do bloqueio
-      que você acabou de provocar. Tentativa de invasão sem trilha registrada é defeito de
-      compliance, não detalhe. Terminada a jornada, `cliente-b` fica travado por 30 minutos —
+- [ ] **P2** — Tentar login de `cliente-b` com senha inválida, **5 vezes**.
+      _Como:_ `cliente-b@sep.test` com uma senha errada qualquer, **exatamente 5 vezes** —
+      contar. A mensagem tem de ser a mesma do P1: o sistema não distingue "usuário não existe"
+      de "senha errada". **As cinco respondem erro de credencial, inclusive a quinta** — o
+      backend confere o bloqueio *antes* de conferir a senha, então na quinta ele ainda enxerga
+      só quatro falhas gravadas, deixa passar, e só depois grava a quinta. É essa quinta que
+      arma o bloqueio; quem vê o `423` é a requisição do passo seguinte. O rate limit por IP no
+      login é de 10 por minuto, o dobro do limite de tentativas — cinco seguidas não disparam
+      `429`. Se aparecer `429`, é outro problema, não o lockout.
+      _Esperado:_ o mesmo erro genérico nas cinco. Nenhuma navegação para fora do login.
+- [ ] **P3** — Sexta requisição, agora com a senha **correta**.
+      _Como:_ `cliente-b@sep.test` com `jornada-ownership-sep-2026`, a senha certa desta vez.
+      Este passo prova duas coisas de uma só: que o bloqueio está armado, e que a senha certa
+      **não** destrava — se destravasse, bastaria ao atacante acertar uma vez para anular o
+      bloqueio. A tela muda: em vez do erro no formulário, o navegador vai para uma página
+      própria, **Conta bloqueada temporariamente**, com o número `423` em destaque. Esse 423 é
+      o código HTTP de "recurso trancado".
+      _Esperado:_ o web navega para `/account-locked` (o `error.interceptor` trata o HTTP
+      **423**) e a sessão é limpa. A senha correta não entra.
+- [ ] **P4** — Conferir que a explicação traz os números da política vigente.
+      _Como:_ Na `/account-locked`, ler o primeiro parágrafo. Ele tem de citar **5 ou mais
+      tentativas**, janela de **15 minutos** e bloqueio de **até 30 minutos**. Esses três
+      números não estão escritos na tela: vêm de `GET /api/v1/auth/politica-lockout` e por isso
+      acompanham a configuração real do ambiente. Confirmar no DevTools, aba **Network**,
+      filtrando por `politica`: a chamada tem de aparecer, com `200`. O "5 **ou mais**" é
+      proposital — pelo P2 você sabe que dá para chegar aqui com mais de cinco.
+      _Esperado:_ os três números na copy e a chamada a `politica-lockout` com `200` na aba
+      Network.
+- [ ] **P5** — Recarregar a página de conta bloqueada (`F5`).
+      _Como:_ Ainda na `/account-locked`, recarregar. A página tem de continuar de pé, com a
+      mesma copy. Este passo existe porque a tela já se autodestruiu por dois caminhos
+      diferentes: a consulta da política levava um token velho e o erro da resposta arrancava o
+      usuário de volta para o `/login` — justamente a tela que o `423` acabou de abrir. Ser
+      jogado para o login aqui é **ocorrência**, não detalhe.
+      _Esperado:_ continua em `/account-locked`. Nenhuma navegação para `/login`.
+- [ ] **P6** — Conferir que o foco foi para o título.
+      _Como:_ Logo depois do reload do P5, **sem clicar em nada**, apertar `Tab` uma vez. O
+      foco tem de sair do título **Conta bloqueada temporariamente** e cair no link **Voltar ao
+      login** — é isso que prova que ele estava no título. Importa para quem usa leitor de
+      tela: sem o foco no lugar, a pessoa fica em silêncio numa tela nova, no desfecho de um
+      evento de segurança.
+      _Esperado:_ o primeiro `Tab` leva ao link **Voltar ao login**.
+- [ ] **P7** — Conferir o audit log:
+      _Como:_ Terminal do banco. Procurar na saída os eventos das tentativas e do bloqueio que
+      você acabou de provocar. Além do `LOCKOUT` (o bloqueio em si), tem de aparecer
+      **`LOCKOUT_TENTATIVA_BARRADA`**, que é a tentativa do P3 — a que bateu na porta já
+      trancada. Até a Sprint 33 nenhuma tentativa barrada deixava rastro, porque a verificação
+      lançava antes de qualquer gravação. Tentativa de invasão sem trilha registrada é defeito
+      de compliance, não detalhe. Terminada a jornada, `cliente-b` fica travado por 30 minutos —
       para destravar antes, o **D2** do [`ROTEIRO-00`](./ROTEIRO-00-AMBIENTE-E-MASSA.md) §7.
       ```bash
       docker exec sep-postgres psql -U sep -d sep_dev \
         -c "SELECT tipo, data_evento FROM audit_log_seguranca ORDER BY data_evento DESC LIMIT 10;"
       ```
-      _Esperado:_ tentativas e bloqueio registrados.
+      _Esperado:_ `LOCKOUT` e `LOCKOUT_TENTATIVA_BARRADA` registrados, além das tentativas.
+- [ ] **P8** — Conferir o texto de reserva com a API fora do ar.
+      _Como:_ Parar a API no terminal do **A3** (`Ctrl+C`) e recarregar a `/account-locked`.
+      Sem a política, a tela cai num texto **sem número nenhum** ("por um período limitado").
+      Isso é deliberado: entre vago e verdadeiro ou preciso e falso, numa tela de desfecho de
+      segurança, vago vence — um "30 minutos" fixo seria mentira num ambiente configurado com
+      outro valor. A tela não pode ficar em branco nem mostrar erro. Religar a API
+      (`./gradlew bootRun`) antes de seguir.
+      _Esperado:_ a página abre completa, com a explicação sem números. Nenhuma tela em branco.
+
+**Resultado final esperado**
+
+- [ ] Cinco falhas armam o bloqueio e a sexta requisição o revela, mesmo com a senha correta
+- [ ] O bloqueio deixa trilha: `LOCKOUT` e `LOCKOUT_TENTATIVA_BARRADA` no audit
+- [ ] A `/account-locked` sobrevive a recarga e à API fora do ar, sem nunca anunciar um número
+      que não seja o da política vigente
 
 ---
 

@@ -2,7 +2,7 @@
 // Fonte: *.md na raiz do sep-test-app — rode `npm run gerar` apos editar.
 window.SEP_DADOS = {
   "schemaVersion": 1,
-  "geradoEm": "2026-07-22T14:08:20.372Z",
+  "geradoEm": "2026-08-10T13:43:17.053Z",
   "gerador": {
     "arquivo": "gerar-dados.mjs",
     "versao": "1.1.0"
@@ -11,8 +11,8 @@ window.SEP_DADOS = {
     "roteiros": 4,
     "escopos": 39,
     "jornadas": 25,
-    "passos": 170,
-    "assercoes": 23,
+    "passos": 174,
+    "assercoes": 26,
     "na": 1
   },
   "glossario": [
@@ -148,37 +148,31 @@ window.SEP_DADOS = {
       {
         "codigo": "SEM_RESULTADO_FINAL",
         "arquivo": "ROTEIRO-01-ACESSO-E-SESSAO.md",
-        "linha": 362,
-        "msg": "jornada J-012.W-N1 sem \"Resultado final esperado\""
-      },
-      {
-        "codigo": "SEM_RESULTADO_FINAL",
-        "arquivo": "ROTEIRO-01-ACESSO-E-SESSAO.md",
-        "linha": 417,
+        "linha": 471,
         "msg": "jornada J-020.W sem \"Resultado final esperado\""
       },
       {
         "codigo": "SEM_RESULTADO_FINAL",
         "arquivo": "ROTEIRO-01-ACESSO-E-SESSAO.md",
-        "linha": 523,
+        "linha": 577,
         "msg": "jornada J-022.W-N1 sem \"Resultado final esperado\""
       },
       {
         "codigo": "SEM_RESULTADO_FINAL",
         "arquivo": "ROTEIRO-01-ACESSO-E-SESSAO.md",
-        "linha": 556,
+        "linha": 610,
         "msg": "jornada J-030.W sem \"Resultado final esperado\""
       },
       {
         "codigo": "SEM_RESULTADO_FINAL",
         "arquivo": "ROTEIRO-01-ACESSO-E-SESSAO.md",
-        "linha": 611,
+        "linha": 665,
         "msg": "jornada J-031.W sem \"Resultado final esperado\""
       },
       {
         "codigo": "SEM_RESULTADO_FINAL",
         "arquivo": "ROTEIRO-01-ACESSO-E-SESSAO.md",
-        "linha": 651,
+        "linha": 705,
         "msg": "jornada J-033.W sem \"Resultado final esperado\""
       },
       {
@@ -229,11 +223,11 @@ window.SEP_DADOS = {
     {
       "id": "CENARIOS",
       "arquivo": "CENARIOS-TESTE-JORNADAS-USUARIO.md",
-      "hash": "afee73c4",
+      "hash": "010e8d52",
       "titulo": "Roteiro de teste manual - Jornadas de usuário SEP",
       "tipo": "hub",
       "ordem": 0,
-      "atualizadoEm": "2026-07-21",
+      "atualizadoEm": "2026-08-10",
       "resumoHtml": "",
       "escopos": [
         {
@@ -254,7 +248,7 @@ window.SEP_DADOS = {
             "A jornada de lockout (<code>J-012.W-N1</code>) bloqueia a persona por <strong>30 minutos</strong>. Execute-a por último dentro da sessão de acesso.",
             "<strong>O mobile permanece no roteiro</strong> mesmo sem aparelho: ele roda como PWA no navegador. Isso não e detalhe — o <strong>cadastro de usuário só existe no mobile</strong> (§7.2). Sem essa superfície não há como criar conta pela UI, só pela API.",
             "<strong>Verifique que o MSW esta desligado.</strong> Web e mobile podem rodar com Mock Service Worker. Se a superfície estiver em mock, o resultado do roteiro <strong>não vale</strong> — o mock aceita credenciais que o backend real recusa. Ver <code>PRE-04</code> no <a href=\"./ROTEIRO-00-AMBIENTE-E-MASSA.md\" rel=\"noreferrer\"><code>ROTEIRO-00</code></a> §8.",
-            "<code>golden-path-mobile.spec.ts</code> esta vermelha desde a M-13. E a <strong>única</strong> spec que já bate no <code>:8080</code> real — as demais injetam MSW. A jornada <code>J-010.M</code> do <a href=\"./ROTEIRO-01-ACESSO-E-SESSAO.md\" rel=\"noreferrer\"><code>ROTEIRO-01</code></a> executa manualmente o mesmo caminho e serve de referência para o diagnóstico.",
+            "<code>golden-path-mobile.spec.ts</code> <strong>deixou de ser vermelha em 2026-07-31</strong>: a M-Sprint 17 a reescreveu contra MSW e a suíte e2e do mobile fechou verde. Ela também deixou de ser a única spec que batia no <code>:8080</code> real — hoje <strong>nenhuma</strong> bate; todas rodam contra o MSW. Isso não afrouxa o roteiro, muda o argumento: a cobertura automatizada prova o app contra um mock que a própria equipe escreve, e o único lugar onde o contrato com o backend real é exercido é a execução manual daqui.",
             "Os dois checkboxes transformam &quot;isso não existe&quot; em afirmação verificável. Se o endpoint aparecer um dia, o roteiro falha e avisa."
           ],
           "grupos": [],
@@ -271,7 +265,7 @@ window.SEP_DADOS = {
               "na": false,
               "naMotivo": null,
               "marcadoNaFonte": false,
-              "linha": 215,
+              "linha": 217,
               "ordem": 1
             },
             {
@@ -286,11 +280,11 @@ window.SEP_DADOS = {
               "na": false,
               "naMotivo": null,
               "marcadoNaFonte": false,
-              "linha": 219,
+              "linha": 221,
               "ordem": 2
             }
           ],
-          "linha": 207,
+          "linha": 209,
           "stats": {
             "passos": 0,
             "na": 0,
@@ -308,7 +302,9 @@ window.SEP_DADOS = {
           "ordem": 2,
           "meta": [],
           "metaIndex": {},
-          "notas": [],
+          "notas": [
+            "<strong>Reconferidos no código em 2026-08-10</strong>, para o próximo leitor não refazer o trabalho: o <strong>A2</strong> e o <strong>A4</strong> continuam válidos — o <code>roleGuard</code> do web compara a role <strong>principal</strong> (<code>allowedRoles.includes(user.role)</code>), e não existe equivalente do <code>redirectAuthenticatedGuard</code> no <code>sep-app</code>. O <strong>A1</strong>, o <strong>A3</strong> e o <strong>A5</strong> não foram medidos e seguem como estavam. Nenhum foi fechado pelas sprints de julho e agosto."
+          ],
           "grupos": [
             {
               "id": "g1",
@@ -328,7 +324,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 267,
+                  "linha": 275,
                   "ordem": 1
                 },
                 {
@@ -343,7 +339,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 275,
+                  "linha": 283,
                   "ordem": 2
                 },
                 {
@@ -358,7 +354,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 282,
+                  "linha": 290,
                   "ordem": 3
                 },
                 {
@@ -373,7 +369,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 287,
+                  "linha": 295,
                   "ordem": 4
                 },
                 {
@@ -388,14 +384,14 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 292,
+                  "linha": 300,
                   "ordem": 5
                 }
               ]
             }
           ],
           "assercoes": [],
-          "linha": 263,
+          "linha": 265,
           "stats": {
             "passos": 5,
             "na": 0,
@@ -409,11 +405,11 @@ window.SEP_DADOS = {
     {
       "id": "ROTEIRO-00",
       "arquivo": "ROTEIRO-00-AMBIENTE-E-MASSA.md",
-      "hash": "641e0a04",
+      "hash": "773e71f1",
       "titulo": "Roteiro 00 - Ambiente e massa de dados",
       "tipo": "secoes",
       "ordem": 10,
-      "atualizadoEm": "2026-07-21",
+      "atualizadoEm": "2026-08-10",
       "resumoHtml": "",
       "escopos": [
         {
@@ -530,6 +526,7 @@ window.SEP_DADOS = {
           "notas": [
             "<strong>O mobile continua no roteiro.</strong> Ele roda como PWA em <code>localhost:8100</code>, que e navegador. Isso importa porque o <strong>cadastro de usuário só existe no mobile</strong> — no web, <code>/register</code> e tela de canalização. Sem a superfície mobile não há como criar conta pela UI.",
             "<strong>Atenção ao MSW.</strong> Web e mobile podem rodar com mock (Mock Service Worker) em vez do backend real. Este roteiro exige backend real. Ver <code>PRE-04</code>.",
+            "<strong>A collection é anterior às Sprints 33 e 34 e não tem tudo.</strong> Falta nela o <code>GET /api/v1/auth/politica-lockout</code>, endpoint <strong>público</strong> que a <code>/account-locked</code> consome. Enquanto a collection não for renovada, chame-o direto no navegador — <code>http://localhost:8080/api/v1/auth/politica-lockout</code> — que ele responde sem token. Renovar a collection é trabalho no repo <code>docs-SEP</code>, não neste.",
             "As variáveis de token e ID nascem <strong>vazias</strong> de propósito: a collection e versionada e não pode carregar credencial nem PII. Preencher e parte do roteiro.",
             "<strong>Nota editorial.</strong> O restante do <code>docs-SEP</code> escreve sem acentuação, mas os roteiros de teste são a <strong>exceção</strong>: quem executa é gente que não conhece o sistema, e português sem acento cansa numa leitura de ~170 passos. Aqui se escreve em PT-BR correto. O parser e o app comparam marcadores sem acento (<code>semAcento()</code>), então acentuar um título de seção não quebra a geração — mas <strong>acentuar o texto de um passo muda o hash dele</strong> e marca &quot;revise&quot; para quem já executou. Ajuste texto de passo só quando for necessário mesmo.",
             "Os nomes de pasta e de request do Insomnia são citados <strong>literalmente</strong> (<code>Usuários</code>, <code>criar cliente público</code>) porque precisam bater com a busca da ferramenta. Não &quot;corrigir&quot; essas ocorrências."
@@ -612,7 +609,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 115,
+                  "linha": 121,
                   "ordem": 1
                 },
                 {
@@ -634,14 +631,14 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 126,
+                  "linha": 132,
                   "ordem": 2
                 }
               ]
             }
           ],
           "assercoes": [],
-          "linha": 113,
+          "linha": 119,
           "stats": {
             "passos": 2,
             "na": 0,
@@ -686,7 +683,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 141,
+                  "linha": 147,
                   "ordem": 1
                 },
                 {
@@ -701,7 +698,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 150,
+                  "linha": 156,
                   "ordem": 2
                 },
                 {
@@ -723,7 +720,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 155,
+                  "linha": 161,
                   "ordem": 3
                 },
                 {
@@ -738,14 +735,14 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 165,
+                  "linha": 171,
                   "ordem": 4
                 }
               ]
             }
           ],
           "assercoes": [],
-          "linha": 139,
+          "linha": 145,
           "stats": {
             "passos": 4,
             "na": 0,
@@ -790,7 +787,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 176,
+                  "linha": 182,
                   "ordem": 1
                 },
                 {
@@ -812,7 +809,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 184,
+                  "linha": 190,
                   "ordem": 2
                 },
                 {
@@ -827,14 +824,14 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 193,
+                  "linha": 199,
                   "ordem": 3
                 }
               ]
             }
           ],
           "assercoes": [],
-          "linha": 174,
+          "linha": 180,
           "stats": {
             "passos": 3,
             "na": 0,
@@ -882,14 +879,14 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 223,
+                  "linha": 229,
                   "ordem": 1
                 }
               ]
             }
           ],
           "assercoes": [],
-          "linha": 217,
+          "linha": 223,
           "stats": {
             "passos": 1,
             "na": 0,
@@ -936,7 +933,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 251,
+                  "linha": 257,
                   "ordem": 1
                 },
                 {
@@ -958,7 +955,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 266,
+                  "linha": 272,
                   "ordem": 2
                 },
                 {
@@ -980,14 +977,14 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 287,
+                  "linha": 293,
                   "ordem": 3
                 }
               ]
             }
           ],
           "assercoes": [],
-          "linha": 245,
+          "linha": 251,
           "stats": {
             "passos": 3,
             "na": 0,
@@ -1041,7 +1038,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 312,
+                  "linha": 318,
                   "ordem": 1
                 },
                 {
@@ -1063,7 +1060,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 325,
+                  "linha": 331,
                   "ordem": 2
                 },
                 {
@@ -1085,7 +1082,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 338,
+                  "linha": 344,
                   "ordem": 3
                 },
                 {
@@ -1107,7 +1104,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 344,
+                  "linha": 350,
                   "ordem": 4
                 },
                 {
@@ -1129,7 +1126,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 357,
+                  "linha": 363,
                   "ordem": 5
                 },
                 {
@@ -1144,7 +1141,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 367,
+                  "linha": 373,
                   "ordem": 6
                 },
                 {
@@ -1159,7 +1156,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 373,
+                  "linha": 379,
                   "ordem": 7
                 },
                 {
@@ -1174,14 +1171,14 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 381,
+                  "linha": 387,
                   "ordem": 8
                 }
               ]
             }
           ],
           "assercoes": [],
-          "linha": 299,
+          "linha": 305,
           "stats": {
             "passos": 8,
             "na": 0,
@@ -1240,7 +1237,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 406,
+                  "linha": 412,
                   "ordem": 1
                 },
                 {
@@ -1262,14 +1259,14 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 425,
+                  "linha": 431,
                   "ordem": 2
                 }
               ]
             }
           ],
           "assercoes": [],
-          "linha": 395,
+          "linha": 401,
           "stats": {
             "passos": 2,
             "na": 0,
@@ -1309,7 +1306,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 451,
+                  "linha": 457,
                   "ordem": 1
                 },
                 {
@@ -1324,7 +1321,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 455,
+                  "linha": 461,
                   "ordem": 2
                 },
                 {
@@ -1339,7 +1336,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 461,
+                  "linha": 467,
                   "ordem": 3
                 },
                 {
@@ -1354,7 +1351,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 469,
+                  "linha": 475,
                   "ordem": 4
                 },
                 {
@@ -1369,7 +1366,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 477,
+                  "linha": 483,
                   "ordem": 5
                 },
                 {
@@ -1391,14 +1388,14 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 484,
+                  "linha": 490,
                   "ordem": 6
                 }
               ]
             }
           ],
           "assercoes": [],
-          "linha": 441,
+          "linha": 447,
           "stats": {
             "passos": 6,
             "na": 0,
@@ -1431,8 +1428,8 @@ window.SEP_DADOS = {
                   "id": "D1",
                   "hash": "a95a72d2",
                   "textoHtml": "Reset total (apaga o volume; ambiente do zero):",
-                  "comoHtml": "<strong>Este passo apaga tudo e não tem desfazer.</strong> O <code>-v</code> remove o volume do banco, ou seja, todos os usuários e dados que você criou. Só rode quando quiser recomeçar do zero, e faça o <strong>D3</strong> antes para não perder o registro da rodada anterior. Depois de rodar, reiniciar a API (o terminal do <strong>A3</strong>) para o Flyway recriar as tabelas.",
-                  "textoBusca": "reset total (apaga o volume; ambiente do zero): este passo apaga tudo e não tem desfazer. o -v remove o volume do banco, ou seja, todos os usuários e dados que você criou. só rode quando quiser recomeçar do zero, e faça o d3 antes para não perder o registro da rodada anterior. depois de rodar, reiniciar a api (o terminal do a3) para o flyway recriar as tabelas.",
+                  "comoHtml": "<strong>Este passo apaga tudo e não tem desfazer.</strong> O <code>-v</code> remove o volume do banco, ou seja, todos os usuários e dados que você criou. Só rode quando quiser recomeçar do zero, e faça o <strong>D4</strong> antes para não perder o registro da rodada anterior. Depois de rodar, reiniciar a API (o terminal do <strong>A3</strong>) para o Flyway recriar as tabelas.",
+                  "textoBusca": "reset total (apaga o volume; ambiente do zero): este passo apaga tudo e não tem desfazer. o -v remove o volume do banco, ou seja, todos os usuários e dados que você criou. só rode quando quiser recomeçar do zero, e faça o d4 antes para não perder o registro da rodada anterior. depois de rodar, reiniciar a api (o terminal do a3) para o flyway recriar as tabelas.",
                   "esperadoHtml": "banco vazio. Toda a §5 e a §6 precisam ser refeitas.",
                   "blocos": [
                     {
@@ -1445,17 +1442,17 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 524,
+                  "linha": 550,
                   "ordem": 1
                 },
                 {
                   "key": "ROTEIRO-00/7/D2",
                   "id": "D2",
-                  "hash": "686abcf5",
-                  "textoHtml": "Destravar uma conta bloqueada sem reset total: remover as tentativas registradas para o usuário e reiniciar a API.",
-                  "comoHtml": "Use isto quando errar a senha cinco vezes e a persona ficar bloqueada por 30 minutos (§6.4) — é bem mais rápido que o reset total, e não destrói a massa de dados. Apagar as tentativas do usuário no banco e reiniciar a API no terminal do <strong>A3</strong> (<code>Ctrl+C</code> e <code>./gradlew bootRun</code> de novo). A alternativa é simplesmente esperar os 30 minutos passarem.",
-                  "textoBusca": "destravar uma conta bloqueada sem reset total: remover as tentativas registradas para o usuário e reiniciar a api. use isto quando errar a senha cinco vezes e a persona ficar bloqueada por 30 minutos (§6.4) — é bem mais rápido que o reset total, e não destrói a massa de dados. apagar as tentativas do usuário no banco e reiniciar a api no terminal do a3 (ctrl+c e ./gradlew bootrun de novo). a alternativa é simplesmente esperar os 30 minutos passarem.",
-                  "esperadoHtml": "login volta a ser aceito com a senha correta.",
+                  "hash": "f0ab48b1",
+                  "textoHtml": "Destravar uma conta bloqueada sem reset total: remover as tentativas registradas para o usuário.",
+                  "comoHtml": "Use isto quando errar a senha cinco vezes e a persona ficar bloqueada por 30 minutos (§6.4) — é bem mais rápido que o reset total, e não destrói a massa de dados. O <code>DELETE</code> abaixo <strong>basta</strong>: o bloqueio é recalculado do banco a cada tentativa, e não há nada em memória guardando quem está travado. <strong>Não é preciso reiniciar a API.</strong> A alternativa é simplesmente esperar os 30 minutos passarem.",
+                  "textoBusca": "destravar uma conta bloqueada sem reset total: remover as tentativas registradas para o usuário. use isto quando errar a senha cinco vezes e a persona ficar bloqueada por 30 minutos (§6.4) — é bem mais rápido que o reset total, e não destrói a massa de dados. o delete abaixo basta: o bloqueio é recalculado do banco a cada tentativa, e não há nada em memória guardando quem está travado. não é preciso reiniciar a api. a alternativa é simplesmente esperar os 30 minutos passarem.",
+                  "esperadoHtml": "login volta a ser aceito com a senha correta, sem reiniciar nada.",
                   "blocos": [
                     {
                       "tipo": "codigo",
@@ -1467,12 +1464,27 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 533,
+                  "linha": 559,
                   "ordem": 2
                 },
                 {
                   "key": "ROTEIRO-00/7/D3",
                   "id": "D3",
+                  "hash": "ba1dec39",
+                  "textoHtml": "Só se o problema for <code>429</code> (rate limit), não <code>423</code>: reiniciar a API.",
+                  "comoHtml": "O contador de requisições por IP vive <strong>em memória</strong>, não no banco, então o <code>DELETE</code> do D2 não o alcança. Reiniciar a API no terminal do <strong>A3</strong> (<code>Ctrl+C</code> e <code>./gradlew bootRun</code> de novo) zera o contador. Esperar 1 minuto também resolve — a janela do limitador é de 60 segundos. Se a tela mostra <strong>Conta bloqueada temporariamente</strong> ou <code>423</code>, o passo certo é o D2, não este.",
+                  "textoBusca": "só se o problema for 429 (rate limit), não 423: reiniciar a api. o contador de requisições por ip vive em memória, não no banco, então o delete do d2 não o alcança. reiniciar a api no terminal do a3 (ctrl+c e ./gradlew bootrun de novo) zera o contador. esperar 1 minuto também resolve — a janela do limitador é de 60 segundos. se a tela mostra conta bloqueada temporariamente ou 423, o passo certo é o d2, não este.",
+                  "esperadoHtml": "as requisições voltam a passar sem <code>429</code>.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 571,
+                  "ordem": 3
+                },
+                {
+                  "key": "ROTEIRO-00/7/D4",
+                  "id": "D4",
                   "hash": "62e7e1d7",
                   "textoHtml": "Antes de uma execução limpa, criar uma <strong>rodada nova</strong> pelo botão <code>+</code> do topo do <a href=\"./app/index.html\" rel=\"noreferrer\">app</a>. A rodada anterior continua registrada.",
                   "comoHtml": "Rodando pelo servidor (<code>npm start</code>), tudo já está persistido em <code>data/db.json</code> — basta clicar no <code>+</code> no topo para abrir uma rodada nova; a anterior permanece no seletor de rodadas e no arquivo. Comite <code>data/db.json</code> para congelar o registro. (No modo <code>file://</code>, clique em <strong>Exportar</strong> antes, pois ali o estado vive só no navegador.)",
@@ -1482,16 +1494,16 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 545,
-                  "ordem": 3
+                  "linha": 578,
+                  "ordem": 4
                 }
               ]
             }
           ],
           "assercoes": [],
-          "linha": 522,
+          "linha": 548,
           "stats": {
-            "passos": 3,
+            "passos": 4,
             "na": 0,
             "assercoes": 0
           }
@@ -1527,7 +1539,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 581,
+                  "linha": 614,
                   "ordem": 1
                 },
                 {
@@ -1542,7 +1554,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 585,
+                  "linha": 618,
                   "ordem": 2
                 },
                 {
@@ -1557,7 +1569,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 590,
+                  "linha": 623,
                   "ordem": 3
                 },
                 {
@@ -1572,7 +1584,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 594,
+                  "linha": 627,
                   "ordem": 4
                 },
                 {
@@ -1587,14 +1599,14 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 599,
+                  "linha": 632,
                   "ordem": 5
                 }
               ]
             }
           ],
           "assercoes": [],
-          "linha": 577,
+          "linha": 610,
           "stats": {
             "passos": 5,
             "na": 0,
@@ -1650,11 +1662,11 @@ window.SEP_DADOS = {
     {
       "id": "ROTEIRO-01",
       "arquivo": "ROTEIRO-01-ACESSO-E-SESSAO.md",
-      "hash": "2e4e6373",
+      "hash": "48298d8f",
       "titulo": "Roteiro 01 - Acesso e sessão",
       "tipo": "jornadas",
       "ordem": 11,
-      "atualizadoEm": "2026-07-21",
+      "atualizadoEm": "2026-08-10",
       "resumoHtml": "",
       "escopos": [
         {
@@ -2706,11 +2718,11 @@ window.SEP_DADOS = {
                 {
                   "key": "ROTEIRO-01/J-011.W/P3",
                   "id": "P3",
-                  "hash": "7735dad7",
+                  "hash": "0c60df10",
                   "textoHtml": "Informar um código TOTP <strong>incorreto</strong>.",
-                  "comoHtml": "No campo <strong>Código</strong>, digitar seis dígitos quaisquer (<code>000000</code> serve) e clicar em <strong>Verificar</strong>. Erro é o resultado esperado. <strong>Não repita mais de duas vezes</strong>: tentativas inválidas contam para o lockout (§6.4 do ROTEIRO-00) e podem travar a persona por 30 minutos no meio do roteiro.",
-                  "textoBusca": "informar um código totp incorreto. no campo código, digitar seis dígitos quaisquer (000000 serve) e clicar em verificar. erro é o resultado esperado. não repita mais de duas vezes: tentativas inválidas contam para o lockout (§6.4 do roteiro-00) e podem travar a persona por 30 minutos no meio do roteiro.",
-                  "esperadoHtml": "erro; permanece na tela; não autentica.",
+                  "comoHtml": "No campo <strong>Código</strong>, digitar seis dígitos quaisquer (<code>000000</code> serve) e clicar em <strong>Verificar</strong>. Erro é o resultado esperado. <strong>Não repita mais de duas vezes</strong>: tentativas inválidas contam para o lockout (§6.4 do ROTEIRO-00) e podem travar a persona por 30 minutos no meio do roteiro. Se acontecer, você cai na <strong>mesma</strong> <code>/account-locked</code> da <a href=\"#j-012w-n1---login-inválido-até-o-lockout\" rel=\"noreferrer\"><code>J-012.W-N1</code></a> — é o mesmo bloqueio de conta, não um erro diferente do MFA. A mensagem de erro distingue código inválido de bloqueio, de rate limit e de queda de rede; se ela acusar &quot;código inválido&quot; nos quatro casos, é ocorrência.",
+                  "textoBusca": "informar um código totp incorreto. no campo código, digitar seis dígitos quaisquer (000000 serve) e clicar em verificar. erro é o resultado esperado. não repita mais de duas vezes: tentativas inválidas contam para o lockout (§6.4 do roteiro-00) e podem travar a persona por 30 minutos no meio do roteiro. se acontecer, você cai na mesma /account-locked da j-012.w-n1 — é o mesmo bloqueio de conta, não um erro diferente do mfa. a mensagem de erro distingue código inválido de bloqueio, de rate limit e de queda de rede; se ela acusar \"código inválido\" nos quatro casos, é ocorrência.",
+                  "esperadoHtml": "erro específico do caso; permanece na tela; não autentica.",
                   "blocos": [],
                   "na": false,
                   "naMotivo": null,
@@ -2730,7 +2742,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 348,
+                  "linha": 352,
                   "ordem": 4
                 },
                 {
@@ -2745,7 +2757,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 353,
+                  "linha": 357,
                   "ordem": 5
                 }
               ]
@@ -2796,8 +2808,8 @@ window.SEP_DADOS = {
             },
             {
               "chave": "Comportamento seguro esperado",
-              "texto": "Bloqueio após 5 tentativas; erro que não revela se o usuário existe",
-              "html": "Bloqueio após 5 tentativas; erro que não revela se o usuário existe"
+              "texto": "Cinco falhas armam o bloqueio; a requisição seguinte o revela, mesmo com a senha correta. Erro que não revela se o usuário existe",
+              "html": "Cinco falhas armam o bloqueio; a requisição seguinte o revela, mesmo com a senha correta. Erro que não revela se o usuário existe"
             },
             {
               "chave": "Pré-condições",
@@ -2806,8 +2818,13 @@ window.SEP_DADOS = {
             },
             {
               "chave": "Política",
-              "texto": "5 tentativas / janela de 15 min / bloqueio de 30 min",
-              "html": "5 tentativas / janela de 15 min / bloqueio de 30 min"
+              "texto": "As 5 falhas mais recentes cabendo em 15 min → bloqueio de 30 min, contados da falha que fechou a janela",
+              "html": "As <strong>5 falhas mais recentes</strong> cabendo em <strong>15 min</strong> → bloqueio de <strong>30 min</strong>, contados da falha que fechou a janela"
+            },
+            {
+              "chave": "Automação equivalente",
+              "texto": "account-locked.spec.ts",
+              "html": "<a href=\"../sep-app/e2e/account-locked.spec.ts\" rel=\"noreferrer\"><code>account-locked.spec.ts</code></a>"
             }
           ],
           "metaIndex": {
@@ -2816,12 +2833,14 @@ window.SEP_DADOS = {
             "Persona": "cliente-b",
             "Superfície": "Web",
             "Vetor": "Tentativas repetidas de senha inválida",
-            "Comportamento seguro esperado": "Bloqueio após 5 tentativas; erro que não revela se o usuário existe",
+            "Comportamento seguro esperado": "Cinco falhas armam o bloqueio; a requisição seguinte o revela, mesmo com a senha correta. Erro que não revela se o usuário existe",
             "Pré-condições": "PRE-01 PRE-02 PRE-04 PRE-09",
-            "Política": "5 tentativas / janela de 15 min / bloqueio de 30 min"
+            "Política": "As 5 falhas mais recentes cabendo em 15 min → bloqueio de 30 min, contados da falha que fechou a janela",
+            "Automação equivalente": "account-locked.spec.ts"
           },
           "notas": [
-            "<strong>Esta jornada bloqueia a persona por 30 minutos.</strong> Execute-a por último na sessão, ou tenha o procedimento de destravamento do <a href=\"./ROTEIRO-00-AMBIENTE-E-MASSA.md\" rel=\"noreferrer\"><code>ROTEIRO-00</code></a> §7 <strong>D2</strong> a mão."
+            "<strong>Esta jornada bloqueia a persona por 30 minutos.</strong> Execute-a por último na sessão, ou tenha o procedimento de destravamento do <a href=\"./ROTEIRO-00-AMBIENTE-E-MASSA.md\" rel=\"noreferrer\"><code>ROTEIRO-00</code></a> §7 <strong>D2</strong> a mão.",
+            "<strong>Se algum passo daqui falhar, é regressão — não roteiro desatualizado.</strong> Este bloqueio <strong>nunca aconteceu</strong> entre a Sprint 5 e 2026-07-29: a tentativa falha era gravada dentro da transação do login e desfeita pelo erro de credencial, então nada chegava à tabela <code>login_attempt</code> e o lockout não tinha o que contar. A correção é recente e esta jornada é o que a guarda."
           ],
           "grupos": [
             {
@@ -2842,62 +2861,92 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 381,
+                  "linha": 392,
                   "ordem": 1
                 },
                 {
                   "key": "ROTEIRO-01/J-012.W-N1/P2",
                   "id": "P2",
-                  "hash": "bd801006",
-                  "textoHtml": "Tentar login de <code>cliente-b</code> com senha inválida, 4 vezes.",
-                  "comoHtml": "<code>cliente-b@sep.test</code> com uma senha errada qualquer, <strong>exatamente 4 vezes</strong> — contar. A quinta é o passo seguinte, e é ela que dispara o bloqueio. A mensagem tem de ser a mesma do P1: o sistema não distingue &quot;usuário não existe&quot; de &quot;senha errada&quot;.",
-                  "textoBusca": "tentar login de cliente-b com senha inválida, 4 vezes. cliente-b@sep.test com uma senha errada qualquer, exatamente 4 vezes — contar. a quinta é o passo seguinte, e é ela que dispara o bloqueio. a mensagem tem de ser a mesma do p1: o sistema não distingue \"usuário não existe\" de \"senha errada\".",
-                  "esperadoHtml": "mesmo erro genérico a cada tentativa.",
-                  "blocos": [],
-                  "na": false,
-                  "naMotivo": null,
-                  "marcadoNaFonte": false,
-                  "linha": 387,
-                  "ordem": 2
-                },
-                {
-                  "key": "ROTEIRO-01/J-012.W-N1/P3",
-                  "id": "P3",
-                  "hash": "82663c70",
-                  "textoHtml": "Quinta tentativa inválida.",
-                  "comoHtml": "Mais uma vez com senha errada. Agora a tela muda: em vez do erro no formulário, o navegador vai para uma página própria, <strong>Conta bloqueada temporariamente</strong>, com o número <code>423</code> em destaque. Esse 423 é o código HTTP de &quot;recurso trancado&quot;.",
-                  "textoBusca": "quinta tentativa inválida. mais uma vez com senha errada. agora a tela muda: em vez do erro no formulário, o navegador vai para uma página própria, conta bloqueada temporariamente, com o número 423 em destaque. esse 423 é o código http de \"recurso trancado\".",
-                  "esperadoHtml": "conta bloqueada; o web navega para <code>/account-locked</code> (o <code>error.interceptor</code> trata o HTTP <strong>423</strong>).",
-                  "blocos": [],
-                  "na": false,
-                  "naMotivo": null,
-                  "marcadoNaFonte": false,
-                  "linha": 392,
-                  "ordem": 3
-                },
-                {
-                  "key": "ROTEIRO-01/J-012.W-N1/P4",
-                  "id": "P4",
-                  "hash": "aa9abb40",
-                  "textoHtml": "Tentar login com a senha <strong>correta</strong> durante o bloqueio.",
-                  "comoHtml": "Voltar ao login e entrar com <code>cliente-b@sep.test</code> / <code>jornada-ownership-sep-2026</code> — a senha certa desta vez. Continuar bloqueado é o comportamento correto: se a senha certa destravasse, bastaria o atacante acertar para anular o bloqueio.",
-                  "textoBusca": "tentar login com a senha correta durante o bloqueio. voltar ao login e entrar com cliente-b@sep.test / jornada-ownership-sep-2026 — a senha certa desta vez. continuar bloqueado é o comportamento correto: se a senha certa destravasse, bastaria o atacante acertar para anular o bloqueio.",
-                  "esperadoHtml": "continua bloqueado. A senha certa não destrava antes do prazo.",
+                  "hash": "a9825697",
+                  "textoHtml": "Tentar login de <code>cliente-b</code> com senha inválida, <strong>5 vezes</strong>.",
+                  "comoHtml": "<code>cliente-b@sep.test</code> com uma senha errada qualquer, <strong>exatamente 5 vezes</strong> — contar. A mensagem tem de ser a mesma do P1: o sistema não distingue &quot;usuário não existe&quot; de &quot;senha errada&quot;. <strong>As cinco respondem erro de credencial, inclusive a quinta</strong> — o backend confere o bloqueio *antes* de conferir a senha, então na quinta ele ainda enxerga só quatro falhas gravadas, deixa passar, e só depois grava a quinta. É essa quinta que arma o bloqueio; quem vê o <code>423</code> é a requisição do passo seguinte. O rate limit por IP no login é de 10 por minuto, o dobro do limite de tentativas — cinco seguidas não disparam <code>429</code>. Se aparecer <code>429</code>, é outro problema, não o lockout.",
+                  "textoBusca": "tentar login de cliente-b com senha inválida, 5 vezes. cliente-b@sep.test com uma senha errada qualquer, exatamente 5 vezes — contar. a mensagem tem de ser a mesma do p1: o sistema não distingue \"usuário não existe\" de \"senha errada\". as cinco respondem erro de credencial, inclusive a quinta — o backend confere o bloqueio antes de conferir a senha, então na quinta ele ainda enxerga só quatro falhas gravadas, deixa passar, e só depois grava a quinta. é essa quinta que arma o bloqueio; quem vê o 423 é a requisição do passo seguinte. o rate limit por ip no login é de 10 por minuto, o dobro do limite de tentativas — cinco seguidas não disparam 429. se aparecer 429, é outro problema, não o lockout.",
+                  "esperadoHtml": "o mesmo erro genérico nas cinco. Nenhuma navegação para fora do login.",
                   "blocos": [],
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
                   "linha": 398,
+                  "ordem": 2
+                },
+                {
+                  "key": "ROTEIRO-01/J-012.W-N1/P3",
+                  "id": "P3",
+                  "hash": "e65bbc6f",
+                  "textoHtml": "Sexta requisição, agora com a senha <strong>correta</strong>.",
+                  "comoHtml": "<code>cliente-b@sep.test</code> com <code>jornada-ownership-sep-2026</code>, a senha certa desta vez. Este passo prova duas coisas de uma só: que o bloqueio está armado, e que a senha certa <strong>não</strong> destrava — se destravasse, bastaria ao atacante acertar uma vez para anular o bloqueio. A tela muda: em vez do erro no formulário, o navegador vai para uma página própria, <strong>Conta bloqueada temporariamente</strong>, com o número <code>423</code> em destaque. Esse 423 é o código HTTP de &quot;recurso trancado&quot;.",
+                  "textoBusca": "sexta requisição, agora com a senha correta. cliente-b@sep.test com jornada-ownership-sep-2026, a senha certa desta vez. este passo prova duas coisas de uma só: que o bloqueio está armado, e que a senha certa não destrava — se destravasse, bastaria ao atacante acertar uma vez para anular o bloqueio. a tela muda: em vez do erro no formulário, o navegador vai para uma página própria, conta bloqueada temporariamente, com o número 423 em destaque. esse 423 é o código http de \"recurso trancado\".",
+                  "esperadoHtml": "o web navega para <code>/account-locked</code> (o <code>error.interceptor</code> trata o HTTP <strong>423</strong>) e a sessão é limpa. A senha correta não entra.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 408,
+                  "ordem": 3
+                },
+                {
+                  "key": "ROTEIRO-01/J-012.W-N1/P4",
+                  "id": "P4",
+                  "hash": "ad950f93",
+                  "textoHtml": "Conferir que a explicação traz os números da política vigente.",
+                  "comoHtml": "Na <code>/account-locked</code>, ler o primeiro parágrafo. Ele tem de citar <strong>5 ou mais tentativas</strong>, janela de <strong>15 minutos</strong> e bloqueio de <strong>até 30 minutos</strong>. Esses três números não estão escritos na tela: vêm de <code>GET /api/v1/auth/politica-lockout</code> e por isso acompanham a configuração real do ambiente. Confirmar no DevTools, aba <strong>Network</strong>, filtrando por <code>politica</code>: a chamada tem de aparecer, com <code>200</code>. O &quot;5 <strong>ou mais</strong>&quot; é proposital — pelo P2 você sabe que dá para chegar aqui com mais de cinco.",
+                  "textoBusca": "conferir que a explicação traz os números da política vigente. na /account-locked, ler o primeiro parágrafo. ele tem de citar 5 ou mais tentativas, janela de 15 minutos e bloqueio de até 30 minutos. esses três números não estão escritos na tela: vêm de get /api/v1/auth/politica-lockout e por isso acompanham a configuração real do ambiente. confirmar no devtools, aba network, filtrando por politica: a chamada tem de aparecer, com 200. o \"5 ou mais\" é proposital — pelo p2 você sabe que dá para chegar aqui com mais de cinco.",
+                  "esperadoHtml": "os três números na copy e a chamada a <code>politica-lockout</code> com <code>200</code> na aba Network.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 417,
                   "ordem": 4
                 },
                 {
                   "key": "ROTEIRO-01/J-012.W-N1/P5",
                   "id": "P5",
-                  "hash": "2b2663c8",
+                  "hash": "9dc329d3",
+                  "textoHtml": "Recarregar a página de conta bloqueada (<code>F5</code>).",
+                  "comoHtml": "Ainda na <code>/account-locked</code>, recarregar. A página tem de continuar de pé, com a mesma copy. Este passo existe porque a tela já se autodestruiu por dois caminhos diferentes: a consulta da política levava um token velho e o erro da resposta arrancava o usuário de volta para o <code>/login</code> — justamente a tela que o <code>423</code> acabou de abrir. Ser jogado para o login aqui é <strong>ocorrência</strong>, não detalhe.",
+                  "textoBusca": "recarregar a página de conta bloqueada (f5). ainda na /account-locked, recarregar. a página tem de continuar de pé, com a mesma copy. este passo existe porque a tela já se autodestruiu por dois caminhos diferentes: a consulta da política levava um token velho e o erro da resposta arrancava o usuário de volta para o /login — justamente a tela que o 423 acabou de abrir. ser jogado para o login aqui é ocorrência, não detalhe.",
+                  "esperadoHtml": "continua em <code>/account-locked</code>. Nenhuma navegação para <code>/login</code>.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 426,
+                  "ordem": 5
+                },
+                {
+                  "key": "ROTEIRO-01/J-012.W-N1/P6",
+                  "id": "P6",
+                  "hash": "9f0a11bf",
+                  "textoHtml": "Conferir que o foco foi para o título.",
+                  "comoHtml": "Logo depois do reload do P5, <strong>sem clicar em nada</strong>, apertar <code>Tab</code> uma vez. O foco tem de sair do título <strong>Conta bloqueada temporariamente</strong> e cair no link <strong>Voltar ao login</strong> — é isso que prova que ele estava no título. Importa para quem usa leitor de tela: sem o foco no lugar, a pessoa fica em silêncio numa tela nova, no desfecho de um evento de segurança.",
+                  "textoBusca": "conferir que o foco foi para o título. logo depois do reload do p5, sem clicar em nada, apertar tab uma vez. o foco tem de sair do título conta bloqueada temporariamente e cair no link voltar ao login — é isso que prova que ele estava no título. importa para quem usa leitor de tela: sem o foco no lugar, a pessoa fica em silêncio numa tela nova, no desfecho de um evento de segurança.",
+                  "esperadoHtml": "o primeiro <code>Tab</code> leva ao link <strong>Voltar ao login</strong>.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 433,
+                  "ordem": 6
+                },
+                {
+                  "key": "ROTEIRO-01/J-012.W-N1/P7",
+                  "id": "P7",
+                  "hash": "49b35ea5",
                   "textoHtml": "Conferir o audit log:",
-                  "comoHtml": "Terminal do banco. Procurar na saída os eventos das tentativas e do bloqueio que você acabou de provocar. Tentativa de invasão sem trilha registrada é defeito de compliance, não detalhe. Terminada a jornada, <code>cliente-b</code> fica travado por 30 minutos — para destravar antes, o <strong>D2</strong> do <a href=\"./ROTEIRO-00-AMBIENTE-E-MASSA.md\" rel=\"noreferrer\"><code>ROTEIRO-00</code></a> §7.",
-                  "textoBusca": "conferir o audit log: terminal do banco. procurar na saída os eventos das tentativas e do bloqueio que você acabou de provocar. tentativa de invasão sem trilha registrada é defeito de compliance, não detalhe. terminada a jornada, cliente-b fica travado por 30 minutos — para destravar antes, o d2 do roteiro-00 §7.",
-                  "esperadoHtml": "tentativas e bloqueio registrados.",
+                  "comoHtml": "Terminal do banco. Procurar na saída os eventos das tentativas e do bloqueio que você acabou de provocar. Além do <code>LOCKOUT</code> (o bloqueio em si), tem de aparecer <strong><code>LOCKOUT_TENTATIVA_BARRADA</code></strong>, que é a tentativa do P3 — a que bateu na porta já trancada. Até a Sprint 33 nenhuma tentativa barrada deixava rastro, porque a verificação lançava antes de qualquer gravação. Tentativa de invasão sem trilha registrada é defeito de compliance, não detalhe. Terminada a jornada, <code>cliente-b</code> fica travado por 30 minutos — para destravar antes, o <strong>D2</strong> do <a href=\"./ROTEIRO-00-AMBIENTE-E-MASSA.md\" rel=\"noreferrer\"><code>ROTEIRO-00</code></a> §7.",
+                  "textoBusca": "conferir o audit log: terminal do banco. procurar na saída os eventos das tentativas e do bloqueio que você acabou de provocar. além do lockout (o bloqueio em si), tem de aparecer lockouttentativabarrada, que é a tentativa do p3 — a que bateu na porta já trancada. até a sprint 33 nenhuma tentativa barrada deixava rastro, porque a verificação lançava antes de qualquer gravação. tentativa de invasão sem trilha registrada é defeito de compliance, não detalhe. terminada a jornada, cliente-b fica travado por 30 minutos — para destravar antes, o d2 do roteiro-00 §7.",
+                  "esperadoHtml": "<code>LOCKOUT</code> e <code>LOCKOUT_TENTATIVA_BARRADA</code> registrados, além das tentativas.",
                   "blocos": [
                     {
                       "tipo": "codigo",
@@ -2909,18 +2958,79 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 404,
-                  "ordem": 5
+                  "linha": 440,
+                  "ordem": 7
+                },
+                {
+                  "key": "ROTEIRO-01/J-012.W-N1/P8",
+                  "id": "P8",
+                  "hash": "fed62563",
+                  "textoHtml": "Conferir o texto de reserva com a API fora do ar.",
+                  "comoHtml": "Parar a API no terminal do <strong>A3</strong> (<code>Ctrl+C</code>) e recarregar a <code>/account-locked</code>. Sem a política, a tela cai num texto <strong>sem número nenhum</strong> (&quot;por um período limitado&quot;). Isso é deliberado: entre vago e verdadeiro ou preciso e falso, numa tela de desfecho de segurança, vago vence — um &quot;30 minutos&quot; fixo seria mentira num ambiente configurado com outro valor. A tela não pode ficar em branco nem mostrar erro. Religar a API (<code>./gradlew bootRun</code>) antes de seguir.",
+                  "textoBusca": "conferir o texto de reserva com a api fora do ar. parar a api no terminal do a3 (ctrl+c) e recarregar a /account-locked. sem a política, a tela cai num texto sem número nenhum (\"por um período limitado\"). isso é deliberado: entre vago e verdadeiro ou preciso e falso, numa tela de desfecho de segurança, vago vence — um \"30 minutos\" fixo seria mentira num ambiente configurado com outro valor. a tela não pode ficar em branco nem mostrar erro. religar a api (./gradlew bootrun) antes de seguir.",
+                  "esperadoHtml": "a página abre completa, com a explicação sem números. Nenhuma tela em branco.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 453,
+                  "ordem": 8
                 }
               ]
             }
           ],
-          "assercoes": [],
-          "linha": 362,
+          "assercoes": [
+            {
+              "key": "ROTEIRO-01/J-012.W-N1/#c9a1e49d",
+              "id": null,
+              "hash": "7f748f62",
+              "textoHtml": "Cinco falhas armam o bloqueio e a sexta requisição o revela, mesmo com a senha correta",
+              "comoHtml": null,
+              "textoBusca": "cinco falhas armam o bloqueio e a sexta requisição o revela, mesmo com a senha correta",
+              "esperadoHtml": null,
+              "blocos": [],
+              "na": false,
+              "naMotivo": null,
+              "marcadoNaFonte": false,
+              "linha": 464,
+              "ordem": 1
+            },
+            {
+              "key": "ROTEIRO-01/J-012.W-N1/#98f3568a",
+              "id": null,
+              "hash": "5c7e8be8",
+              "textoHtml": "O bloqueio deixa trilha: <code>LOCKOUT</code> e <code>LOCKOUT_TENTATIVA_BARRADA</code> no audit",
+              "comoHtml": null,
+              "textoBusca": "o bloqueio deixa trilha: lockout e lockouttentativabarrada no audit",
+              "esperadoHtml": null,
+              "blocos": [],
+              "na": false,
+              "naMotivo": null,
+              "marcadoNaFonte": false,
+              "linha": 465,
+              "ordem": 2
+            },
+            {
+              "key": "ROTEIRO-01/J-012.W-N1/#0a6a70b2",
+              "id": null,
+              "hash": "4fb9b2ee",
+              "textoHtml": "A <code>/account-locked</code> sobrevive a recarga e à API fora do ar, sem nunca anunciar um número que não seja o da política vigente",
+              "comoHtml": null,
+              "textoBusca": "a /account-locked sobrevive a recarga e à api fora do ar, sem nunca anunciar um número que não seja o da política vigente",
+              "esperadoHtml": null,
+              "blocos": [],
+              "na": false,
+              "naMotivo": null,
+              "marcadoNaFonte": false,
+              "linha": 466,
+              "ordem": 3
+            }
+          ],
+          "linha": 366,
           "stats": {
-            "passos": 5,
+            "passos": 8,
             "na": 0,
-            "assercoes": 0
+            "assercoes": 3
           }
         },
         {
@@ -2998,7 +3108,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 431,
+                  "linha": 485,
                   "ordem": 1
                 },
                 {
@@ -3013,7 +3123,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 436,
+                  "linha": 490,
                   "ordem": 2
                 },
                 {
@@ -3028,14 +3138,14 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 440,
+                  "linha": 494,
                   "ordem": 3
                 }
               ]
             }
           ],
           "assercoes": [],
-          "linha": 417,
+          "linha": 471,
           "stats": {
             "passos": 3,
             "na": 0,
@@ -3135,7 +3245,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 469,
+                  "linha": 523,
                   "ordem": 1
                 },
                 {
@@ -3150,7 +3260,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 476,
+                  "linha": 530,
                   "ordem": 2
                 },
                 {
@@ -3165,7 +3275,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 482,
+                  "linha": 536,
                   "ordem": 3
                 },
                 {
@@ -3180,7 +3290,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 488,
+                  "linha": 542,
                   "ordem": 4
                 },
                 {
@@ -3195,7 +3305,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 493,
+                  "linha": 547,
                   "ordem": 5
                 },
                 {
@@ -3210,7 +3320,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 498,
+                  "linha": 552,
                   "ordem": 6
                 },
                 {
@@ -3225,7 +3335,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 502,
+                  "linha": 556,
                   "ordem": 7
                 },
                 {
@@ -3247,7 +3357,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 505,
+                  "linha": 559,
                   "ordem": 8
                 }
               ]
@@ -3266,7 +3376,7 @@ window.SEP_DADOS = {
               "na": false,
               "naMotivo": null,
               "marcadoNaFonte": false,
-              "linha": 515,
+              "linha": 569,
               "ordem": 1
             },
             {
@@ -3281,11 +3391,11 @@ window.SEP_DADOS = {
               "na": false,
               "naMotivo": null,
               "marcadoNaFonte": false,
-              "linha": 516,
+              "linha": 570,
               "ordem": 2
             }
           ],
-          "linha": 450,
+          "linha": 504,
           "stats": {
             "passos": 8,
             "na": 0,
@@ -3367,7 +3477,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 537,
+                  "linha": 591,
                   "ordem": 1
                 },
                 {
@@ -3382,14 +3492,14 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 546,
+                  "linha": 600,
                   "ordem": 2
                 }
               ]
             }
           ],
           "assercoes": [],
-          "linha": 523,
+          "linha": 577,
           "stats": {
             "passos": 2,
             "na": 0,
@@ -3479,7 +3589,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 576,
+                  "linha": 630,
                   "ordem": 1
                 },
                 {
@@ -3494,7 +3604,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 581,
+                  "linha": 635,
                   "ordem": 2
                 },
                 {
@@ -3509,7 +3619,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 587,
+                  "linha": 641,
                   "ordem": 3
                 },
                 {
@@ -3524,7 +3634,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 592,
+                  "linha": 646,
                   "ordem": 4
                 },
                 {
@@ -3539,7 +3649,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 597,
+                  "linha": 651,
                   "ordem": 5
                 },
                 {
@@ -3561,14 +3671,14 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 601,
+                  "linha": 655,
                   "ordem": 6
                 }
               ]
             }
           ],
           "assercoes": [],
-          "linha": 556,
+          "linha": 610,
           "stats": {
             "passos": 6,
             "na": 0,
@@ -3644,7 +3754,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 624,
+                  "linha": 678,
                   "ordem": 1
                 },
                 {
@@ -3659,7 +3769,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 630,
+                  "linha": 684,
                   "ordem": 2
                 },
                 {
@@ -3674,7 +3784,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 635,
+                  "linha": 689,
                   "ordem": 3
                 },
                 {
@@ -3696,14 +3806,14 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 640,
+                  "linha": 694,
                   "ordem": 4
                 }
               ]
             }
           ],
           "assercoes": [],
-          "linha": 611,
+          "linha": 665,
           "stats": {
             "passos": 4,
             "na": 0,
@@ -3805,7 +3915,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 671,
+                  "linha": 725,
                   "ordem": 1
                 },
                 {
@@ -3820,7 +3930,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 678,
+                  "linha": 732,
                   "ordem": 2
                 },
                 {
@@ -3835,7 +3945,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 683,
+                  "linha": 737,
                   "ordem": 3
                 },
                 {
@@ -3850,7 +3960,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 688,
+                  "linha": 742,
                   "ordem": 4
                 },
                 {
@@ -3865,7 +3975,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 693,
+                  "linha": 747,
                   "ordem": 5
                 },
                 {
@@ -3880,14 +3990,14 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 698,
+                  "linha": 752,
                   "ordem": 6
                 }
               ]
             }
           ],
           "assercoes": [],
-          "linha": 651,
+          "linha": 705,
           "stats": {
             "passos": 6,
             "na": 0,
@@ -3965,7 +4075,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 721,
+                  "linha": 775,
                   "ordem": 1
                 },
                 {
@@ -3980,7 +4090,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 727,
+                  "linha": 781,
                   "ordem": 2
                 },
                 {
@@ -3995,7 +4105,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 733,
+                  "linha": 787,
                   "ordem": 3
                 },
                 {
@@ -4010,7 +4120,7 @@ window.SEP_DADOS = {
                   "na": false,
                   "naMotivo": null,
                   "marcadoNaFonte": false,
-                  "linha": 739,
+                  "linha": 793,
                   "ordem": 4
                 }
               ]
@@ -4029,7 +4139,7 @@ window.SEP_DADOS = {
               "na": false,
               "naMotivo": null,
               "marcadoNaFonte": false,
-              "linha": 747,
+              "linha": 801,
               "ordem": 1
             },
             {
@@ -4044,11 +4154,11 @@ window.SEP_DADOS = {
               "na": false,
               "naMotivo": null,
               "marcadoNaFonte": false,
-              "linha": 748,
+              "linha": 802,
               "ordem": 2
             }
           ],
-          "linha": 708,
+          "linha": 762,
           "stats": {
             "passos": 4,
             "na": 0,

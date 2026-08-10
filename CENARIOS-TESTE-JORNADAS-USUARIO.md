@@ -8,7 +8,7 @@
 > Estado do produto e escopo da fase ficam no repo `docs-SEP`
 > (`docs-sep/STATE.md` e `docs-sep/PRD-FASE-4.md` §37).
 
-_Atualizado em: 2026-07-21._
+_Atualizado em: 2026-08-10._
 
 ## 1. Objetivo
 
@@ -188,7 +188,7 @@ As specs rodam contra **MSW**, não contra o backend real, e **não rodam em CI*
 
 | Roteiro | Specs web | Specs mobile |
 |---|---|---|
-| `ROTEIRO-01` | `smoke`, `golden-path` | `smoke`, `golden-path-mobile` (**vermelha**), `profile-actions` |
+| `ROTEIRO-01` | `smoke`, `golden-path`, `account-locked` | `smoke`, `golden-path-mobile`, `profile-actions`, `account-locked-mobile`, `foco-redirect-mobile`, `landmarks-mobile` |
 | `ROTEIRO-02` | `governanca`, `admin-flow` | — |
 | `ROTEIRO-03` | `onboarding` | `onboarding-mobile` |
 | `ROTEIRO-04` | `golden-path` (parcial) | `credito-mobile`, `formalizacao-mobile` |
@@ -197,10 +197,12 @@ As specs rodam contra **MSW**, não contra o backend real, e **não rodam em CI*
 | `ROTEIRO-07` | `pix`, `pix-chaves` | `pix-mobile` |
 | `ROTEIRO-08` | `backoffice` | — |
 
-> `golden-path-mobile.spec.ts` esta vermelha desde a M-13. E a **única** spec que já bate no
-> `:8080` real — as demais injetam MSW. A jornada `J-010.M` do
-> [`ROTEIRO-01`](./ROTEIRO-01-ACESSO-E-SESSAO.md) executa manualmente o mesmo
-> caminho e serve de referência para o diagnóstico.
+> `golden-path-mobile.spec.ts` **deixou de ser vermelha em 2026-07-31**: a M-Sprint 17 a
+> reescreveu contra MSW e a suíte e2e do mobile fechou verde. Ela também deixou de ser a única
+> spec que batia no `:8080` real — hoje **nenhuma** bate; todas rodam contra o MSW. Isso não afrouxa
+> o roteiro, muda o argumento: a cobertura automatizada prova o app contra um mock que a própria
+> equipe escreve, e o único lugar onde o contrato com o backend real é exercido é a execução
+> manual daqui.
 
 ## 7. Limitações e jornadas inexistentes
 
@@ -251,7 +253,7 @@ o MFA antes, pelo web.
 
 | Item | Gate | Reativa quando |
 |---|---|---|
-| Android nativo, biometria, deep link, back físico | **Escopo deste ciclo** — só navegador | Houver aparelho ou emulador Android disponível |
+| Android nativo, biometria, deep link, back físico | **Escopo deste ciclo** — só navegador | Decisão de escopo, não falta de ferramenta: a máquina de dev **tem** Android SDK e roda `gradlew assembleDebug` local (conferido na M-13 e na M-17). Reativa quando este roteiro admitir superfície nativa |
 | iOS nativo (M-14) e biometria iOS (M-15) | Hardware macOS 13+ para Xcode 15+ | Mac com macOS 13+, cloud Mac ou runner CI macOS |
 | Matching, aporte POST e chaves Pix no mobile | **Gate M-16.0** — contratos exigem `FINANCEIRO`/`ADMIN`, role inexistente no `sep-mobile` | ADR + revisão da spec 216, ou backend que admita a credora dona |
 | Celcoin real, AWS, publicação em lojas | Fase 5 | Credenciais e contas liberadas |
@@ -263,6 +265,12 @@ meses e alguém reinvestigar do zero.
 ## 8. Achados a confirmar em execução
 
 Suspeitas levantadas na leitura do código. São **verificações**, não afirmações.
+
+> **Reconferidos no código em 2026-08-10**, para o próximo leitor não refazer o trabalho: o **A2**
+> e o **A4** continuam válidos — o `roleGuard` do web compara a role **principal**
+> (`allowedRoles.includes(user.role)`), e não existe equivalente do `redirectAuthenticatedGuard`
+> no `sep-app`. O **A1**, o **A3** e o **A5** não foram medidos e seguem como estavam. Nenhum foi
+> fechado pelas sprints de julho e agosto.
 
 - [ ] **A1** — A rota `/app/credora` **não** tem `roleGuard`, embora o item de menu seja
       `roles: ['CLIENTE']`. Conferir se `financeiro`, `backoffice` e `admin` alcançam a tela
@@ -468,6 +476,7 @@ Termos que aparecem nos roteiros e não são óbvios para quem chega agora. No a
 
 | Data | Mudanca |
 |---|---|
+| 2026-08-10 | Ressincronização com o produto depois das Sprints 33, F-21, F-22, M-17, 34, D-1, F-23 e F-24. A `J-012.W-N1` foi revista: são **5 falhas para armar e a 6ª requisição para revelar** o bloqueio (o roteiro dizia "quinta tentativa"), e a jornada ganhou os passos da `/account-locked` dinâmica, do foco e do audit `LOCKOUT_TENTATIVA_BARRADA`. `ROTEIRO-00` §6.4 ganhou a semântica correta da política e o rate limit de 10/min; o **D2** deixou de mandar reiniciar a API (não era necessário) e o restart virou o **D3** novo, só para `429` — o antigo D3 (rodada nova) passou a **D4**. |
 | 2026-07-21 | Passos ganham `_Como:_` (instrução de execução) e o hub ganha §12 Glossário; roteiros passam a ser escritos em PT-BR acentuado. Histórico vira §13. |
 | 2026-07-21 | App de execução em [`app/`](./app/): a marcação sai do markdown e vai para o navegador; a "regra da copia por execução" e substituida por exportar JSON. Novas seções §10 (regenerar) e §11 (formato dos roteiros). |
 | 2026-07-21 | Reescrita completa. Vira hub de execução manual contra backend real; jornadas movidas para `roteiros-teste/`; `ROTEIRO-00`, `01` e `04` escritos como piloto. |
