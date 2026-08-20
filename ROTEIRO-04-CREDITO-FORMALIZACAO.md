@@ -80,8 +80,8 @@ Dois pontos que mudam o roteiro:
 
 #### Tela `/app/credito/propostas/nova`
 
-> **Esta jornada exige `PRE-11`** — `cliente-a` com onboarding aprovado, que é produzido pelo
-> roteiro de onboarding, não pelo preparo do ROTEIRO-00. Sem isso, o comportamento correto é o
+> **Esta jornada exige `PRE-11`** — `cliente-a` em `APROVADO_FINAL`, que é produzido pelo
+> [`ROTEIRO-03`](./ROTEIRO-03-ONBOARDING.md), não pelo preparo do ROTEIRO-00. Sem isso, o comportamento correto é o
 > da [`J-061.W-N1`](#j-061w-n1---proposta-sem-onboarding-aprovado): a UI manda você para o
 > onboarding. Se for esse o caso, execute o onboarding antes e volte.
 

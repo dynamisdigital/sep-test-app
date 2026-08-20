@@ -75,7 +75,7 @@ Algumas pré-condições são produzidas por jornadas, não por setup. A ordem i
 
 1. [`ROTEIRO-00`](./ROTEIRO-00-AMBIENTE-E-MASSA.md) — obrigatório, sempre primeiro
 2. [`ROTEIRO-01`](./ROTEIRO-01-ACESSO-E-SESSAO.md) — acesso e sessão
-3. Onboarding — produz `PRE-11` (KYC aprovado)
+3. [`ROTEIRO-03`](./ROTEIRO-03-ONBOARDING.md) — onboarding; produz `PRE-11` (`APROVADO_FINAL`)
 4. [`ROTEIRO-04`](./ROTEIRO-04-CREDITO-FORMALIZACAO.md) — produz `PRE-12` (contrato assinado)
 5. Cobrança — depende de contrato `ASSINADO`
 6. Credora, Pix, backoffice e financeiro — independentes entre si
@@ -131,8 +131,8 @@ Três pontos que costumam derrubar a primeira execução:
 | Banda | Família | Roteiro | Status |
 |---|---|---|---|
 | `J-000`–`J-039` | Público, login, MFA, sessão, perfil, senha, step-up | [`ROTEIRO-01`](./ROTEIRO-01-ACESSO-E-SESSAO.md) | **escrito** |
-| `J-040`–`J-049` | Governança, usuários, parâmetros | `ROTEIRO-02` | a escrever |
-| `J-050`–`J-059` | Onboarding KYC PF e KYB PJ + PLD | `ROTEIRO-03` | a escrever |
+| `J-040`–`J-049` | Governança, usuários, parâmetros | [`ROTEIRO-02`](./ROTEIRO-02-GOVERNANCA.md) | **escrito** |
+| `J-050`–`J-059` | Onboarding KYC PF e KYB PJ + PLD | [`ROTEIRO-03`](./ROTEIRO-03-ONBOARDING.md) | **escrito** |
 | `J-060`–`J-079` | Crédito, Open Finance, formalização, CCB | [`ROTEIRO-04`](./ROTEIRO-04-CREDITO-FORMALIZACAO.md) | **escrito** |
 | `J-080`–`J-089` | Cobrança, inadimplência, renegociação, recebimentos | `ROTEIRO-05` | a escrever |
 | `J-090`–`J-099` | **Congelada** — não reusar | — | — |
@@ -164,7 +164,7 @@ banda fica vazia como sinalização.
 | Enrollment de TOTP | sim | **não existe** | sim | Sprint 5 |
 | Perfil e alteração de senha | sim | sim | sim | Sprints 2, 3 |
 | Onboarding KYC PF | sim | sim | sim | Sprint 6 / F-6 / M-6 |
-| Onboarding KYB PJ + PLD | sim | — | sim | Sprint 7 / F-6 |
+| Onboarding KYB PJ + PLD | sim | sim | sim | Sprint 7 / F-6 / M-6 |
 | Proposta de crédito e parecer | sim | sim | sim | Sprint 8 / F-7 / M-7 |
 | Open Finance | sim | sim | sim | Sprint 9 / F-7 / M-7 |
 | Formalização, aceite, CCB | sim | sim | sim | Sprints 10-11 / F-8 / M-8 |
@@ -318,7 +318,7 @@ Este arquivo substitui o catálogo `J-001`..`J-092` congelado em 2026-05-13, que
 | `J-021` (alterar nome) | **removida** — não há endpoint de atualização de perfil |
 | `J-025` (deleção de conta) | **removida** — ver §7.1 |
 | `J-030`..`J-032` | `J-030.W`, `J-031.W`, biometria no `ROTEIRO-09` |
-| `J-040`..`J-042` | `ROTEIRO-02` |
+| `J-040`..`J-042` | [`ROTEIRO-02`](./ROTEIRO-02-GOVERNANCA.md) |
 | `J-050`..`J-053` | `ROTEIRO-03` |
 | `J-060`..`J-062` | `J-060.W`, `J-061.W-N1`, `J-070.W` |
 | `J-070`, `J-071` | `ROTEIRO-05` (banda `J-080`+) |

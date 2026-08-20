@@ -600,9 +600,9 @@ As jornadas referenciam estes identificadores em vez de repetir o preparo.
 | `PRE-08` | `financeiro` com TOTP habilitado | §6.2 **C7** |
 | `PRE-09` | `cliente-b` **sem** TOTP | §6.1 **C1** (não habilitar) |
 | `PRE-10` | Autenticador TOTP a mão | §2 |
-| `PRE-11` | `cliente-a` com KYC aprovado | Roteiro de onboarding |
-| `PRE-12` | `cliente-a` com proposta aprovada e contrato aguardando aceite | Roteiro de crédito |
-| `PRE-13` | `credora` cadastrada e elegível | Roteiro de credora |
+| `PRE-11` | `cliente-a` em `APROVADO_FINAL` (KYC + PLD) | [`ROTEIRO-03`](./ROTEIRO-03-ONBOARDING.md) `J-050.W` + `J-051.A` |
+| `PRE-12` | `cliente-a` com proposta aprovada e contrato aguardando aceite | [`ROTEIRO-04`](./ROTEIRO-04-CREDITO-FORMALIZACAO.md) |
+| `PRE-13` | `credora` cadastrada e elegível | KYB em [`ROTEIRO-03`](./ROTEIRO-03-ONBOARDING.md) `J-056.W` + cadastro no roteiro de credora |
 
 `PRE-11` a `PRE-13` são produzidas por jornadas, não por setup. Por isso a ordem de execução
 recomendada no hub importa: onboarding antes de crédito, crédito antes de cobrança.

@@ -2,18 +2,18 @@
 // Fonte: *.md na raiz do sep-test-app — rode `npm run gerar` apos editar.
 window.SEP_DADOS = {
   "schemaVersion": 1,
-  "geradoEm": "2026-08-10T13:43:17.053Z",
+  "geradoEm": "2026-08-20T13:22:13.040Z",
   "gerador": {
     "arquivo": "gerar-dados.mjs",
     "versao": "1.1.0"
   },
   "totais": {
-    "roteiros": 4,
-    "escopos": 39,
-    "jornadas": 25,
-    "passos": 174,
-    "assercoes": 26,
-    "na": 1
+    "roteiros": 6,
+    "escopos": 62,
+    "jornadas": 48,
+    "passos": 324,
+    "assercoes": 36,
+    "na": 3
   },
   "glossario": [
     {
@@ -177,6 +177,84 @@ window.SEP_DADOS = {
       },
       {
         "codigo": "SEM_RESULTADO_FINAL",
+        "arquivo": "ROTEIRO-02-GOVERNANCA.md",
+        "linha": 173,
+        "msg": "jornada J-040.W-N1 sem \"Resultado final esperado\""
+      },
+      {
+        "codigo": "SEM_RESULTADO_FINAL",
+        "arquivo": "ROTEIRO-02-GOVERNANCA.md",
+        "linha": 293,
+        "msg": "jornada J-041.W-N1 sem \"Resultado final esperado\""
+      },
+      {
+        "codigo": "SEM_RESULTADO_FINAL",
+        "arquivo": "ROTEIRO-02-GOVERNANCA.md",
+        "linha": 483,
+        "msg": "jornada J-043.W-N1 sem \"Resultado final esperado\""
+      },
+      {
+        "codigo": "SEM_RESULTADO_FINAL",
+        "arquivo": "ROTEIRO-02-GOVERNANCA.md",
+        "linha": 526,
+        "msg": "jornada J-044.M-N1 sem \"Resultado final esperado\""
+      },
+      {
+        "codigo": "SEM_RESULTADO_FINAL",
+        "arquivo": "ROTEIRO-03-ONBOARDING.md",
+        "linha": 217,
+        "msg": "jornada J-050.W-N1 sem \"Resultado final esperado\""
+      },
+      {
+        "codigo": "SEM_RESULTADO_FINAL",
+        "arquivo": "ROTEIRO-03-ONBOARDING.md",
+        "linha": 343,
+        "msg": "jornada J-051.A-N1 sem \"Resultado final esperado\""
+      },
+      {
+        "codigo": "SEM_RESULTADO_FINAL",
+        "arquivo": "ROTEIRO-03-ONBOARDING.md",
+        "linha": 587,
+        "msg": "jornada J-052.W-N1 sem \"Resultado final esperado\""
+      },
+      {
+        "codigo": "SEM_RESULTADO_FINAL",
+        "arquivo": "ROTEIRO-03-ONBOARDING.md",
+        "linha": 631,
+        "msg": "jornada J-052.W-N2 sem \"Resultado final esperado\""
+      },
+      {
+        "codigo": "SEM_RESULTADO_FINAL",
+        "arquivo": "ROTEIRO-03-ONBOARDING.md",
+        "linha": 671,
+        "msg": "jornada J-053.A-N1 sem \"Resultado final esperado\""
+      },
+      {
+        "codigo": "SEM_RESULTADO_FINAL",
+        "arquivo": "ROTEIRO-03-ONBOARDING.md",
+        "linha": 710,
+        "msg": "jornada J-054.W-N1 sem \"Resultado final esperado\""
+      },
+      {
+        "codigo": "SEM_RESULTADO_FINAL",
+        "arquivo": "ROTEIRO-03-ONBOARDING.md",
+        "linha": 762,
+        "msg": "jornada J-055.M sem \"Resultado final esperado\""
+      },
+      {
+        "codigo": "SEM_RESULTADO_FINAL",
+        "arquivo": "ROTEIRO-03-ONBOARDING.md",
+        "linha": 891,
+        "msg": "jornada J-057.A sem \"Resultado final esperado\""
+      },
+      {
+        "codigo": "SEM_RESULTADO_FINAL",
+        "arquivo": "ROTEIRO-03-ONBOARDING.md",
+        "linha": 932,
+        "msg": "jornada J-058.A sem \"Resultado final esperado\""
+      },
+      {
+        "codigo": "SEM_RESULTADO_FINAL",
         "arquivo": "ROTEIRO-04-CREDITO-FORMALIZACAO.md",
         "linha": 137,
         "msg": "jornada J-061.W-N1 sem \"Resultado final esperado\""
@@ -223,7 +301,7 @@ window.SEP_DADOS = {
     {
       "id": "CENARIOS",
       "arquivo": "CENARIOS-TESTE-JORNADAS-USUARIO.md",
-      "hash": "010e8d52",
+      "hash": "77425dc4",
       "titulo": "Roteiro de teste manual - Jornadas de usuário SEP",
       "tipo": "hub",
       "ordem": 0,
@@ -405,7 +483,7 @@ window.SEP_DADOS = {
     {
       "id": "ROTEIRO-00",
       "arquivo": "ROTEIRO-00-AMBIENTE-E-MASSA.md",
-      "hash": "773e71f1",
+      "hash": "2e6283cc",
       "titulo": "Roteiro 00 - Ambiente e massa de dados",
       "tipo": "secoes",
       "ordem": 10,
@@ -4223,9 +4301,4797 @@ window.SEP_DADOS = {
       ]
     },
     {
+      "id": "ROTEIRO-02",
+      "arquivo": "ROTEIRO-02-GOVERNANCA.md",
+      "hash": "e599290a",
+      "titulo": "Roteiro 02 - Governança, usuários e parâmetros",
+      "tipo": "jornadas",
+      "ordem": 12,
+      "atualizadoEm": "2026-08-20",
+      "resumoHtml": "",
+      "escopos": [
+        {
+          "key": "ROTEIRO-02/J-040.W",
+          "id": "J-040.W",
+          "escopoId": "J-040.W",
+          "kind": "jornada",
+          "nivel": 3,
+          "titulo": "ADMIN consulta usuários e roles",
+          "anchor": "j-040w---admin-consulta-usurios-e-roles",
+          "ordem": 1,
+          "meta": [
+            {
+              "chave": "ID",
+              "texto": "J-040.W",
+              "html": "<code>J-040.W</code>"
+            },
+            {
+              "chave": "Tipo",
+              "texto": "Positiva — leitura",
+              "html": "Positiva — leitura"
+            },
+            {
+              "chave": "Persona",
+              "texto": "admin",
+              "html": "<code>admin</code>"
+            },
+            {
+              "chave": "Superfície",
+              "texto": "Web",
+              "html": "Web"
+            },
+            {
+              "chave": "Pré-condições",
+              "texto": "PRE-01 PRE-02 PRE-04 PRE-05 PRE-06",
+              "html": "<code>PRE-01</code> <code>PRE-02</code> <code>PRE-04</code> <code>PRE-05</code> <code>PRE-06</code>"
+            },
+            {
+              "chave": "Endpoints tocados",
+              "texto": "GET /usuarios, GET /usuarios/{id}, GET /usuarios/{id}/roles",
+              "html": "<code>GET /usuarios</code>, <code>GET /usuarios/{id}</code>, <code>GET /usuarios/{id}/roles</code>"
+            },
+            {
+              "chave": "Step-up",
+              "texto": "não — leitura",
+              "html": "não — leitura"
+            },
+            {
+              "chave": "Duração",
+              "texto": "6 min",
+              "html": "6 min"
+            },
+            {
+              "chave": "Automação equivalente",
+              "texto": "governanca.spec.ts, admin-flow.spec.ts (Playwright, contra MSW)",
+              "html": "<code>governanca.spec.ts</code>, <code>admin-flow.spec.ts</code> (Playwright, contra MSW)"
+            },
+            {
+              "chave": "Só o manual cobre",
+              "texto": "Backend real, precedência da role principal sobre dados reais",
+              "html": "Backend real, precedência da role principal sobre dados reais"
+            }
+          ],
+          "metaIndex": {
+            "ID": "J-040.W",
+            "Tipo": "Positiva — leitura",
+            "Persona": "admin",
+            "Superfície": "Web",
+            "Pré-condições": "PRE-01 PRE-02 PRE-04 PRE-05 PRE-06",
+            "Endpoints tocados": "GET /usuarios, GET /usuarios/{id}, GET /usuarios/{id}/roles",
+            "Step-up": "não — leitura",
+            "Duração": "6 min",
+            "Automação equivalente": "governanca.spec.ts, admin-flow.spec.ts (Playwright, contra MSW)",
+            "Só o manual cobre": "Backend real, precedência da role principal sobre dados reais"
+          },
+          "notas": [
+            "Família <code>J-040</code> a <code>J-049</code>: administração de usuários, roles cumulativas, parâmetros operacionais governados e negação de acesso à área administrativa. Requer <a href=\"./ROTEIRO-00-AMBIENTE-E-MASSA.md\" rel=\"noreferrer\"><code>ROTEIRO-00</code></a> concluído. Hub: <a href=\"./CENARIOS-TESTE-JORNADAS-USUARIO.md\" rel=\"noreferrer\"><code>CENARIOS-TESTE-JORNADAS-USUARIO.md</code></a>.",
+            "<strong>Execute pelo <a href=\"./app/index.html\" rel=\"noreferrer\">app</a></strong>, não editando este arquivo — as caixas aqui ficam sempre vazias. Desvio não vira caixa marcada: vira <strong>ocorrência</strong> registrada no passo.",
+            "<strong>Não use <code>credito.valor.maximo.pf</code> como cobaia.</strong> Ele tem gêmeo no <code>application.yml</code> com o mesmo valor, e deixá-lo divergente atrapalha a leitura do <code>ROTEIRO-04</code> por quem vier depois. O parâmetro de webhook é <code>INTEGER</code> como ele, serve para os mesmos testes e não induz ninguém a erro."
+          ],
+          "grupos": [
+            {
+              "id": "g2",
+              "tituloHtml": "Tela <code>/app/admin</code>",
+              "tela": "/app/admin",
+              "implicito": false,
+              "passos": [
+                {
+                  "key": "ROTEIRO-02/J-040.W/P1",
+                  "id": "P1",
+                  "hash": "b6d3d13e",
+                  "textoHtml": "Abrir a área administrativa.",
+                  "comoHtml": "Logado como <code>admin@sep.test</code>, procurar <strong>Administração</strong> no menu.",
+                  "textoBusca": "abrir a área administrativa. logado como admin@sep.test, procurar administração no menu.",
+                  "esperadoHtml": "<code>/app/admin</code> abre com os acessos de governança de usuários e parâmetros.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 123,
+                  "ordem": 1
+                },
+                {
+                  "key": "ROTEIRO-02/J-040.W/P2",
+                  "id": "P2",
+                  "hash": "7ef2b666",
+                  "textoHtml": "Conferir o que ainda não existe.",
+                  "comoHtml": "Ler os cartões da tela inicial. Pelo menos um anuncia <strong>&quot;Disponivel em breve&quot;</strong>. Anotar <strong>quais</strong>: card de administração que promete e não entrega é ocorrência de produto, e o registro serve de linha de base para a próxima execução.",
+                  "textoBusca": "conferir o que ainda não existe. ler os cartões da tela inicial. pelo menos um anuncia \"disponivel em breve\". anotar quais: card de administração que promete e não entrega é ocorrência de produto, e o registro serve de linha de base para a próxima execução.",
+                  "esperadoHtml": "os cartões indisponíveis estão rotulados como tal, e não levam a tela vazia ou a erro.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 126,
+                  "ordem": 2
+                }
+              ]
+            },
+            {
+              "id": "g3",
+              "tituloHtml": "Tela <code>/app/admin/users</code>",
+              "tela": "/app/admin/users",
+              "implicito": false,
+              "passos": [
+                {
+                  "key": "ROTEIRO-02/J-040.W/P3",
+                  "id": "P3",
+                  "hash": "d61aabf4",
+                  "textoHtml": "Listar os usuários.",
+                  "comoHtml": "Abrir <strong>Usuários</strong>. Devem aparecer as seis personas do <code>ROTEIRO-00</code> mais o que outras jornadas tiverem criado.",
+                  "textoBusca": "listar os usuários. abrir usuários. devem aparecer as seis personas do roteiro-00 mais o que outras jornadas tiverem criado.",
+                  "esperadoHtml": "tabela com e-mail, perfil, criado em e modificado em.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 135,
+                  "ordem": 1
+                },
+                {
+                  "key": "ROTEIRO-02/J-040.W/P4",
+                  "id": "P4",
+                  "hash": "13ce016d",
+                  "textoHtml": "Filtrar por e-mail.",
+                  "comoHtml": "Usar o campo de filtro com um trecho do e-mail do <code>financeiro</code>.",
+                  "textoBusca": "filtrar por e-mail. usar o campo de filtro com um trecho do e-mail do financeiro.",
+                  "esperadoHtml": "a lista reduz; nenhum erro com filtro sem resultado.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 139,
+                  "ordem": 2
+                },
+                {
+                  "key": "ROTEIRO-02/J-040.W/P5",
+                  "id": "P5",
+                  "hash": "73b176a0",
+                  "textoHtml": "Conferir a coluna <strong>Perfil</strong> contra a precedência.",
+                  "comoHtml": "O <code>admin</code> do <code>ROTEIRO-00</code> tem duas roles (ADMIN + CLIENTE). A coluna Perfil mostra a role <strong>principal</strong>, derivada por precedência (<code>ADMIN &gt; FINANCEIRO &gt; BACKOFFICE &gt; CLIENTE</code>), e não a lista inteira.",
+                  "textoBusca": "conferir a coluna perfil contra a precedência. o admin do roteiro-00 tem duas roles (admin + cliente). a coluna perfil mostra a role principal, derivada por precedência (admin > financeiro > backoffice > cliente), e não a lista inteira.",
+                  "esperadoHtml": "<code>admin</code> aparece como <code>ADMIN</code>, não como <code>CLIENTE</code> nem como duas linhas.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 142,
+                  "ordem": 3
+                }
+              ]
+            },
+            {
+              "id": "g4",
+              "tituloHtml": "Tela <code>/app/admin/users/:id</code>",
+              "tela": "/app/admin/users/:id",
+              "implicito": false,
+              "passos": [
+                {
+                  "key": "ROTEIRO-02/J-040.W/P6",
+                  "id": "P6",
+                  "hash": "9c1f67fa",
+                  "textoHtml": "Abrir o detalhe do <code>admin</code> e ler o bloco de roles.",
+                  "comoHtml": "Clicar no próprio <code>admin</code>. O detalhe traz identificação, auditoria e o bloco <strong>Roles cumulativas</strong>.",
+                  "textoBusca": "abrir o detalhe do admin e ler o bloco de roles. clicar no próprio admin. o detalhe traz identificação, auditoria e o bloco roles cumulativas.",
+                  "esperadoHtml": "as duas roles listadas, e um aviso de que <strong>você não pode alterar as próprias roles</strong> — a tela antecipa a regra que a <a href=\"#j-041w-n1---limites-da-gestão-de-roles\" rel=\"noreferrer\"><code>J-041.W-N1</code></a> prova no backend.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 150,
+                  "ordem": 1
+                },
+                {
+                  "key": "ROTEIRO-02/J-040.W/P7",
+                  "id": "P7",
+                  "hash": "15f28bd8",
+                  "textoHtml": "Conferir o conjunto pelo banco.",
+                  "comoHtml": "Terminal do banco. A tabela <code>usuario_role</code> é a fonte autoritativa; a coluna <code>usuario.role</code> é derivada. As duas têm de contar a mesma história.",
+                  "textoBusca": "conferir o conjunto pelo banco. terminal do banco. a tabela usuariorole é a fonte autoritativa; a coluna usuario.role é derivada. as duas têm de contar a mesma história.",
+                  "esperadoHtml": "para cada usuário, a principal é a de maior precedência dentro das cumulativas. Divergência aqui é defeito de sincronização.",
+                  "blocos": [
+                    {
+                      "tipo": "codigo",
+                      "lang": "bash",
+                      "regiao": "como",
+                      "conteudo": "docker exec sep-postgres psql -U sep -d sep_dev \\\n  -c \"SELECT u.username, u.role AS principal, string_agg(ur.role, ',' ORDER BY ur.role) AS cumulativas\n      FROM usuario u LEFT JOIN usuario_role ur ON ur.usuario_id = u.id\n      GROUP BY u.username, u.role ORDER BY u.username;\""
+                    }
+                  ],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 155,
+                  "ordem": 2
+                }
+              ]
+            }
+          ],
+          "assercoes": [
+            {
+              "key": "ROTEIRO-02/J-040.W/#a00fe6a4",
+              "id": null,
+              "hash": "f456b46a",
+              "textoHtml": "Lista, detalhe e roles conferem com o banco, e a role principal segue a precedência",
+              "comoHtml": null,
+              "textoBusca": "lista, detalhe e roles conferem com o banco, e a role principal segue a precedência",
+              "esperadoHtml": null,
+              "blocos": [],
+              "na": false,
+              "naMotivo": null,
+              "marcadoNaFonte": false,
+              "linha": 169,
+              "ordem": 1
+            }
+          ],
+          "linha": 104,
+          "stats": {
+            "passos": 7,
+            "na": 0,
+            "assercoes": 1
+          }
+        },
+        {
+          "key": "ROTEIRO-02/J-040.W-N1",
+          "id": "J-040.W-N1",
+          "escopoId": "J-040.W-N1",
+          "kind": "jornada",
+          "nivel": 3,
+          "titulo": "Área administrativa negada a não-ADMIN",
+          "anchor": "j-040w-n1---rea-administrativa-negada-a-no-admin",
+          "ordem": 2,
+          "meta": [
+            {
+              "chave": "ID",
+              "texto": "J-040.W-N1",
+              "html": "<code>J-040.W-N1</code>"
+            },
+            {
+              "chave": "Tipo",
+              "texto": "Negativa — RBAC",
+              "html": "Negativa — RBAC"
+            },
+            {
+              "chave": "Persona",
+              "texto": "financeiro, backoffice e cliente-a",
+              "html": "<code>financeiro</code>, <code>backoffice</code> e <code>cliente-a</code>"
+            },
+            {
+              "chave": "Superfície",
+              "texto": "Web + API",
+              "html": "Web + API"
+            },
+            {
+              "chave": "Vetor",
+              "texto": "Alcançar governança sem ser ADMIN, por menu e por URL direta",
+              "html": "Alcançar governança sem ser ADMIN, por menu e por URL direta"
+            },
+            {
+              "chave": "Comportamento seguro esperado",
+              "texto": "Negação no backend; sumiço no menu é só conveniência",
+              "html": "Negação no backend; sumiço no menu é só conveniência"
+            },
+            {
+              "chave": "Pré-condições",
+              "texto": "PRE-01 PRE-02 PRE-04 PRE-06 PRE-07",
+              "html": "<code>PRE-01</code> <code>PRE-02</code> <code>PRE-04</code> <code>PRE-06</code> <code>PRE-07</code>"
+            }
+          ],
+          "metaIndex": {
+            "ID": "J-040.W-N1",
+            "Tipo": "Negativa — RBAC",
+            "Persona": "financeiro, backoffice e cliente-a",
+            "Superfície": "Web + API",
+            "Vetor": "Alcançar governança sem ser ADMIN, por menu e por URL direta",
+            "Comportamento seguro esperado": "Negação no backend; sumiço no menu é só conveniência",
+            "Pré-condições": "PRE-01 PRE-02 PRE-04 PRE-06 PRE-07"
+          },
+          "notas": [
+            "A matriz completa de rota × role é o <code>ROTEIRO-10</code>. Aqui está só o recorte de governança, que é o mais sensível: quem entra aqui promove a si mesmo."
+          ],
+          "grupos": [
+            {
+              "id": "g1",
+              "tituloHtml": null,
+              "tela": null,
+              "implicito": true,
+              "passos": [
+                {
+                  "key": "ROTEIRO-02/J-040.W-N1/P1",
+                  "id": "P1",
+                  "hash": "9273d4a7",
+                  "textoHtml": "Como <code>financeiro</code>, conferir que <strong>Administração</strong> não aparece no menu.",
+                  "comoHtml": "Entrar como <code>financeiro@sep.test</code> (vai pedir TOTP) e percorrer o menu lateral.",
+                  "textoBusca": "como financeiro, conferir que administração não aparece no menu. entrar como financeiro@sep.test (vai pedir totp) e percorrer o menu lateral.",
+                  "esperadoHtml": "nenhum item de administração.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 190,
+                  "ordem": 1
+                },
+                {
+                  "key": "ROTEIRO-02/J-040.W-N1/P2",
+                  "id": "P2",
+                  "hash": "7994759b",
+                  "textoHtml": "Alcançar <code>/app/admin</code> pela URL direta.",
+                  "comoHtml": "<strong>Este é o passo que importa</strong> — o P1 só mostrou que o menu esconde, e esconder não é bloquear. Digitar <code>http://localhost:4200/app/admin</code> na barra de endereço.",
+                  "textoBusca": "alcançar /app/admin pela url direta. este é o passo que importa — o p1 só mostrou que o menu esconde, e esconder não é bloquear. digitar http://localhost:4200/app/admin na barra de endereço.",
+                  "esperadoHtml": "negado pelo <code>roleGuard</code>; cai em acesso negado, <strong>não</strong> na tela de administração nem numa tela vazia.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 193,
+                  "ordem": 2
+                },
+                {
+                  "key": "ROTEIRO-02/J-040.W-N1/P3",
+                  "id": "P3",
+                  "hash": "26a39b11",
+                  "textoHtml": "Repetir o P2 com <code>backoffice</code> e com <code>cliente-a</code>.",
+                  "comoHtml": "Mesma URL, uma persona de cada vez. Três roles diferentes, três negações.",
+                  "textoBusca": "repetir o p2 com backoffice e com cliente-a. mesma url, uma persona de cada vez. três roles diferentes, três negações.",
+                  "esperadoHtml": "negado para as três.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 198,
+                  "ordem": 3
+                },
+                {
+                  "key": "ROTEIRO-02/J-040.W-N1/P4",
+                  "id": "P4",
+                  "hash": "7a5ef919",
+                  "textoHtml": "Chamar os endpoints de governança direto na API.",
+                  "comoHtml": "No Insomnia, com o token do <code>financeiro</code>, chamar <code>GET /api/v1/usuarios</code>, <code>GET /api/v1/usuarios/{id}/roles</code> e <code>GET /api/v1/governanca/parametros</code>. O guard do front não protege a API.",
+                  "textoBusca": "chamar os endpoints de governança direto na api. no insomnia, com o token do financeiro, chamar get /api/v1/usuarios, get /api/v1/usuarios/{id}/roles e get /api/v1/governanca/parametros. o guard do front não protege a api.",
+                  "esperadoHtml": "<code>403</code> nos três. Um <code>200</code> aqui é bloqueio de go-live.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 201,
+                  "ordem": 4
+                },
+                {
+                  "key": "ROTEIRO-02/J-040.W-N1/P5",
+                  "id": "P5",
+                  "hash": "54f22008",
+                  "textoHtml": "Tentar a promoção direto na API, sem ser ADMIN.",
+                  "comoHtml": "Com o token do <code>financeiro</code>, <code>POST /api/v1/usuarios/{id}/roles/ADMIN</code> apontando para o próprio id. É a escalada de privilégio óbvia.",
+                  "textoBusca": "tentar a promoção direto na api, sem ser admin. com o token do financeiro, post /api/v1/usuarios/{id}/roles/admin apontando para o próprio id. é a escalada de privilégio óbvia.",
+                  "esperadoHtml": "<code>403</code>. Conferir depois, pelo banco, que o conjunto de roles do <code>financeiro</code> não mudou.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 206,
+                  "ordem": 5
+                }
+              ]
+            }
+          ],
+          "assercoes": [],
+          "linha": 173,
+          "stats": {
+            "passos": 5,
+            "na": 0,
+            "assercoes": 0
+          }
+        },
+        {
+          "key": "ROTEIRO-02/J-041.W",
+          "id": "J-041.W",
+          "escopoId": "J-041.W",
+          "kind": "jornada",
+          "nivel": 3,
+          "titulo": "Criar usuário interno e gerenciar roles cumulativas",
+          "anchor": "j-041w---criar-usurio-interno-e-gerenciar-roles-cumulativas",
+          "ordem": 3,
+          "meta": [
+            {
+              "chave": "ID",
+              "texto": "J-041.W",
+              "html": "<code>J-041.W</code>"
+            },
+            {
+              "chave": "Tipo",
+              "texto": "Positiva",
+              "html": "Positiva"
+            },
+            {
+              "chave": "Persona",
+              "texto": "admin (com TOTP — PRE-05 + autenticador)",
+              "html": "<code>admin</code> (com TOTP — <code>PRE-05</code> + autenticador)"
+            },
+            {
+              "chave": "Superfície",
+              "texto": "Web + API",
+              "html": "Web + API"
+            },
+            {
+              "chave": "Pré-condições",
+              "texto": "PRE-01 PRE-02 PRE-04 PRE-05 PRE-10",
+              "html": "<code>PRE-01</code> <code>PRE-02</code> <code>PRE-04</code> <code>PRE-05</code> <code>PRE-10</code>"
+            },
+            {
+              "chave": "Endpoints tocados",
+              "texto": "POST /admin/usuarios, POST /usuarios/{id}/roles/{role}, DELETE /usuarios/{id}/roles/{role}, GET /usuarios/{id}/roles",
+              "html": "<code>POST /admin/usuarios</code>, <code>POST /usuarios/{id}/roles/{role}</code>, <code>DELETE /usuarios/{id}/roles/{role}</code>, <code>GET /usuarios/{id}/roles</code>"
+            },
+            {
+              "chave": "Step-up",
+              "texto": "sim nas mutações de role",
+              "html": "<strong>sim</strong> nas mutações de role"
+            },
+            {
+              "chave": "Duração",
+              "texto": "12 min",
+              "html": "12 min"
+            },
+            {
+              "chave": "Automação equivalente",
+              "texto": "admin-flow.spec.ts (parcial, contra MSW)",
+              "html": "<code>admin-flow.spec.ts</code> (parcial, contra MSW)"
+            },
+            {
+              "chave": "Só o manual cobre",
+              "texto": "Step-up com TOTP real, sincronização da role principal, auditoria",
+              "html": "Step-up com TOTP real, sincronização da role principal, auditoria"
+            }
+          ],
+          "metaIndex": {
+            "ID": "J-041.W",
+            "Tipo": "Positiva",
+            "Persona": "admin (com TOTP — PRE-05 + autenticador)",
+            "Superfície": "Web + API",
+            "Pré-condições": "PRE-01 PRE-02 PRE-04 PRE-05 PRE-10",
+            "Endpoints tocados": "POST /admin/usuarios, POST /usuarios/{id}/roles/{role}, DELETE /usuarios/{id}/roles/{role}, GET /usuarios/{id}/roles",
+            "Step-up": "sim nas mutações de role",
+            "Duração": "12 min",
+            "Automação equivalente": "admin-flow.spec.ts (parcial, contra MSW)",
+            "Só o manual cobre": "Step-up com TOTP real, sincronização da role principal, auditoria"
+          },
+          "notas": [
+            "<strong>O <code>admin</code> precisa de TOTP habilitado.</strong> Se o <code>ROTEIRO-00</code> §6.2 não habilitou para ele, as mutações de role param no step-up. Habilite antes de começar — nenhuma jornada deste roteiro contorna isso."
+          ],
+          "grupos": [
+            {
+              "id": "g1",
+              "tituloHtml": null,
+              "tela": null,
+              "implicito": true,
+              "passos": [
+                {
+                  "key": "ROTEIRO-02/J-041.W/P1",
+                  "id": "P1",
+                  "hash": "47e29206",
+                  "textoHtml": "Criar um usuário interno descartável.",
+                  "comoHtml": "Pela API, <code>POST /api/v1/admin/usuarios</code> com o token do <code>admin</code>. Este endpoint só aceita <code>ADMIN</code> ou <code>CLIENTE</code> — <code>FINANCEIRO</code> e <code>BACKOFFICE</code> <strong>não</strong> podem ser atribuídos no cadastro, só por promoção. Usar a data de hoje no e-mail.",
+                  "textoBusca": "criar um usuário interno descartável. pela api, post /api/v1/admin/usuarios com o token do admin. este endpoint só aceita admin ou cliente — financeiro e backoffice não podem ser atribuídos no cadastro, só por promoção. usar a data de hoje no e-mail.",
+                  "esperadoHtml": "<code>201</code>. <strong>Anotar o id.</strong>",
+                  "blocos": [
+                    {
+                      "tipo": "codigo",
+                      "lang": "json",
+                      "regiao": "como",
+                      "conteudo": "{ \"username\": \"governanca-<AAAA-MM-DD>@sep.test\",\n  \"password\": \"jornada-governanca-sep-2026\",\n  \"role\": \"CLIENTE\" }"
+                    }
+                  ],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 235,
+                  "ordem": 1
+                },
+                {
+                  "key": "ROTEIRO-02/J-041.W/P2",
+                  "id": "P2",
+                  "hash": "7852d48f",
+                  "textoHtml": "Tentar criar já como <code>FINANCEIRO</code>.",
+                  "comoHtml": "Repetir o P1 com <code>\"role\": \"FINANCEIRO\"</code> e outro e-mail. A restrição é deliberada: role interna se conquista por promoção auditada, não por cadastro.",
+                  "textoBusca": "tentar criar já como financeiro. repetir o p1 com \"role\": \"financeiro\" e outro e-mail. a restrição é deliberada: role interna se conquista por promoção auditada, não por cadastro.",
+                  "esperadoHtml": "recusado com <code>400</code>, código <code>USR-400-002</code>, mensagem mandando promover pelo endpoint de role. Nenhum usuário criado. &gt; <strong>O código <code>USR-400-002</code> é ambíguo.</strong> Ele identifica <strong>duas</strong> regras sem relação: esta, e &gt; &quot;usuário deve manter ao menos uma role&quot; (<code>J-041.W-N1</code> P2). Quem ramificar tratamento de &gt; erro por código no front vai acertar a mensagem errada. Ver §Divergências.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 245,
+                  "ordem": 2
+                },
+                {
+                  "key": "ROTEIRO-02/J-041.W/P3",
+                  "id": "P3",
+                  "hash": "16cb1ae7",
+                  "textoHtml": "Abrir o detalhe do novo usuário no web.",
+                  "comoHtml": "<code>/app/admin/users</code>, filtrar pelo e-mail criado, abrir o detalhe.",
+                  "textoBusca": "abrir o detalhe do novo usuário no web. /app/admin/users, filtrar pelo e-mail criado, abrir o detalhe.",
+                  "esperadoHtml": "Perfil <code>CLIENTE</code>, uma role cumulativa (<code>CLIENTE</code>), e <strong>sem</strong> o aviso de autoalteração — ele não é você.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 253,
+                  "ordem": 3
+                },
+                {
+                  "key": "ROTEIRO-02/J-041.W/P4",
+                  "id": "P4",
+                  "hash": "cb4a9e12",
+                  "textoHtml": "Adicionar a role <code>FINANCEIRO</code>, passando pelo step-up.",
+                  "comoHtml": "No bloco de roles, adicionar <code>FINANCEIRO</code>. O step-up é o padrão da fase: <strong>Iniciar</strong>, código TOTP do <code>admin</code>, <strong>Confirmar</strong>.",
+                  "textoBusca": "adicionar a role financeiro, passando pelo step-up. no bloco de roles, adicionar financeiro. o step-up é o padrão da fase: iniciar, código totp do admin, confirmar.",
+                  "esperadoHtml": "<code>200</code>; o conjunto passa a ter <code>CLIENTE</code> e <code>FINANCEIRO</code>.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 257,
+                  "ordem": 4
+                },
+                {
+                  "key": "ROTEIRO-02/J-041.W/P5",
+                  "id": "P5",
+                  "hash": "e4067154",
+                  "textoHtml": "Conferir que a coluna <strong>Perfil</strong> mudou sozinha.",
+                  "comoHtml": "Voltar à lista. Ninguém editou o campo Perfil, mas ele é derivado por precedência, e <code>FINANCEIRO</code> ganha de <code>CLIENTE</code>.",
+                  "textoBusca": "conferir que a coluna perfil mudou sozinha. voltar à lista. ninguém editou o campo perfil, mas ele é derivado por precedência, e financeiro ganha de cliente.",
+                  "esperadoHtml": "Perfil agora é <code>FINANCEIRO</code>, com as duas roles preservadas no detalhe.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 261,
+                  "ordem": 5
+                },
+                {
+                  "key": "ROTEIRO-02/J-041.W/P6",
+                  "id": "P6",
+                  "hash": "1c75ad1e",
+                  "textoHtml": "Adicionar <code>BACKOFFICE</code> e conferir que a principal <strong>não</strong> muda.",
+                  "comoHtml": "Repetir o P4 com <code>BACKOFFICE</code>. Agora são três roles, e <code>FINANCEIRO</code> continua tendo precedência sobre <code>BACKOFFICE</code>. É o passo que separa &quot;acumula&quot; de &quot;substitui&quot;.",
+                  "textoBusca": "adicionar backoffice e conferir que a principal não muda. repetir o p4 com backoffice. agora são três roles, e financeiro continua tendo precedência sobre backoffice. é o passo que separa \"acumula\" de \"substitui\".",
+                  "esperadoHtml": "três roles no conjunto; Perfil segue <code>FINANCEIRO</code>.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 265,
+                  "ordem": 6
+                },
+                {
+                  "key": "ROTEIRO-02/J-041.W/P7",
+                  "id": "P7",
+                  "hash": "16acdd83",
+                  "textoHtml": "Remover <code>FINANCEIRO</code> e ver a principal recuar.",
+                  "comoHtml": "Remover a role, com step-up.",
+                  "textoBusca": "remover financeiro e ver a principal recuar. remover a role, com step-up.",
+                  "esperadoHtml": "duas roles (<code>CLIENTE</code>, <code>BACKOFFICE</code>); Perfil passa a <code>BACKOFFICE</code>.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 269,
+                  "ordem": 7
+                },
+                {
+                  "key": "ROTEIRO-02/J-041.W/P8",
+                  "id": "P8",
+                  "hash": "980b84a5",
+                  "textoHtml": "Conferir a trilha de auditoria.",
+                  "comoHtml": "Terminal do banco. Mudança de privilégio sem trilha é achado de compliance.",
+                  "textoBusca": "conferir a trilha de auditoria. terminal do banco. mudança de privilégio sem trilha é achado de compliance.",
+                  "esperadoHtml": "um evento por mutação — três, se você fez P4, P6 e P7.",
+                  "blocos": [
+                    {
+                      "tipo": "codigo",
+                      "lang": "bash",
+                      "regiao": "como",
+                      "conteudo": "docker exec sep-postgres psql -U sep -d sep_dev \\\n  -c \"SELECT tipo, data_evento FROM audit_log_seguranca\n      WHERE tipo IN ('USUARIO_ROLES_ALTERADAS','ROLE_ALTERADO')\n      ORDER BY data_evento DESC LIMIT 6;\""
+                    }
+                  ],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 272,
+                  "ordem": 8
+                },
+                {
+                  "key": "ROTEIRO-02/J-041.W/P9",
+                  "id": "P9",
+                  "hash": "8cd49838",
+                  "textoHtml": "Conferir o estado final nas duas tabelas.",
+                  "comoHtml": "Terminal do banco, mesma consulta do <a href=\"#j-040w---admin-consulta-usuários-e-roles\" rel=\"noreferrer\"><code>J-040.W</code></a> P7, filtrando pelo novo usuário.",
+                  "textoBusca": "conferir o estado final nas duas tabelas. terminal do banco, mesma consulta do j-040.w p7, filtrando pelo novo usuário.",
+                  "esperadoHtml": "<code>usuario_role</code> com <code>CLIENTE</code> e <code>BACKOFFICE</code>; <code>usuario.role</code> = <code>BACKOFFICE</code>.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 281,
+                  "ordem": 9
+                }
+              ]
+            }
+          ],
+          "assercoes": [
+            {
+              "key": "ROTEIRO-02/J-041.W/#8e9fd903",
+              "id": null,
+              "hash": "97b8f78f",
+              "textoHtml": "Usuário de governança criado, roles acumuladas e removidas com step-up, principal derivada corretamente; anotar o e-mail usado",
+              "comoHtml": null,
+              "textoBusca": "usuário de governança criado, roles acumuladas e removidas com step-up, principal derivada corretamente; anotar o e-mail usado",
+              "esperadoHtml": null,
+              "blocos": [],
+              "na": false,
+              "naMotivo": null,
+              "marcadoNaFonte": false,
+              "linha": 288,
+              "ordem": 1
+            }
+          ],
+          "linha": 214,
+          "stats": {
+            "passos": 9,
+            "na": 0,
+            "assercoes": 1
+          }
+        },
+        {
+          "key": "ROTEIRO-02/J-041.W-N1",
+          "id": "J-041.W-N1",
+          "escopoId": "J-041.W-N1",
+          "kind": "jornada",
+          "nivel": 3,
+          "titulo": "Limites da gestão de roles",
+          "anchor": "j-041w-n1---limites-da-gesto-de-roles",
+          "ordem": 4,
+          "meta": [
+            {
+              "chave": "ID",
+              "texto": "J-041.W-N1",
+              "html": "<code>J-041.W-N1</code>"
+            },
+            {
+              "chave": "Tipo",
+              "texto": "Negativa — regra de negócio e segurança",
+              "html": "Negativa — regra de negócio e segurança"
+            },
+            {
+              "chave": "Persona",
+              "texto": "admin",
+              "html": "<code>admin</code>"
+            },
+            {
+              "chave": "Superfície",
+              "texto": "API",
+              "html": "API"
+            },
+            {
+              "chave": "Vetor",
+              "texto": "Autopromoção, usuário sem role e mutação sem step-up",
+              "html": "Autopromoção, usuário sem role e mutação sem step-up"
+            },
+            {
+              "chave": "Comportamento seguro esperado",
+              "texto": "Recusa com código próprio, sem alterar estado",
+              "html": "Recusa com código próprio, sem alterar estado"
+            },
+            {
+              "chave": "Pré-condições",
+              "texto": "PRE-01 PRE-04 PRE-05 PRE-10 + J-041.W concluída",
+              "html": "<code>PRE-01</code> <code>PRE-04</code> <code>PRE-05</code> <code>PRE-10</code> + <code>J-041.W</code> concluída"
+            }
+          ],
+          "metaIndex": {
+            "ID": "J-041.W-N1",
+            "Tipo": "Negativa — regra de negócio e segurança",
+            "Persona": "admin",
+            "Superfície": "API",
+            "Vetor": "Autopromoção, usuário sem role e mutação sem step-up",
+            "Comportamento seguro esperado": "Recusa com código próprio, sem alterar estado",
+            "Pré-condições": "PRE-01 PRE-04 PRE-05 PRE-10 + J-041.W concluída"
+          },
+          "notas": [],
+          "grupos": [
+            {
+              "id": "g1",
+              "tituloHtml": null,
+              "tela": null,
+              "implicito": true,
+              "passos": [
+                {
+                  "key": "ROTEIRO-02/J-041.W-N1/P1",
+                  "id": "P1",
+                  "hash": "57c9a5b2",
+                  "textoHtml": "Tentar alterar as <strong>próprias</strong> roles.",
+                  "comoHtml": "Com o token do <code>admin</code> e step-up válido, <code>POST /api/v1/usuarios/{idDoProprioAdmin}/roles/FINANCEIRO</code>. Um ADMIN que se rebaixa por engano tranca a própria governança; um que se promove burla a segregação. A regra existe para os dois casos.",
+                  "textoBusca": "tentar alterar as próprias roles. com o token do admin e step-up válido, post /api/v1/usuarios/{iddoproprioadmin}/roles/financeiro. um admin que se rebaixa por engano tranca a própria governança; um que se promove burla a segregação. a regra existe para os dois casos.",
+                  "esperadoHtml": "<code>403</code> com código <code>USR-403-002</code>, mensagem sobre não alterar as próprias roles.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 307,
+                  "ordem": 1
+                },
+                {
+                  "key": "ROTEIRO-02/J-041.W-N1/P2",
+                  "id": "P2",
+                  "hash": "e83b7a24",
+                  "textoHtml": "Tentar remover a <strong>última</strong> role de um usuário.",
+                  "comoHtml": "No usuário de governança, remover as roles até sobrar uma e tentar remover essa. Usuário sem role nenhuma não consegue nem autenticar direito.",
+                  "textoBusca": "tentar remover a última role de um usuário. no usuário de governança, remover as roles até sobrar uma e tentar remover essa. usuário sem role nenhuma não consegue nem autenticar direito.",
+                  "esperadoHtml": "<code>400</code> com código <code>USR-400-002</code>.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 312,
+                  "ordem": 2
+                },
+                {
+                  "key": "ROTEIRO-02/J-041.W-N1/P3",
+                  "id": "P3",
+                  "hash": "28009433",
+                  "textoHtml": "Tentar uma mutação de role <strong>sem</strong> o header de step-up.",
+                  "comoHtml": "Repetir o <code>POST .../roles/FINANCEIRO</code> no usuário de governança, com token de ADMIN válido mas <strong>sem</strong> <code>X-Step-Up-Token</code>.",
+                  "textoBusca": "tentar uma mutação de role sem o header de step-up. repetir o post .../roles/financeiro no usuário de governança, com token de admin válido mas sem x-step-up-token.",
+                  "esperadoHtml": "<code>403</code>. Alteração de privilégio nunca passa só com o token de sessão.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 316,
+                  "ordem": 3
+                },
+                {
+                  "key": "ROTEIRO-02/J-041.W-N1/P4",
+                  "id": "P4",
+                  "hash": "3cd3d6a0",
+                  "textoHtml": "Repetir o P3 no endpoint <strong>legado</strong> de role.",
+                  "comoHtml": "<code>POST /api/v1/usuarios/{id}/role</code>, sem step-up. Este endpoint é da Sprint 8 e substitui o conjunto inteiro por uma role só — o caminho mais destrutivo dos dois. Ele <strong>também</strong> exige step-up; o passo confere que a proteção não ficou só no endpoint novo.",
+                  "textoBusca": "repetir o p3 no endpoint legado de role. post /api/v1/usuarios/{id}/role, sem step-up. este endpoint é da sprint 8 e substitui o conjunto inteiro por uma role só — o caminho mais destrutivo dos dois. ele também exige step-up; o passo confere que a proteção não ficou só no endpoint novo.",
+                  "esperadoHtml": "<code>403</code> sem step-up. Um <code>200</code> aqui é escalada de privilégio por endpoint esquecido.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 320,
+                  "ordem": 4
+                },
+                {
+                  "key": "ROTEIRO-02/J-041.W-N1/P5",
+                  "id": "P5",
+                  "hash": "bf0e33d1",
+                  "textoHtml": "Conferir que nada mudou.",
+                  "comoHtml": "<code>GET /api/v1/usuarios/{id}/roles</code> no usuário de governança e na conta do <code>admin</code>.",
+                  "textoBusca": "conferir que nada mudou. get /api/v1/usuarios/{id}/roles no usuário de governança e na conta do admin.",
+                  "esperadoHtml": "os dois conjuntos iguais aos do fim da <code>J-041.W</code>.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 326,
+                  "ordem": 5
+                }
+              ]
+            }
+          ],
+          "assercoes": [],
+          "linha": 293,
+          "stats": {
+            "passos": 5,
+            "na": 0,
+            "assercoes": 0
+          }
+        },
+        {
+          "key": "ROTEIRO-02/J-042.W",
+          "id": "J-042.W",
+          "escopoId": "J-042.W",
+          "kind": "jornada",
+          "nivel": 3,
+          "titulo": "Promoção não vale na sessão já aberta",
+          "anchor": "j-042w---promoo-no-vale-na-sesso-j-aberta",
+          "ordem": 5,
+          "meta": [
+            {
+              "chave": "ID",
+              "texto": "J-042.W",
+              "html": "<code>J-042.W</code>"
+            },
+            {
+              "chave": "Tipo",
+              "texto": "Positiva — comportamento de sessão",
+              "html": "Positiva — comportamento de sessão"
+            },
+            {
+              "chave": "Persona",
+              "texto": "admin + usuário de governança da J-041.W",
+              "html": "<code>admin</code> + usuário de governança da <code>J-041.W</code>"
+            },
+            {
+              "chave": "Superfície",
+              "texto": "Web (duas sessões)",
+              "html": "Web (duas sessões)"
+            },
+            {
+              "chave": "Pré-condições",
+              "texto": "PRE-01 PRE-02 PRE-04 PRE-05 PRE-10 + J-041.W concluída",
+              "html": "<code>PRE-01</code> <code>PRE-02</code> <code>PRE-04</code> <code>PRE-05</code> <code>PRE-10</code> + <code>J-041.W</code> concluída"
+            },
+            {
+              "chave": "Endpoints tocados",
+              "texto": "POST /usuarios/{id}/roles/{role}, POST /auth/login, POST /auth/refresh",
+              "html": "<code>POST /usuarios/{id}/roles/{role}</code>, <code>POST /auth/login</code>, <code>POST /auth/refresh</code>"
+            },
+            {
+              "chave": "Step-up",
+              "texto": "sim, na promoção",
+              "html": "sim, na promoção"
+            },
+            {
+              "chave": "Duração",
+              "texto": "10 min",
+              "html": "10 min"
+            },
+            {
+              "chave": "Automação equivalente",
+              "texto": "nenhuma — exige duas sessões simultâneas contra backend real",
+              "html": "nenhuma — exige duas sessões simultâneas contra backend real"
+            },
+            {
+              "chave": "Só o manual cobre",
+              "texto": "Efeito temporal da claim de roles no JWT",
+              "html": "Efeito temporal da claim de roles no JWT"
+            }
+          ],
+          "metaIndex": {
+            "ID": "J-042.W",
+            "Tipo": "Positiva — comportamento de sessão",
+            "Persona": "admin + usuário de governança da J-041.W",
+            "Superfície": "Web (duas sessões)",
+            "Pré-condições": "PRE-01 PRE-02 PRE-04 PRE-05 PRE-10 + J-041.W concluída",
+            "Endpoints tocados": "POST /usuarios/{id}/roles/{role}, POST /auth/login, POST /auth/refresh",
+            "Step-up": "sim, na promoção",
+            "Duração": "10 min",
+            "Automação equivalente": "nenhuma — exige duas sessões simultâneas contra backend real",
+            "Só o manual cobre": "Efeito temporal da claim de roles no JWT"
+          },
+          "notas": [
+            "<strong>Por que isto é jornada, e não detalhe.</strong> O backend resolve permissão pela claim <code>roles</code> do token, sem reler o banco a cada request. Então uma promoção <strong>não</strong> alcança quem já está logado: o access token velho continua valendo até expirar (15 minutos por padrão) ou até um refresh, que <strong>relê o usuário</strong> e emite token novo. Quem não souber disso vai reportar &quot;promovi e não funcionou&quot; como defeito."
+          ],
+          "grupos": [
+            {
+              "id": "g1",
+              "tituloHtml": null,
+              "tela": null,
+              "implicito": true,
+              "passos": [
+                {
+                  "key": "ROTEIRO-02/J-042.W/P1",
+                  "id": "P1",
+                  "hash": "ca734871",
+                  "textoHtml": "Abrir duas sessões, em janelas separadas.",
+                  "comoHtml": "Janela normal com o <code>admin</code>; <strong>janela anônima</strong> com o usuário de governança (<code>jornada-governanca-sep-2026</code>). Anônima evita que as duas sessões briguem pelo mesmo storage.",
+                  "textoBusca": "abrir duas sessões, em janelas separadas. janela normal com o admin; janela anônima com o usuário de governança (jornada-governanca-sep-2026). anônima evita que as duas sessões briguem pelo mesmo storage.",
+                  "esperadoHtml": "as duas autenticadas ao mesmo tempo.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 355,
+                  "ordem": 1
+                },
+                {
+                  "key": "ROTEIRO-02/J-042.W/P2",
+                  "id": "P2",
+                  "hash": "7c1992ad",
+                  "textoHtml": "Na janela do usuário comum, tentar <code>/app/admin</code>.",
+                  "comoHtml": "URL direta. Ele está como <code>CLIENTE</code>/<code>BACKOFFICE</code> no fim da <code>J-041.W</code>.",
+                  "textoBusca": "na janela do usuário comum, tentar /app/admin. url direta. ele está como cliente/backoffice no fim da j-041.w.",
+                  "esperadoHtml": "negado.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 360,
+                  "ordem": 2
+                },
+                {
+                  "key": "ROTEIRO-02/J-042.W/P3",
+                  "id": "P3",
+                  "hash": "dc174ffb",
+                  "textoHtml": "Na janela do <code>admin</code>, promover o usuário a <code>ADMIN</code>.",
+                  "comoHtml": "<code>/app/admin/users/:id</code>, adicionar a role <code>ADMIN</code>, com step-up.",
+                  "textoBusca": "na janela do admin, promover o usuário a admin. /app/admin/users/:id, adicionar a role admin, com step-up.",
+                  "esperadoHtml": "<code>200</code>; o conjunto passa a incluir <code>ADMIN</code>; Perfil vira <code>ADMIN</code>.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 363,
+                  "ordem": 3
+                },
+                {
+                  "key": "ROTEIRO-02/J-042.W/P4",
+                  "id": "P4",
+                  "hash": "75d5739c",
+                  "textoHtml": "Na janela do usuário, <strong>sem recarregar nem sair</strong>, tentar <code>/app/admin</code> de novo.",
+                  "comoHtml": "Repetir o P2 imediatamente. <strong>O esperado aqui é continuar negado</strong> — o token dessa sessão foi emitido antes da promoção e carrega as roles antigas.",
+                  "textoBusca": "na janela do usuário, sem recarregar nem sair, tentar /app/admin de novo. repetir o p2 imediatamente. o esperado aqui é continuar negado — o token dessa sessão foi emitido antes da promoção e carrega as roles antigas.",
+                  "esperadoHtml": "ainda negado. Se passar de imediato, o backend está consultando o banco por request em vez de confiar na claim, e a premissa de sessão do sistema é outra: registre como ocorrência, porque muda a análise de segurança.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 366,
+                  "ordem": 4
+                },
+                {
+                  "key": "ROTEIRO-02/J-042.W/P5",
+                  "id": "P5",
+                  "hash": "e8cc16e8",
+                  "textoHtml": "Sair e entrar de novo na janela do usuário.",
+                  "comoHtml": "Logout e login com as mesmas credenciais. É o caminho curto; o longo é esperar o access token expirar e o refresh acontecer sozinho.",
+                  "textoBusca": "sair e entrar de novo na janela do usuário. logout e login com as mesmas credenciais. é o caminho curto; o longo é esperar o access token expirar e o refresh acontecer sozinho.",
+                  "esperadoHtml": "agora <code>/app/admin</code> abre, e o item de administração aparece no menu.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 372,
+                  "ordem": 5
+                },
+                {
+                  "key": "ROTEIRO-02/J-042.W/P6",
+                  "id": "P6",
+                  "hash": "e96eab7c",
+                  "textoHtml": "Conferir a claim do token novo.",
+                  "comoHtml": "Na aba <strong>Network</strong>, copiar o <code>accessToken</code> da resposta de login e colar em <a href=\"https://jwt.io\" rel=\"noreferrer\">jwt.io</a> — ou decodificar o miolo em base64 no terminal. Interessa a claim <code>roles</code>.",
+                  "textoBusca": "conferir a claim do token novo. na aba network, copiar o accesstoken da resposta de login e colar em jwt.io — ou decodificar o miolo em base64 no terminal. interessa a claim roles.",
+                  "esperadoHtml": "<code>roles</code> contém <code>ADMIN</code>. É a prova direta de onde a permissão vem.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 376,
+                  "ordem": 6
+                },
+                {
+                  "key": "ROTEIRO-02/J-042.W/P7",
+                  "id": "P7",
+                  "hash": "a3047d10",
+                  "textoHtml": "Desfazer a promoção.",
+                  "comoHtml": "Na janela do <code>admin</code>, remover a role <code>ADMIN</code> do usuário de governança, com step-up. <strong>Não deixe um ADMIN extra vivo</strong> ao fim da execução.",
+                  "textoBusca": "desfazer a promoção. na janela do admin, remover a role admin do usuário de governança, com step-up. não deixe um admin extra vivo ao fim da execução.",
+                  "esperadoHtml": "conjunto volta ao do fim da <code>J-041.W</code>.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 381,
+                  "ordem": 7
+                }
+              ]
+            }
+          ],
+          "assercoes": [
+            {
+              "key": "ROTEIRO-02/J-042.W/#f27dabe8",
+              "id": null,
+              "hash": "c96f86fa",
+              "textoHtml": "Promoção só valeu depois de novo token; ADMIN extra removido ao final",
+              "comoHtml": null,
+              "textoBusca": "promoção só valeu depois de novo token; admin extra removido ao final",
+              "esperadoHtml": null,
+              "blocos": [],
+              "na": false,
+              "naMotivo": null,
+              "marcadoNaFonte": false,
+              "linha": 388,
+              "ordem": 1
+            }
+          ],
+          "linha": 332,
+          "stats": {
+            "passos": 7,
+            "na": 0,
+            "assercoes": 1
+          }
+        },
+        {
+          "key": "ROTEIRO-02/J-043.W",
+          "id": "J-043.W",
+          "escopoId": "J-043.W",
+          "kind": "jornada",
+          "nivel": 3,
+          "titulo": "Alterar parâmetro operacional com step-up e histórico",
+          "anchor": "j-043w---alterar-parmetro-operacional-com-step-up-e-histrico",
+          "ordem": 6,
+          "meta": [
+            {
+              "chave": "ID",
+              "texto": "J-043.W",
+              "html": "<code>J-043.W</code>"
+            },
+            {
+              "chave": "Tipo",
+              "texto": "Positiva",
+              "html": "Positiva"
+            },
+            {
+              "chave": "Persona",
+              "texto": "admin",
+              "html": "<code>admin</code>"
+            },
+            {
+              "chave": "Superfície",
+              "texto": "Web",
+              "html": "Web"
+            },
+            {
+              "chave": "Pré-condições",
+              "texto": "PRE-01 PRE-02 PRE-04 PRE-05 PRE-10",
+              "html": "<code>PRE-01</code> <code>PRE-02</code> <code>PRE-04</code> <code>PRE-05</code> <code>PRE-10</code>"
+            },
+            {
+              "chave": "Endpoints tocados",
+              "texto": "GET /governanca/parametros, GET /governanca/parametros/{chave}, PATCH /governanca/parametros/{chave}",
+              "html": "<code>GET /governanca/parametros</code>, <code>GET /governanca/parametros/{chave}</code>, <code>PATCH /governanca/parametros/{chave}</code>"
+            },
+            {
+              "chave": "Step-up",
+              "texto": "sim",
+              "html": "<strong>sim</strong>"
+            },
+            {
+              "chave": "Duração",
+              "texto": "12 min",
+              "html": "12 min"
+            },
+            {
+              "chave": "Automação equivalente",
+              "texto": "governanca.spec.ts (contra MSW)",
+              "html": "<code>governanca.spec.ts</code> (contra MSW)"
+            },
+            {
+              "chave": "Só o manual cobre",
+              "texto": "Versionamento real, histórico persistido e a ausência de efeito no motor",
+              "html": "Versionamento real, histórico persistido e a <strong>ausência de efeito</strong> no motor"
+            }
+          ],
+          "metaIndex": {
+            "ID": "J-043.W",
+            "Tipo": "Positiva",
+            "Persona": "admin",
+            "Superfície": "Web",
+            "Pré-condições": "PRE-01 PRE-02 PRE-04 PRE-05 PRE-10",
+            "Endpoints tocados": "GET /governanca/parametros, GET /governanca/parametros/{chave}, PATCH /governanca/parametros/{chave}",
+            "Step-up": "sim",
+            "Duração": "12 min",
+            "Automação equivalente": "governanca.spec.ts (contra MSW)",
+            "Só o manual cobre": "Versionamento real, histórico persistido e a ausência de efeito no motor"
+          },
+          "notas": [
+            "<strong>Leia o §&quot;O achado&quot; antes deste bloco.</strong> A alteração é registrada com rigor — versão, valor anterior, justificativa, ator, auditoria — e <strong>não muda comportamento de nenhum motor</strong>. Esta jornada mede o registro e <strong>declara</strong> a ausência de efeito; ela não finge que o parâmetro é aplicado."
+          ],
+          "grupos": [
+            {
+              "id": "g2",
+              "tituloHtml": "Tela <code>/app/admin/parametros</code>",
+              "tela": "/app/admin/parametros",
+              "implicito": false,
+              "passos": [
+                {
+                  "key": "ROTEIRO-02/J-043.W/P1",
+                  "id": "P1",
+                  "hash": "8c4a6bd2",
+                  "textoHtml": "Listar os parâmetros governados.",
+                  "comoHtml": "Abrir <strong>Parâmetros</strong> na administração.",
+                  "textoBusca": "listar os parâmetros governados. abrir parâmetros na administração.",
+                  "esperadoHtml": "11 parâmetros, com chave, tipo, valor e versão. Todos em versão <code>1</code> se nenhuma execução anterior mexeu.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 416,
+                  "ordem": 1
+                },
+                {
+                  "key": "ROTEIRO-02/J-043.W/P2",
+                  "id": "P2",
+                  "hash": "0d35a003",
+                  "textoHtml": "Abrir o detalhe de <code>backoffice.webhook.pendente.horas</code>.",
+                  "comoHtml": "Clicar na linha. O detalhe traz tipo, valor atual, versão, descrição, o formulário de alteração e o histórico.",
+                  "textoBusca": "abrir o detalhe de backoffice.webhook.pendente.horas. clicar na linha. o detalhe traz tipo, valor atual, versão, descrição, o formulário de alteração e o histórico.",
+                  "esperadoHtml": "tipo <code>INTEGER</code>, valor <code>1</code>, versão <code>1</code>, e histórico dizendo que <strong>não há alterações registradas</strong>.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 420,
+                  "ordem": 2
+                }
+              ]
+            },
+            {
+              "id": "g3",
+              "tituloHtml": "Alteração",
+              "tela": null,
+              "implicito": false,
+              "passos": [
+                {
+                  "key": "ROTEIRO-02/J-043.W/P3",
+                  "id": "P3",
+                  "hash": "65b5baa9",
+                  "textoHtml": "Alterar o valor sem preencher a justificativa.",
+                  "comoHtml": "Informar o novo valor <code>6</code> e tentar salvar deixando a justificativa em branco. A justificativa é obrigatória por contrato, não só por educação — ela é persistida no histórico e é o que explica a mudança meses depois.",
+                  "textoBusca": "alterar o valor sem preencher a justificativa. informar o novo valor 6 e tentar salvar deixando a justificativa em branco. a justificativa é obrigatória por contrato, não só por educação — ela é persistida no histórico e é o que explica a mudança meses depois.",
+                  "esperadoHtml": "recusado, com a mensagem pedindo a justificativa.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 428,
+                  "ordem": 1
+                },
+                {
+                  "key": "ROTEIRO-02/J-043.W/P4",
+                  "id": "P4",
+                  "hash": "60377a29",
+                  "textoHtml": "Alterar com justificativa, passando pelo step-up.",
+                  "comoHtml": "Novo valor <code>6</code>, justificativa reconhecível (por exemplo <code>roteiro-02 execucao &lt;data&gt;</code>), salvar. Step-up: <strong>Iniciar</strong>, TOTP do <code>admin</code>, <strong>Confirmar</strong>.",
+                  "textoBusca": "alterar com justificativa, passando pelo step-up. novo valor 6, justificativa reconhecível (por exemplo roteiro-02 execucao <data>), salvar. step-up: iniciar, totp do admin, confirmar.",
+                  "esperadoHtml": "<code>200</code>; valor passa a <code>6</code> e a <strong>versão vai para 2</strong>.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 433,
+                  "ordem": 2
+                },
+                {
+                  "key": "ROTEIRO-02/J-043.W/P5",
+                  "id": "P5",
+                  "hash": "53c02662",
+                  "textoHtml": "Conferir o histórico na tela.",
+                  "comoHtml": "Ler o bloco <strong>Histórico de versões</strong>.",
+                  "textoBusca": "conferir o histórico na tela. ler o bloco histórico de versões.",
+                  "esperadoHtml": "uma entrada com versão, valor anterior <code>1</code>, valor novo <code>6</code>, sua justificativa e a data. Valor anterior ausente ou justificativa truncada é ocorrência.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 437,
+                  "ordem": 3
+                },
+                {
+                  "key": "ROTEIRO-02/J-043.W/P6",
+                  "id": "P6",
+                  "hash": "7e7835bb",
+                  "textoHtml": "Conferir o histórico no banco.",
+                  "comoHtml": "Terminal do banco. A tela pode estar montando o histórico a partir do que ela mesma acabou de enviar; esta consulta prova que ele foi persistido.",
+                  "textoBusca": "conferir o histórico no banco. terminal do banco. a tela pode estar montando o histórico a partir do que ela mesma acabou de enviar; esta consulta prova que ele foi persistido.",
+                  "esperadoHtml": "parâmetro em <code>6</code>/versão 2, e uma linha de histórico com <code>1</code> → <code>6</code>.",
+                  "blocos": [
+                    {
+                      "tipo": "codigo",
+                      "lang": "bash",
+                      "regiao": "como",
+                      "conteudo": "docker exec sep-postgres psql -U sep -d sep_dev \\\n  -c \"SELECT p.chave, p.valor, p.versao, v.valor_anterior, v.valor_novo, v.justificativa\n      FROM parametro_operacional p\n      LEFT JOIN versao_parametro_operacional v ON v.parametro_id = p.id\n      WHERE p.chave = 'backoffice.webhook.pendente.horas' ORDER BY v.versao;\""
+                    }
+                  ],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 441,
+                  "ordem": 4
+                },
+                {
+                  "key": "ROTEIRO-02/J-043.W/P7",
+                  "id": "P7",
+                  "hash": "15178d9b",
+                  "textoHtml": "Conferir a auditoria.",
+                  "comoHtml": "Terminal do banco.",
+                  "textoBusca": "conferir a auditoria. terminal do banco.",
+                  "esperadoHtml": "um evento, com o id do <code>admin</code> como ator.",
+                  "blocos": [
+                    {
+                      "tipo": "codigo",
+                      "lang": "bash",
+                      "regiao": "como",
+                      "conteudo": "docker exec sep-postgres psql -U sep -d sep_dev \\\n  -c \"SELECT tipo, usuario_id, data_evento FROM audit_log_seguranca\n      WHERE tipo = 'PARAMETRO_OPERACIONAL_ALTERADO' ORDER BY data_evento DESC LIMIT 3;\""
+                    }
+                  ],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 452,
+                  "ordem": 5
+                },
+                {
+                  "key": "ROTEIRO-02/J-043.W/P8",
+                  "id": "P8",
+                  "hash": "7323d9fe",
+                  "textoHtml": "Confirmar que o valor efetivo do backend <strong>não</strong> mudou.",
+                  "comoHtml": "Este é o passo do achado. O valor que o <code>VerificadorPendenciasJob</code> usa vem de <code>app.backoffice.verificador.webhook-falhou-horas</code>, no <code>application.yml</code> do <code>sep-api</code> — não da tabela. Abrir o arquivo e comparar com o que a tela mostra.",
+                  "textoBusca": "confirmar que o valor efetivo do backend não mudou. este é o passo do achado. o valor que o verificadorpendenciasjob usa vem de app.backoffice.verificador.webhook-falhou-horas, no application.yml do sep-api — não da tabela. abrir o arquivo e comparar com o que a tela mostra.",
+                  "esperadoHtml": "o <code>yml</code> continua em <code>1</code> enquanto a tela mostra <code>6</code>. <strong>Divergência é o resultado correto desta execução</strong> e a evidência do achado: a governança registrou uma decisão que o sistema não aplica. Registrar como ocorrência de produto, uma vez por execução.",
+                  "blocos": [
+                    {
+                      "tipo": "codigo",
+                      "lang": "bash",
+                      "regiao": "como",
+                      "conteudo": "grep -n \"webhook-falhou-horas\" \\\n  /home/mauricio/workspaces/workspace-sep/sep-api/src/main/resources/application.yml"
+                    }
+                  ],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 460,
+                  "ordem": 6
+                },
+                {
+                  "key": "ROTEIRO-02/J-043.W/P9",
+                  "id": "P9",
+                  "hash": "755117fb",
+                  "textoHtml": "Reverter o parâmetro.",
+                  "comoHtml": "Alterar de volta para <code>1</code>, com justificativa (<code>reversao roteiro-02</code>). Deixar valor divergente atrapalha quem executar o <code>ROTEIRO-08</code> depois.",
+                  "textoBusca": "reverter o parâmetro. alterar de volta para 1, com justificativa (reversao roteiro-02). deixar valor divergente atrapalha quem executar o roteiro-08 depois.",
+                  "esperadoHtml": "valor <code>1</code>, <strong>versão 3</strong> — reverter não apaga histórico, acrescenta. Três entradas no histórico ao final.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 471,
+                  "ordem": 7
+                }
+              ]
+            }
+          ],
+          "assercoes": [
+            {
+              "key": "ROTEIRO-02/J-043.W/#999689cb",
+              "id": null,
+              "hash": "abc90dbc",
+              "textoHtml": "Alteração versionada, justificada e auditada; ausência de efeito registrada; valor revertido",
+              "comoHtml": null,
+              "textoBusca": "alteração versionada, justificada e auditada; ausência de efeito registrada; valor revertido",
+              "esperadoHtml": null,
+              "blocos": [],
+              "na": false,
+              "naMotivo": null,
+              "marcadoNaFonte": false,
+              "linha": 479,
+              "ordem": 1
+            }
+          ],
+          "linha": 392,
+          "stats": {
+            "passos": 9,
+            "na": 0,
+            "assercoes": 1
+          }
+        },
+        {
+          "key": "ROTEIRO-02/J-043.W-N1",
+          "id": "J-043.W-N1",
+          "escopoId": "J-043.W-N1",
+          "kind": "jornada",
+          "nivel": 3,
+          "titulo": "Recusas na alteração de parâmetro",
+          "anchor": "j-043w-n1---recusas-na-alterao-de-parmetro",
+          "ordem": 7,
+          "meta": [
+            {
+              "chave": "ID",
+              "texto": "J-043.W-N1",
+              "html": "<code>J-043.W-N1</code>"
+            },
+            {
+              "chave": "Tipo",
+              "texto": "Negativa — validação e segurança",
+              "html": "Negativa — validação e segurança"
+            },
+            {
+              "chave": "Persona",
+              "texto": "admin e financeiro",
+              "html": "<code>admin</code> e <code>financeiro</code>"
+            },
+            {
+              "chave": "Superfície",
+              "texto": "Web + API",
+              "html": "Web + API"
+            },
+            {
+              "chave": "Vetor",
+              "texto": "Valor incompatível com o tipo, chave inexistente e alteração sem step-up",
+              "html": "Valor incompatível com o tipo, chave inexistente e alteração sem step-up"
+            },
+            {
+              "chave": "Comportamento seguro esperado",
+              "texto": "Recusa sem gravar versão nem incrementar contador",
+              "html": "Recusa sem gravar versão nem incrementar contador"
+            },
+            {
+              "chave": "Pré-condições",
+              "texto": "PRE-01 PRE-04 PRE-05 PRE-06 PRE-10",
+              "html": "<code>PRE-01</code> <code>PRE-04</code> <code>PRE-05</code> <code>PRE-06</code> <code>PRE-10</code>"
+            }
+          ],
+          "metaIndex": {
+            "ID": "J-043.W-N1",
+            "Tipo": "Negativa — validação e segurança",
+            "Persona": "admin e financeiro",
+            "Superfície": "Web + API",
+            "Vetor": "Valor incompatível com o tipo, chave inexistente e alteração sem step-up",
+            "Comportamento seguro esperado": "Recusa sem gravar versão nem incrementar contador",
+            "Pré-condições": "PRE-01 PRE-04 PRE-05 PRE-06 PRE-10"
+          },
+          "notas": [],
+          "grupos": [
+            {
+              "id": "g1",
+              "tituloHtml": null,
+              "tela": null,
+              "implicito": true,
+              "passos": [
+                {
+                  "key": "ROTEIRO-02/J-043.W-N1/P1",
+                  "id": "P1",
+                  "hash": "8acdcf04",
+                  "textoHtml": "Enviar texto num parâmetro <code>INTEGER</code>.",
+                  "comoHtml": "Em <code>backoffice.webhook.pendente.horas</code>, novo valor <code>seis</code>, com justificativa.",
+                  "textoBusca": "enviar texto num parâmetro integer. em backoffice.webhook.pendente.horas, novo valor seis, com justificativa.",
+                  "esperadoHtml": "<code>400</code>; a validação é por tipo do parâmetro, não por máscara de tela.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 497,
+                  "ordem": 1
+                },
+                {
+                  "key": "ROTEIRO-02/J-043.W-N1/P2",
+                  "id": "P2",
+                  "hash": "e3e4c79a",
+                  "textoHtml": "Enviar decimal num parâmetro <code>INTEGER</code>.",
+                  "comoHtml": "Mesmo parâmetro, valor <code>1.5</code>. <code>INTEGER</code> recusa; <code>DECIMAL</code> aceitaria.",
+                  "textoBusca": "enviar decimal num parâmetro integer. mesmo parâmetro, valor 1.5. integer recusa; decimal aceitaria.",
+                  "esperadoHtml": "<code>400</code>.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 500,
+                  "ordem": 2
+                },
+                {
+                  "key": "ROTEIRO-02/J-043.W-N1/P3",
+                  "id": "P3",
+                  "hash": "311f0b4c",
+                  "textoHtml": "Enviar valor vazio.",
+                  "comoHtml": "Pela API, <code>PATCH</code> com <code>\"novoValor\": \"\"</code>.",
+                  "textoBusca": "enviar valor vazio. pela api, patch com \"novovalor\": \"\".",
+                  "esperadoHtml": "<code>400</code> por validação de contrato, antes de qualquer regra de tipo.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 503,
+                  "ordem": 3
+                },
+                {
+                  "key": "ROTEIRO-02/J-043.W-N1/P4",
+                  "id": "P4",
+                  "hash": "14a439fb",
+                  "textoHtml": "Alterar uma chave que não existe.",
+                  "comoHtml": "<code>PATCH /api/v1/governanca/parametros/chave.que.nao.existe</code> com corpo válido.",
+                  "textoBusca": "alterar uma chave que não existe. patch /api/v1/governanca/parametros/chave.que.nao.existe com corpo válido.",
+                  "esperadoHtml": "<code>404</code>. Não pode criar parâmetro novo por <code>PATCH</code>.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 506,
+                  "ordem": 4
+                },
+                {
+                  "key": "ROTEIRO-02/J-043.W-N1/P5",
+                  "id": "P5",
+                  "hash": "466c2867",
+                  "textoHtml": "Alterar <strong>sem</strong> step-up.",
+                  "comoHtml": "<code>PATCH</code> válido, token de ADMIN, <strong>sem</strong> <code>X-Step-Up-Token</code>.",
+                  "textoBusca": "alterar sem step-up. patch válido, token de admin, sem x-step-up-token.",
+                  "esperadoHtml": "<code>403</code>.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 509,
+                  "ordem": 5
+                },
+                {
+                  "key": "ROTEIRO-02/J-043.W-N1/P6",
+                  "id": "P6",
+                  "hash": "cfdb0b24",
+                  "textoHtml": "Alterar como <code>financeiro</code>.",
+                  "comoHtml": "<code>PATCH</code> válido com o token do <code>financeiro</code>, mesmo com step-up dele.",
+                  "textoBusca": "alterar como financeiro. patch válido com o token do financeiro, mesmo com step-up dele.",
+                  "esperadoHtml": "<code>403</code>. Parâmetro operacional é exclusividade de ADMIN.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 512,
+                  "ordem": 6
+                },
+                {
+                  "key": "ROTEIRO-02/J-043.W-N1/P7",
+                  "id": "P7",
+                  "hash": "e27ec71d",
+                  "textoHtml": "Conferir que nenhuma tentativa gravou versão.",
+                  "comoHtml": "Terminal do banco. Seis recusas não podem ter deixado rastro de alteração.",
+                  "textoBusca": "conferir que nenhuma tentativa gravou versão. terminal do banco. seis recusas não podem ter deixado rastro de alteração.",
+                  "esperadoHtml": "valor <code>1</code> e versão <code>3</code>, exatamente como a <code>J-043.W</code> P9 deixou.",
+                  "blocos": [
+                    {
+                      "tipo": "codigo",
+                      "lang": "bash",
+                      "regiao": "como",
+                      "conteudo": "docker exec sep-postgres psql -U sep -d sep_dev \\\n  -c \"SELECT chave, valor, versao FROM parametro_operacional\n      WHERE chave = 'backoffice.webhook.pendente.horas';\""
+                    }
+                  ],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 515,
+                  "ordem": 7
+                }
+              ]
+            }
+          ],
+          "assercoes": [],
+          "linha": 483,
+          "stats": {
+            "passos": 7,
+            "na": 0,
+            "assercoes": 0
+          }
+        },
+        {
+          "key": "ROTEIRO-02/J-044.M-N1",
+          "id": "J-044.M-N1",
+          "escopoId": "J-044.M-N1",
+          "kind": "jornada",
+          "nivel": 3,
+          "titulo": "Administração no mobile é placeholder",
+          "anchor": "j-044m-n1---administrao-no-mobile--placeholder",
+          "ordem": 8,
+          "meta": [
+            {
+              "chave": "ID",
+              "texto": "J-044.M-N1",
+              "html": "<code>J-044.M-N1</code>"
+            },
+            {
+              "chave": "Tipo",
+              "texto": "Negativa — cobertura de superfície",
+              "html": "Negativa — cobertura de superfície"
+            },
+            {
+              "chave": "Persona",
+              "texto": "admin e cliente-a",
+              "html": "<code>admin</code> e <code>cliente-a</code>"
+            },
+            {
+              "chave": "Superfície",
+              "texto": "Mobile (PWA)",
+              "html": "Mobile (PWA)"
+            },
+            {
+              "chave": "Vetor",
+              "texto": "Esperar governança no mobile",
+              "html": "Esperar governança no mobile"
+            },
+            {
+              "chave": "Comportamento seguro esperado",
+              "texto": "Rota guardada por ADMIN e conteúdo honesto sobre não existir",
+              "html": "Rota guardada por ADMIN e conteúdo honesto sobre não existir"
+            },
+            {
+              "chave": "Pré-condições",
+              "texto": "PRE-01 PRE-03 PRE-04 PRE-05",
+              "html": "<code>PRE-01</code> <code>PRE-03</code> <code>PRE-04</code> <code>PRE-05</code>"
+            }
+          ],
+          "metaIndex": {
+            "ID": "J-044.M-N1",
+            "Tipo": "Negativa — cobertura de superfície",
+            "Persona": "admin e cliente-a",
+            "Superfície": "Mobile (PWA)",
+            "Vetor": "Esperar governança no mobile",
+            "Comportamento seguro esperado": "Rota guardada por ADMIN e conteúdo honesto sobre não existir",
+            "Pré-condições": "PRE-01 PRE-03 PRE-04 PRE-05"
+          },
+          "notas": [
+            "A rota <code>/app/admin</code> <strong>existe</strong> no <code>sep-mobile</code>, com <code>roleGuard</code> de ADMIN, mas carrega um componente de placeholder. Ou seja: o guard é real e a funcionalidade não. A jornada registra as duas metades, para a matriz do <code>ROTEIRO-10</code> não marcar cobertura que não existe."
+          ],
+          "grupos": [
+            {
+              "id": "g1",
+              "tituloHtml": null,
+              "tela": null,
+              "implicito": true,
+              "passos": [
+                {
+                  "key": "ROTEIRO-02/J-044.M-N1/P1",
+                  "id": "P1",
+                  "hash": "c29e2476",
+                  "textoHtml": "Como <code>cliente-a</code>, tentar <code>/app/admin</code> no mobile.",
+                  "comoHtml": "Em <code>http://localhost:8100</code>, emulação ligada, logado como <code>cliente-a</code>, digitar a rota na barra de endereço.",
+                  "textoBusca": "como cliente-a, tentar /app/admin no mobile. em http://localhost:8100, emulação ligada, logado como cliente-a, digitar a rota na barra de endereço.",
+                  "esperadoHtml": "negado pelo <code>roleGuard</code>.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 544,
+                  "ordem": 1
+                },
+                {
+                  "key": "ROTEIRO-02/J-044.M-N1/P2",
+                  "id": "P2",
+                  "hash": "8e48afff",
+                  "textoHtml": "Como <code>admin</code>, abrir <code>/app/admin</code> no mobile.",
+                  "comoHtml": "Sair, entrar como <code>admin@sep.test</code> e repetir.",
+                  "textoBusca": "como admin, abrir /app/admin no mobile. sair, entrar como admin@sep.test e repetir.",
+                  "esperadoHtml": "a rota abre e mostra <strong>placeholder</strong> — sem lista de usuários, sem parâmetros e sem ação de mutação.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 548,
+                  "ordem": 2
+                },
+                {
+                  "key": "ROTEIRO-02/J-044.M-N1/P3",
+                  "id": "P3",
+                  "hash": "bbbada2b",
+                  "textoHtml": "Confirmar que não há caminho de mutação escondido.",
+                  "comoHtml": "Percorrer a tela inteira, inclusive rolando até o fim, procurando qualquer botão de promoção, alteração de role ou de parâmetro.",
+                  "textoBusca": "confirmar que não há caminho de mutação escondido. percorrer a tela inteira, inclusive rolando até o fim, procurando qualquer botão de promoção, alteração de role ou de parâmetro.",
+                  "esperadoHtml": "nenhum. Governança no mobile <strong>não existe</strong>; se aparecer qualquer ação de mutação num placeholder, é ocorrência grave.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 552,
+                  "ordem": 3
+                },
+                {
+                  "key": "ROTEIRO-02/J-044.M-N1/P4",
+                  "id": "P4",
+                  "hash": "e014b28a",
+                  "textoHtml": "Registrar a lacuna.",
+                  "comoHtml": "Anotar em ocorrências, uma vez por execução, que a administração mobile está como placeholder. É informação de planejamento, não defeito de código.",
+                  "textoBusca": "registrar a lacuna. anotar em ocorrências, uma vez por execução, que a administração mobile está como placeholder. é informação de planejamento, não defeito de código.",
+                  "esperadoHtml": "lacuna registrada com a data da execução.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 557,
+                  "ordem": 4
+                }
+              ]
+            }
+          ],
+          "assercoes": [],
+          "linha": 526,
+          "stats": {
+            "passos": 4,
+            "na": 0,
+            "assercoes": 0
+          }
+        }
+      ],
+      "ocorrenciasColunas": [
+        "#",
+        "Jornada",
+        "Passo",
+        "O que aconteceu",
+        "Esperado",
+        "Issue"
+      ],
+      "registroCampos": [
+        {
+          "chave": "executado_por",
+          "rotulo": "Executado por",
+          "tipo": "texto"
+        },
+        {
+          "chave": "data_hora",
+          "rotulo": "Data / hora",
+          "tipo": "texto"
+        },
+        {
+          "chave": "commit_sep_api",
+          "rotulo": "Commit sep-api",
+          "tipo": "texto"
+        },
+        {
+          "chave": "commit_sep_app",
+          "rotulo": "Commit sep-app",
+          "tipo": "texto"
+        },
+        {
+          "chave": "commit_sep_mobile",
+          "rotulo": "Commit sep-mobile",
+          "tipo": "texto"
+        },
+        {
+          "chave": "usuario_de_governanca_criado",
+          "rotulo": "Usuário de governança criado",
+          "tipo": "texto"
+        },
+        {
+          "chave": "parametro_alterado_e_revertido",
+          "rotulo": "Parâmetro alterado e revertido",
+          "tipo": "texto"
+        },
+        {
+          "chave": "cards_disponivel_em_breve_encontrados",
+          "rotulo": "Cards \"Disponivel em breve\" encontrados",
+          "tipo": "texto"
+        },
+        {
+          "chave": "jornadas_ok",
+          "rotulo": "Jornadas OK",
+          "tipo": "texto"
+        },
+        {
+          "chave": "jornadas_nok",
+          "rotulo": "Jornadas NOK",
+          "tipo": "texto"
+        },
+        {
+          "chave": "jornadas_bloqueado",
+          "rotulo": "Jornadas BLOQUEADO",
+          "tipo": "texto"
+        },
+        {
+          "chave": "observacoes",
+          "rotulo": "Observações",
+          "tipo": "textarea"
+        }
+      ]
+    },
+    {
+      "id": "ROTEIRO-03",
+      "arquivo": "ROTEIRO-03-ONBOARDING.md",
+      "hash": "e49bfcc4",
+      "titulo": "Roteiro 03 - Onboarding KYC PF, KYB PJ e PLD",
+      "tipo": "jornadas",
+      "ordem": 13,
+      "atualizadoEm": "2026-08-20",
+      "resumoHtml": "",
+      "escopos": [
+        {
+          "key": "ROTEIRO-03/J-050.W",
+          "id": "J-050.W",
+          "escopoId": "J-050.W",
+          "kind": "jornada",
+          "nivel": 3,
+          "titulo": "Tomador conclui o onboarding KYC PF",
+          "anchor": "j-050w---tomador-conclui-o-onboarding-kyc-pf",
+          "ordem": 1,
+          "meta": [
+            {
+              "chave": "ID",
+              "texto": "J-050.W",
+              "html": "<code>J-050.W</code>"
+            },
+            {
+              "chave": "Tipo",
+              "texto": "Positiva",
+              "html": "Positiva"
+            },
+            {
+              "chave": "Persona",
+              "texto": "cliente-a — CLIENTE sem onboarding ativo",
+              "html": "<code>cliente-a</code> — CLIENTE sem onboarding ativo"
+            },
+            {
+              "chave": "Superfície",
+              "texto": "Web",
+              "html": "Web"
+            },
+            {
+              "chave": "Pré-condições",
+              "texto": "PRE-01 PRE-02 PRE-04 PRE-05",
+              "html": "<code>PRE-01</code> <code>PRE-02</code> <code>PRE-04</code> <code>PRE-05</code>"
+            },
+            {
+              "chave": "Endpoints tocados",
+              "texto": "POST /onboarding/pessoa, POST /{id}/documentos, POST /{id}/verificar, GET /{id}",
+              "html": "<code>POST /onboarding/pessoa</code>, <code>POST /{id}/documentos</code>, <code>POST /{id}/verificar</code>, <code>GET /{id}</code>"
+            },
+            {
+              "chave": "Step-up",
+              "texto": "não",
+              "html": "não"
+            },
+            {
+              "chave": "Duração",
+              "texto": "12 min (mais a J-051.A)",
+              "html": "12 min (mais a <code>J-051.A</code>)"
+            },
+            {
+              "chave": "Automação equivalente",
+              "texto": "onboarding.spec.ts (Playwright, contra MSW)",
+              "html": "<code>onboarding.spec.ts</code> (Playwright, contra MSW)"
+            },
+            {
+              "chave": "Só o manual cobre",
+              "texto": "Provider real do backend, transição por webhook, PLD automático, trilha de auditoria",
+              "html": "Provider real do backend, transição por webhook, PLD automático, trilha de auditoria"
+            }
+          ],
+          "metaIndex": {
+            "ID": "J-050.W",
+            "Tipo": "Positiva",
+            "Persona": "cliente-a — CLIENTE sem onboarding ativo",
+            "Superfície": "Web",
+            "Pré-condições": "PRE-01 PRE-02 PRE-04 PRE-05",
+            "Endpoints tocados": "POST /onboarding/pessoa, POST /{id}/documentos, POST /{id}/verificar, GET /{id}",
+            "Step-up": "não",
+            "Duração": "12 min (mais a J-051.A)",
+            "Automação equivalente": "onboarding.spec.ts (Playwright, contra MSW)",
+            "Só o manual cobre": "Provider real do backend, transição por webhook, PLD automático, trilha de auditoria"
+          },
+          "notas": [
+            "Família <code>J-050</code> a <code>J-059</code>: solicitação de onboarding, documentos cadastrais, verificação nos providers, webhooks e PLD. Requer <a href=\"./ROTEIRO-00-AMBIENTE-E-MASSA.md\" rel=\"noreferrer\"><code>ROTEIRO-00</code></a> concluído. Hub: <a href=\"./CENARIOS-TESTE-JORNADAS-USUARIO.md\" rel=\"noreferrer\"><code>CENARIOS-TESTE-JORNADAS-USUARIO.md</code></a>.",
+            "<strong>Execute pelo <a href=\"./app/index.html\" rel=\"noreferrer\">app</a></strong>, não editando este arquivo — as caixas aqui ficam sempre vazias. Desvio não vira caixa marcada: vira <strong>ocorrência</strong> registrada no passo.",
+            "<strong><code>PRE-11</code> diz &quot;KYC aprovado&quot; e isso é impreciso.</strong> O gate real do crédito é <code>APROVADO_FINAL</code>, que só existe <strong>depois do PLD</strong>. <code>APROVADO</code> puro é KYC aprovado e PLD ainda não consolidado — e a criação de proposta recusa com <code>422</code> nesse estado (<code>RegraOnboardingAprovado</code>). Se você parar em <code>APROVADO</code> achando que terminou, o <code>ROTEIRO-04</code> falha e parece defeito de crédito."
+          ],
+          "grupos": [
+            {
+              "id": "g2",
+              "tituloHtml": "Tela <code>/app/onboarding</code>",
+              "tela": "/app/onboarding",
+              "implicito": false,
+              "passos": [
+                {
+                  "key": "ROTEIRO-03/J-050.W/P1",
+                  "id": "P1",
+                  "hash": "8d23c1b6",
+                  "textoHtml": "Abrir <strong>Onboarding</strong> no menu e escolher pessoa física.",
+                  "comoHtml": "Logado como <code>cliente-a@sep.test</code>, menu lateral, grupo <strong>Jornadas</strong>, item <strong>Onboarding</strong>. A tela oferece dois cartões de escolha; abrir o de pessoa física.",
+                  "textoBusca": "abrir onboarding no menu e escolher pessoa física. logado como cliente-a@sep.test, menu lateral, grupo jornadas, item onboarding. a tela oferece dois cartões de escolha; abrir o de pessoa física.",
+                  "esperadoHtml": "vai para <code>/app/onboarding/pessoa</code> com o formulário de início.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 138,
+                  "ordem": 1
+                }
+              ]
+            },
+            {
+              "id": "g3",
+              "tituloHtml": "Tela <code>/app/onboarding/pessoa</code>",
+              "tela": "/app/onboarding/pessoa",
+              "implicito": false,
+              "passos": [
+                {
+                  "key": "ROTEIRO-03/J-050.W/P2",
+                  "id": "P2",
+                  "hash": "5323bdee",
+                  "textoHtml": "Preencher CPF, nome completo e data de nascimento e iniciar.",
+                  "comoHtml": "CPF <code>52998224725</code>, nome completo qualquer, data de nascimento qualquer. <strong>Anotar o id</strong> que aparece no endereço depois do redirecionamento (<code>/app/onboarding/pessoa/&lt;id&gt;</code>) — o resto deste roteiro depende dele, e a <a href=\"#j-051a---webhook-kyc-fecha-a-verificação-pf\" rel=\"noreferrer\"><code>J-051.A</code></a> não roda sem ele.",
+                  "textoBusca": "preencher cpf, nome completo e data de nascimento e iniciar. cpf 52998224725, nome completo qualquer, data de nascimento qualquer. anotar o id que aparece no endereço depois do redirecionamento (/app/onboarding/pessoa/<id>) — o resto deste roteiro depende dele, e a j-051.a não roda sem ele.",
+                  "esperadoHtml": "<code>201</code>; redireciona para o detalhe da solicitação.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 145,
+                  "ordem": 1
+                }
+              ]
+            },
+            {
+              "id": "g4",
+              "tituloHtml": "Tela <code>/app/onboarding/pessoa/:id</code>",
+              "tela": "/app/onboarding/pessoa/:id",
+              "implicito": false,
+              "passos": [
+                {
+                  "key": "ROTEIRO-03/J-050.W/P3",
+                  "id": "P3",
+                  "hash": "c0249ab1",
+                  "textoHtml": "Conferir o status inicial.",
+                  "comoHtml": "Ler o badge de status no painel <strong>Status</strong>. Ele mostra o valor <strong>cru</strong> do backend, sem tradução — é assim de propósito, para o teste manual ver exatamente o que a API devolveu.",
+                  "textoBusca": "conferir o status inicial. ler o badge de status no painel status. ele mostra o valor cru do backend, sem tradução — é assim de propósito, para o teste manual ver exatamente o que a api devolveu.",
+                  "esperadoHtml": "<code>INICIADO</code>, e a lista de documentos diz que não há nenhum enviado.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 154,
+                  "ordem": 1
+                },
+                {
+                  "key": "ROTEIRO-03/J-050.W/P4",
+                  "id": "P4",
+                  "hash": "e9eba1d9",
+                  "textoHtml": "Enviar um documento de identidade.",
+                  "comoHtml": "No bloco <strong>Enviar documento</strong>, escolher tipo <code>RG</code> (ou <code>CNH</code>, ou <code>PASSAPORTE</code>) e anexar o arquivo. O rótulo do campo já declara a política: PDF, JPEG ou PNG, até 10MB.",
+                  "textoBusca": "enviar um documento de identidade. no bloco enviar documento, escolher tipo rg (ou cnh, ou passaporte) e anexar o arquivo. o rótulo do campo já declara a política: pdf, jpeg ou png, até 10mb.",
+                  "esperadoHtml": "<code>204</code>; o documento aparece na lista e o status <strong>vira</strong> <code>DOCUMENTOS_RECEBIDOS</code> — a transição acontece no primeiro upload, não no último.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 159,
+                  "ordem": 2
+                },
+                {
+                  "key": "ROTEIRO-03/J-050.W/P5",
+                  "id": "P5",
+                  "hash": "61054923",
+                  "textoHtml": "Enviar a selfie.",
+                  "comoHtml": "Mesmo bloco, tipo <code>SELFIE</code>. <strong>Os dois são obrigatórios</strong>: 1 identidade + 1 selfie. Enviar só um deixa a verificação bloqueada — é o que a <a href=\"#j-052w-n1---verificação-sem-os-documentos-mínimos\" rel=\"noreferrer\"><code>J-052.W-N1</code></a> prova.",
+                  "textoBusca": "enviar a selfie. mesmo bloco, tipo selfie. os dois são obrigatórios: 1 identidade + 1 selfie. enviar só um deixa a verificação bloqueada — é o que a j-052.w-n1 prova.",
+                  "esperadoHtml": "<code>204</code>; dois documentos na lista.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 164,
+                  "ordem": 3
+                },
+                {
+                  "key": "ROTEIRO-03/J-050.W/P6",
+                  "id": "P6",
+                  "hash": "eb86ccee",
+                  "textoHtml": "Enviar para verificação.",
+                  "comoHtml": "Bloco <strong>Verificação</strong>, botão <strong>Enviar para verificação</strong>.",
+                  "textoBusca": "enviar para verificação. bloco verificação, botão enviar para verificação.",
+                  "esperadoHtml": "<code>202</code>; status vai para <code>EM_VERIFICACAO</code>.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 169,
+                  "ordem": 4
+                },
+                {
+                  "key": "ROTEIRO-03/J-050.W/P7",
+                  "id": "P7",
+                  "hash": "cbbce537",
+                  "textoHtml": "Clicar <strong>Atualizar</strong> duas ou três vezes e confirmar que <strong>nada muda</strong>.",
+                  "comoHtml": "Este passo parece perda de tempo e é o oposto disso: ele fixa a expectativa correta. O provider fake não devolve resultado sozinho, então <code>EM_VERIFICACAO</code> é estado <strong>estável</strong>, não &quot;carregando&quot;. Confirmar na aba <strong>Network</strong> que cada clique dispara <strong>um</strong> <code>GET</code> e que a tela não faz chamadas repetidas em intervalo fixo por conta própria.",
+                  "textoBusca": "clicar atualizar duas ou três vezes e confirmar que nada muda. este passo parece perda de tempo e é o oposto disso: ele fixa a expectativa correta. o provider fake não devolve resultado sozinho, então emverificacao é estado estável, não \"carregando\". confirmar na aba network que cada clique dispara um get e que a tela não faz chamadas repetidas em intervalo fixo por conta própria.",
+                  "esperadoHtml": "status permanece <code>EM_VERIFICACAO</code>; sem polling automático.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 172,
+                  "ordem": 5
+                },
+                {
+                  "key": "ROTEIRO-03/J-050.W/P8",
+                  "id": "P8",
+                  "hash": "ba2752b9",
+                  "textoHtml": "Executar a <a href=\"#j-051a---webhook-kyc-fecha-a-verificação-pf\" rel=\"noreferrer\"><code>J-051.A</code></a> com <strong>este</strong> id e voltar para esta tela.",
+                  "comoHtml": "A jornada do webhook é o que fecha a verificação. Volte aqui e clique <strong>Atualizar</strong> uma vez.",
+                  "textoBusca": "executar a j-051.a com este id e voltar para esta tela. a jornada do webhook é o que fecha a verificação. volte aqui e clique atualizar uma vez.",
+                  "esperadoHtml": "status <strong><code>APROVADO_FINAL</code></strong>, não <code>APROVADO</code>. O PLD roda automaticamente logo depois do KYC e, com o provider fake, sai limpo — os dois saltos acontecem antes de o webhook responder <code>202</code>.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 178,
+                  "ordem": 6
+                },
+                {
+                  "key": "ROTEIRO-03/J-050.W/P9",
+                  "id": "P9",
+                  "hash": "8d9e5dec",
+                  "textoHtml": "Conferir a trilha de auditoria.",
+                  "comoHtml": "Terminal do banco. Onboarding é ato sob a CMN 4.656/2018: cada etapa precisa de registro próprio.",
+                  "textoBusca": "conferir a trilha de auditoria. terminal do banco. onboarding é ato sob a cmn 4.656/2018: cada etapa precisa de registro próprio.",
+                  "esperadoHtml": "na ordem inversa da lista, <code>KYC_INICIADO</code>, <code>KYC_DOCUMENTO_ENVIADO</code> (duas vezes), <code>KYC_VERIFICACAO_DISPARADA</code>, <code>KYC_FINALIZADO_APROVADO</code>, <code>PLD_INICIADO</code>, <code>PLD_LIMPO</code> e <code>PLD_FINALIZADO</code>.",
+                  "blocos": [
+                    {
+                      "tipo": "codigo",
+                      "lang": "bash",
+                      "regiao": "como",
+                      "conteudo": "docker exec sep-postgres psql -U sep -d sep_dev \\\n  -c \"SELECT tipo, data_evento FROM audit_log_seguranca\n      WHERE tipo LIKE 'KYC%' OR tipo LIKE 'PLD%'\n      ORDER BY data_evento DESC LIMIT 12;\""
+                    }
+                  ],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 185,
+                  "ordem": 7
+                },
+                {
+                  "key": "ROTEIRO-03/J-050.W/P10",
+                  "id": "P10",
+                  "hash": "5301a031",
+                  "textoHtml": "Conferir o estado persistido.",
+                  "comoHtml": "Terminal do banco. A tela pode estar mostrando cache; esta consulta é a verdade.",
+                  "textoBusca": "conferir o estado persistido. terminal do banco. a tela pode estar mostrando cache; esta consulta é a verdade.",
+                  "esperadoHtml": "uma linha, <code>APROVADO_FINAL</code>, <code>id_verificacao_externa</code> começando com <code>fake-</code>, e <code>docs = 2</code>.",
+                  "blocos": [
+                    {
+                      "tipo": "codigo",
+                      "lang": "bash",
+                      "regiao": "como",
+                      "conteudo": "docker exec sep-postgres psql -U sep -d sep_dev \\\n  -c \"SELECT s.status, s.id_verificacao_externa, count(d.id) AS docs\n      FROM solicitacao_onboarding s\n      LEFT JOIN documento_cadastral d ON d.solicitacao_id = s.id\n      JOIN usuario u ON u.id = s.usuario_id\n      WHERE u.username = 'cliente-a@sep.test'\n      GROUP BY s.id, s.status, s.id_verificacao_externa;\""
+                    }
+                  ],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 197,
+                  "ordem": 8
+                }
+              ]
+            }
+          ],
+          "assercoes": [
+            {
+              "key": "ROTEIRO-03/J-050.W/#afad7816",
+              "id": null,
+              "hash": "3bc98369",
+              "textoHtml": "<code>cliente-a</code> em <code>APROVADO_FINAL</code>: <strong><code>PRE-11</code> satisfeito</strong>; anotar o id da solicitação",
+              "comoHtml": null,
+              "textoBusca": "cliente-a em aprovadofinal: pre-11 satisfeito; anotar o id da solicitação",
+              "esperadoHtml": null,
+              "blocos": [],
+              "na": false,
+              "naMotivo": null,
+              "marcadoNaFonte": false,
+              "linha": 213,
+              "ordem": 1
+            }
+          ],
+          "linha": 119,
+          "stats": {
+            "passos": 10,
+            "na": 0,
+            "assercoes": 1
+          }
+        },
+        {
+          "key": "ROTEIRO-03/J-050.W-N1",
+          "id": "J-050.W-N1",
+          "escopoId": "J-050.W-N1",
+          "kind": "jornada",
+          "nivel": 3,
+          "titulo": "CPF inválido e CPF já em uso",
+          "anchor": "j-050w-n1---cpf-invlido-e-cpf-j-em-uso",
+          "ordem": 2,
+          "meta": [
+            {
+              "chave": "ID",
+              "texto": "J-050.W-N1",
+              "html": "<code>J-050.W-N1</code>"
+            },
+            {
+              "chave": "Tipo",
+              "texto": "Negativa — validação e conflito",
+              "html": "Negativa — validação e conflito"
+            },
+            {
+              "chave": "Persona",
+              "texto": "cliente-a",
+              "html": "<code>cliente-a</code>"
+            },
+            {
+              "chave": "Superfície",
+              "texto": "Web + API",
+              "html": "Web + API"
+            },
+            {
+              "chave": "Vetor",
+              "texto": "Documento malformado e segunda solicitação para o mesmo CPF",
+              "html": "Documento malformado e segunda solicitação para o mesmo CPF"
+            },
+            {
+              "chave": "Comportamento seguro esperado",
+              "texto": "Recusa no backend, com código de erro próprio",
+              "html": "Recusa no backend, com código de erro próprio"
+            },
+            {
+              "chave": "Pré-condições",
+              "texto": "PRE-01 PRE-02 PRE-04 + J-050.W concluída",
+              "html": "<code>PRE-01</code> <code>PRE-02</code> <code>PRE-04</code> + <code>J-050.W</code> concluída"
+            }
+          ],
+          "metaIndex": {
+            "ID": "J-050.W-N1",
+            "Tipo": "Negativa — validação e conflito",
+            "Persona": "cliente-a",
+            "Superfície": "Web + API",
+            "Vetor": "Documento malformado e segunda solicitação para o mesmo CPF",
+            "Comportamento seguro esperado": "Recusa no backend, com código de erro próprio",
+            "Pré-condições": "PRE-01 PRE-02 PRE-04 + J-050.W concluída"
+          },
+          "notas": [],
+          "grupos": [
+            {
+              "id": "g1",
+              "tituloHtml": null,
+              "tela": null,
+              "implicito": true,
+              "passos": [
+                {
+                  "key": "ROTEIRO-03/J-050.W-N1/P1",
+                  "id": "P1",
+                  "hash": "243a81be",
+                  "textoHtml": "Tentar iniciar um onboarding com CPF de dígito verificador errado.",
+                  "comoHtml": "Abrir <code>/app/onboarding/pessoa</code> de novo e enviar o formulário com CPF <code>52998224726</code> — é o CPF do <code>cliente-a</code> com o último dígito trocado. O backend calcula o DV; um CPF que &quot;parece certo&quot; tem de ser recusado igual.",
+                  "textoBusca": "tentar iniciar um onboarding com cpf de dígito verificador errado. abrir /app/onboarding/pessoa de novo e enviar o formulário com cpf 52998224726 — é o cpf do cliente-a com o último dígito trocado. o backend calcula o dv; um cpf que \"parece certo\" tem de ser recusado igual.",
+                  "esperadoHtml": "recusado, código <code>ONB-400-002</code>. Nenhuma solicitação criada.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 231,
+                  "ordem": 1
+                },
+                {
+                  "key": "ROTEIRO-03/J-050.W-N1/P2",
+                  "id": "P2",
+                  "hash": "fb9b83c3",
+                  "textoHtml": "Repetir com <code>11111111111</code>.",
+                  "comoHtml": "Sequência repetida tem DV matematicamente válido e é recusada por uma regra <strong>separada</strong>. Vale testar os dois porque são dois caminhos diferentes no código, e um pode quebrar sem o outro.",
+                  "textoBusca": "repetir com 11111111111. sequência repetida tem dv matematicamente válido e é recusada por uma regra separada. vale testar os dois porque são dois caminhos diferentes no código, e um pode quebrar sem o outro.",
+                  "esperadoHtml": "recusado, mesmo código <code>ONB-400-002</code>, mensagem falando de sequência repetida.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 236,
+                  "ordem": 2
+                },
+                {
+                  "key": "ROTEIRO-03/J-050.W-N1/P3",
+                  "id": "P3",
+                  "hash": "c18840af",
+                  "textoHtml": "Tentar iniciar de novo com o CPF <strong>válido</strong> que já foi usado na <code>J-050.W</code>.",
+                  "comoHtml": "Enviar o formulário com <code>52998224725</code>. Como a solicitação anterior está em <code>APROVADO_FINAL</code> — status que continua prendendo o documento — o backend precisa recusar. A tela tem mensagem própria para este caso, com link para voltar e consultar a solicitação existente.",
+                  "textoBusca": "tentar iniciar de novo com o cpf válido que já foi usado na j-050.w. enviar o formulário com 52998224725. como a solicitação anterior está em aprovadofinal — status que continua prendendo o documento — o backend precisa recusar. a tela tem mensagem própria para este caso, com link para voltar e consultar a solicitação existente.",
+                  "esperadoHtml": "<code>409</code>, código <code>ONB-409-001</code>; a UI oferece voltar e consultar a existente.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 241,
+                  "ordem": 3
+                },
+                {
+                  "key": "ROTEIRO-03/J-050.W-N1/P4",
+                  "id": "P4",
+                  "hash": "18702e8b",
+                  "textoHtml": "Repetir o P3 direto na API.",
+                  "comoHtml": "<strong>Este é o passo que importa.</strong> No Insomnia, login como <code>cliente-a</code>, e <code>POST /api/v1/onboarding/pessoa</code> com o mesmo payload que a tela enviou. Se a tela recusa e a API aceita, existe caminho para duas solicitações ativas no mesmo CPF.",
+                  "textoBusca": "repetir o p3 direto na api. este é o passo que importa. no insomnia, login como cliente-a, e post /api/v1/onboarding/pessoa com o mesmo payload que a tela enviou. se a tela recusa e a api aceita, existe caminho para duas solicitações ativas no mesmo cpf.",
+                  "esperadoHtml": "<code>409</code> vindo do backend, não da tela.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 247,
+                  "ordem": 4
+                },
+                {
+                  "key": "ROTEIRO-03/J-050.W-N1/P5",
+                  "id": "P5",
+                  "hash": "40874320",
+                  "textoHtml": "Conferir que continua havendo <strong>uma</strong> solicitação para o CPF.",
+                  "comoHtml": "Terminal do banco.",
+                  "textoBusca": "conferir que continua havendo uma solicitação para o cpf. terminal do banco.",
+                  "esperadoHtml": "<code>1</code>.",
+                  "blocos": [
+                    {
+                      "tipo": "codigo",
+                      "lang": "bash",
+                      "regiao": "como",
+                      "conteudo": "docker exec sep-postgres psql -U sep -d sep_dev \\\n  -c \"SELECT count(*) FROM solicitacao_onboarding WHERE documento = '52998224725';\""
+                    }
+                  ],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 252,
+                  "ordem": 5
+                }
+              ]
+            }
+          ],
+          "assercoes": [],
+          "linha": 217,
+          "stats": {
+            "passos": 5,
+            "na": 0,
+            "assercoes": 0
+          }
+        },
+        {
+          "key": "ROTEIRO-03/J-051.A",
+          "id": "J-051.A",
+          "escopoId": "J-051.A",
+          "kind": "jornada",
+          "nivel": 3,
+          "titulo": "Webhook KYC fecha a verificação PF",
+          "anchor": "j-051a---webhook-kyc-fecha-a-verificao-pf",
+          "ordem": 3,
+          "meta": [
+            {
+              "chave": "ID",
+              "texto": "J-051.A",
+              "html": "<code>J-051.A</code>"
+            },
+            {
+              "chave": "Tipo",
+              "texto": "Positiva",
+              "html": "Positiva"
+            },
+            {
+              "chave": "Persona",
+              "texto": "Provider externo (simulado)",
+              "html": "Provider externo (simulado)"
+            },
+            {
+              "chave": "Superfície",
+              "texto": "API",
+              "html": "API"
+            },
+            {
+              "chave": "Pré-condições",
+              "texto": "PRE-01 + solicitação PF em EMVERIFICACAO (J-050.W até o P6)",
+              "html": "<code>PRE-01</code> + solicitação PF em <code>EM_VERIFICACAO</code> (<code>J-050.W</code> até o P6)"
+            },
+            {
+              "chave": "Endpoints tocados",
+              "texto": "POST /api/v1/webhooks/celcoin/kyc",
+              "html": "<code>POST /api/v1/webhooks/celcoin/kyc</code>"
+            },
+            {
+              "chave": "Step-up",
+              "texto": "não — endpoint público autenticado por HMAC",
+              "html": "não — endpoint público autenticado por HMAC"
+            },
+            {
+              "chave": "Duração",
+              "texto": "8 min",
+              "html": "8 min"
+            },
+            {
+              "chave": "Automação equivalente",
+              "texto": "ITs do backend; nenhuma spec de front chega aqui",
+              "html": "ITs do backend; <strong>nenhuma spec de front</strong> chega aqui"
+            },
+            {
+              "chave": "Só o manual cobre",
+              "texto": "HMAC real, idempotência do outbox, encadeamento KYC → PLD ponta a ponta",
+              "html": "HMAC real, idempotência do outbox, encadeamento KYC → PLD ponta a ponta"
+            }
+          ],
+          "metaIndex": {
+            "ID": "J-051.A",
+            "Tipo": "Positiva",
+            "Persona": "Provider externo (simulado)",
+            "Superfície": "API",
+            "Pré-condições": "PRE-01 + solicitação PF em EMVERIFICACAO (J-050.W até o P6)",
+            "Endpoints tocados": "POST /api/v1/webhooks/celcoin/kyc",
+            "Step-up": "não — endpoint público autenticado por HMAC",
+            "Duração": "8 min",
+            "Automação equivalente": "ITs do backend; nenhuma spec de front chega aqui",
+            "Só o manual cobre": "HMAC real, idempotência do outbox, encadeamento KYC → PLD ponta a ponta"
+          },
+          "notas": [
+            "<strong>Esta jornada é o elo que falta na execução local.</strong> Sem ela, todo onboarding PF fica preso em <code>EM_VERIFICACAO</code> e parece defeito de UI. O provider fake nunca chama de volta."
+          ],
+          "grupos": [
+            {
+              "id": "g1",
+              "tituloHtml": null,
+              "tela": null,
+              "implicito": true,
+              "passos": [
+                {
+                  "key": "ROTEIRO-03/J-051.A/P1",
+                  "id": "P1",
+                  "hash": "8b357dc2",
+                  "textoHtml": "Disparar o webhook com status aprovado.",
+                  "comoHtml": "No terminal, com o id da solicitação da <code>J-050.W</code>. O <code>verification_id</code> <strong>tem</strong> de ser <code>fake-&lt;id&gt;</code>: é esse o identificador externo que o provider fake gerou, e a busca no backend é por ele. A assinatura é HMAC-SHA256 <strong>hex puro</strong> do corpo cru, sem prefixo <code>sha256=</code>. Trocar um espaço no corpo invalida a assinatura.",
+                  "textoBusca": "disparar o webhook com status aprovado. no terminal, com o id da solicitação da j-050.w. o verificationid tem de ser fake-<id>: é esse o identificador externo que o provider fake gerou, e a busca no backend é por ele. a assinatura é hmac-sha256 hex puro do corpo cru, sem prefixo sha256=. trocar um espaço no corpo invalida a assinatura.",
+                  "esperadoHtml": "<code>202</code>, corpo vazio. &gt; Se o ambiente sobrescreveu o secret, ele está em <code>APP_WEBHOOK_SECRET_CELCOIN_KYC</code>; o &gt; default do <code>application.yml</code> é o usado acima. O mesmo request existe no Insomnia &gt; (<code>POST /webhooks/celcoin/kyc — APPROVED (202)</code>), faltando só preencher a variável de &gt; assinatura.",
+                  "blocos": [
+                    {
+                      "tipo": "codigo",
+                      "lang": "bash",
+                      "regiao": "como",
+                      "conteudo": "SOLICITACAO_ID=<id-da-J-050.W>\nSECRET=dev-kyc-webhook-secret-change-me\nBODY=\"{\\\"verification_id\\\":\\\"fake-$SOLICITACAO_ID\\\",\\\"status\\\":\\\"APPROVED\\\",\\\"reason\\\":null}\"\nSIG=$(printf '%s' \"$BODY\" | openssl dgst -sha256 -hmac \"$SECRET\" -r | cut -d' ' -f1)\n\ncurl -i -X POST http://localhost:8080/api/v1/webhooks/celcoin/kyc \\\n  -H 'Content-Type: application/json' \\\n  -H \"Idempotency-Key: kyc-$SOLICITACAO_ID\" \\\n  -H \"X-Webhook-Signature: $SIG\" \\\n  --data-binary \"$BODY\""
+                    }
+                  ],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 282,
+                  "ordem": 1
+                },
+                {
+                  "key": "ROTEIRO-03/J-051.A/P2",
+                  "id": "P2",
+                  "hash": "160e4f51",
+                  "textoHtml": "Conferir que o status pulou <strong>dois</strong> degraus.",
+                  "comoHtml": "Consultar a solicitação como <code>cliente-a</code>, ou clicar <strong>Atualizar</strong> na tela. O esperado não é <code>APROVADO</code>: o <code>PldOrchestrationListener</code> roda depois do commit do KYC e, no fake, o PLD volta limpo na mesma sequência.",
+                  "textoBusca": "conferir que o status pulou dois degraus. consultar a solicitação como cliente-a, ou clicar atualizar na tela. o esperado não é aprovado: o pldorchestrationlistener roda depois do commit do kyc e, no fake, o pld volta limpo na mesma sequência.",
+                  "esperadoHtml": "<code>APROVADO_FINAL</code>. Parar em <code>APROVADO</code> é ocorrência — significa que o PLD não disparou.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 304,
+                  "ordem": 2
+                },
+                {
+                  "key": "ROTEIRO-03/J-051.A/P3",
+                  "id": "P3",
+                  "hash": "767bd478",
+                  "textoHtml": "Reenviar o <strong>mesmo</strong> request, sem mudar nada.",
+                  "comoHtml": "Seta para cima e enter. Mesma <code>Idempotency-Key</code>, mesmo corpo, mesma assinatura. Webhook de provider é reenviado na vida real; a segunda entrega não pode reprocessar nem quebrar.",
+                  "textoBusca": "reenviar o mesmo request, sem mudar nada. seta para cima e enter. mesma idempotency-key, mesmo corpo, mesma assinatura. webhook de provider é reenviado na vida real; a segunda entrega não pode reprocessar nem quebrar.",
+                  "esperadoHtml": "<code>202</code> de novo; status continua <code>APROVADO_FINAL</code>. A chave repetida <strong>não gera linha nova</strong> no outbox — o registro é a própria trava de idempotência, e o P5 confere isso.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 310,
+                  "ordem": 3
+                },
+                {
+                  "key": "ROTEIRO-03/J-051.A/P4",
+                  "id": "P4",
+                  "hash": "7d895725",
+                  "textoHtml": "Reenviar com <code>Idempotency-Key</code> <strong>diferente</strong> e status <strong>conflitante</strong>.",
+                  "comoHtml": "Trocar a chave para <code>kyc-$SOLICITACAO_ID-b</code> e o <code>status</code> para <code>\"REJECTED\"</code>, recalculando a assinatura (o corpo mudou). Este é o callback tardio contraditório: o provider mandando resultado diferente depois de o caso já ter fechado. O backend aceita a entrega mas <strong>não pode reescrever</strong> o resultado.",
+                  "textoBusca": "reenviar com idempotency-key diferente e status conflitante. trocar a chave para kyc-$solicitacaoid-b e o status para \"rejected\", recalculando a assinatura (o corpo mudou). este é o callback tardio contraditório: o provider mandando resultado diferente depois de o caso já ter fechado. o backend aceita a entrega mas não pode reescrever o resultado.",
+                  "esperadoHtml": "<code>202</code>; status permanece <code>APROVADO_FINAL</code>; o evento fica marcado como <code>FALHOU</code> no outbox.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 316,
+                  "ordem": 4
+                },
+                {
+                  "key": "ROTEIRO-03/J-051.A/P5",
+                  "id": "P5",
+                  "hash": "2240de2f",
+                  "textoHtml": "Conferir o outbox de webhooks.",
+                  "comoHtml": "Terminal do banco. <strong>São três entregas e duas linhas</strong> — e essa diferença é o passo. A entrega do P3 reusou a chave do P1, então ela não foi gravada nem reprocessada; a do P4 trouxe chave nova, foi gravada e recusada no conteúdo.",
+                  "textoBusca": "conferir o outbox de webhooks. terminal do banco. são três entregas e duas linhas — e essa diferença é o passo. a entrega do p3 reusou a chave do p1, então ela não foi gravada nem reprocessada; a do p4 trouxe chave nova, foi gravada e recusada no conteúdo.",
+                  "esperadoHtml": "duas linhas — a chave do P1 em <code>PROCESSADO</code> e a do P4 em <code>FALHOU</code>, com o motivo do conflito preenchido em <code>erro</code>. Três linhas significaria que a chave repetida passou, ou seja, idempotência quebrada.",
+                  "blocos": [
+                    {
+                      "tipo": "codigo",
+                      "lang": "bash",
+                      "regiao": "como",
+                      "conteudo": "docker exec sep-postgres psql -U sep -d sep_dev \\\n  -c \"SELECT idempotency_key, status, erro FROM webhook_event_log\n      WHERE provider = 'celcoin-kyc'\n      ORDER BY data_recebimento DESC LIMIT 5;\""
+                    }
+                  ],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 323,
+                  "ordem": 5
+                }
+              ]
+            }
+          ],
+          "assercoes": [
+            {
+              "key": "ROTEIRO-03/J-051.A/#56d6ad53",
+              "id": null,
+              "hash": "43086374",
+              "textoHtml": "Solicitação PF em <code>APROVADO_FINAL</code> e webhook idempotente comprovado",
+              "comoHtml": null,
+              "textoBusca": "solicitação pf em aprovadofinal e webhook idempotente comprovado",
+              "esperadoHtml": null,
+              "blocos": [],
+              "na": false,
+              "naMotivo": null,
+              "marcadoNaFonte": false,
+              "linha": 339,
+              "ordem": 1
+            }
+          ],
+          "linha": 262,
+          "stats": {
+            "passos": 5,
+            "na": 0,
+            "assercoes": 1
+          }
+        },
+        {
+          "key": "ROTEIRO-03/J-051.A-N1",
+          "id": "J-051.A-N1",
+          "escopoId": "J-051.A-N1",
+          "kind": "jornada",
+          "nivel": 3,
+          "titulo": "Webhook com assinatura inválida",
+          "anchor": "j-051a-n1---webhook-com-assinatura-invlida",
+          "ordem": 4,
+          "meta": [
+            {
+              "chave": "ID",
+              "texto": "J-051.A-N1",
+              "html": "<code>J-051.A-N1</code>"
+            },
+            {
+              "chave": "Tipo",
+              "texto": "Negativa — segurança",
+              "html": "Negativa — segurança"
+            },
+            {
+              "chave": "Persona",
+              "texto": "Atacante sem o secret",
+              "html": "Atacante sem o secret"
+            },
+            {
+              "chave": "Superfície",
+              "texto": "API",
+              "html": "API"
+            },
+            {
+              "chave": "Vetor",
+              "texto": "Forjar resultado de KYC sem conhecer o HMAC",
+              "html": "Forjar resultado de KYC sem conhecer o HMAC"
+            },
+            {
+              "chave": "Comportamento seguro esperado",
+              "texto": "401 antes de qualquer efeito, e nada persistido",
+              "html": "<code>401</code> antes de qualquer efeito, e nada persistido"
+            },
+            {
+              "chave": "Pré-condições",
+              "texto": "PRE-01 + solicitação PF em EMVERIFICACAO",
+              "html": "<code>PRE-01</code> + solicitação PF em <code>EM_VERIFICACAO</code>"
+            }
+          ],
+          "metaIndex": {
+            "ID": "J-051.A-N1",
+            "Tipo": "Negativa — segurança",
+            "Persona": "Atacante sem o secret",
+            "Superfície": "API",
+            "Vetor": "Forjar resultado de KYC sem conhecer o HMAC",
+            "Comportamento seguro esperado": "401 antes de qualquer efeito, e nada persistido",
+            "Pré-condições": "PRE-01 + solicitação PF em EMVERIFICACAO"
+          },
+          "notas": [
+            "Se esta jornada passar quando deveria negar, qualquer um na rede aprova o próprio KYC. É bloqueio de go-live, não achado menor."
+          ],
+          "grupos": [
+            {
+              "id": "g1",
+              "tituloHtml": null,
+              "tela": null,
+              "implicito": true,
+              "passos": [
+                {
+                  "key": "ROTEIRO-03/J-051.A-N1/P1",
+                  "id": "P1",
+                  "hash": "83421319",
+                  "textoHtml": "Enviar um payload perfeitamente válido com assinatura falsa.",
+                  "comoHtml": "Precisa ser uma solicitação <strong>ainda em <code>EM_VERIFICACAO</code></strong> — use a de outra persona, ou repita a <code>J-050.W</code> até o P6 com outro CPF. O corpo é o mesmo que funcionaria.",
+                  "textoBusca": "enviar um payload perfeitamente válido com assinatura falsa. precisa ser uma solicitação ainda em emverificacao — use a de outra persona, ou repita a j-050.w até o p6 com outro cpf. o corpo é o mesmo que funcionaria.",
+                  "esperadoHtml": "<code>401</code>. Não <code>403</code>, não <code>202</code>, não <code>500</code>.",
+                  "blocos": [
+                    {
+                      "tipo": "codigo",
+                      "lang": "bash",
+                      "regiao": "como",
+                      "conteudo": "curl -i -X POST http://localhost:8080/api/v1/webhooks/celcoin/kyc \\\n  -H 'Content-Type: application/json' \\\n  -H 'Idempotency-Key: forjado-001' \\\n  -H 'X-Webhook-Signature: sha256=INVALIDA' \\\n  --data-binary '{\"verification_id\":\"fake-<id>\",\"status\":\"APPROVED\"}'"
+                    }
+                  ],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 360,
+                  "ordem": 1
+                },
+                {
+                  "key": "ROTEIRO-03/J-051.A-N1/P2",
+                  "id": "P2",
+                  "hash": "4f827538",
+                  "textoHtml": "Enviar <strong>sem</strong> o header de assinatura.",
+                  "comoHtml": "Repetir o P1 removendo o <code>X-Webhook-Signature</code>. Ausência de header e header errado são caminhos distintos no código.",
+                  "textoBusca": "enviar sem o header de assinatura. repetir o p1 removendo o x-webhook-signature. ausência de header e header errado são caminhos distintos no código.",
+                  "esperadoHtml": "recusado; nenhuma transição de status.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 371,
+                  "ordem": 2
+                },
+                {
+                  "key": "ROTEIRO-03/J-051.A-N1/P3",
+                  "id": "P3",
+                  "hash": "2db4ce7e",
+                  "textoHtml": "Conferir que o status não mudou.",
+                  "comoHtml": "Consultar a solicitação. Um <code>401</code> na resposta não prova que nada aconteceu antes da validação — esta consulta prova.",
+                  "textoBusca": "conferir que o status não mudou. consultar a solicitação. um 401 na resposta não prova que nada aconteceu antes da validação — esta consulta prova.",
+                  "esperadoHtml": "continua <code>EM_VERIFICACAO</code>.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 375,
+                  "ordem": 3
+                },
+                {
+                  "key": "ROTEIRO-03/J-051.A-N1/P4",
+                  "id": "P4",
+                  "hash": "2a518968",
+                  "textoHtml": "Conferir que a tentativa não virou aprovação silenciosa no audit.",
+                  "comoHtml": "Terminal do banco.",
+                  "textoBusca": "conferir que a tentativa não virou aprovação silenciosa no audit. terminal do banco.",
+                  "esperadoHtml": "nenhum evento novo de finalização depois da hora do P1.",
+                  "blocos": [
+                    {
+                      "tipo": "codigo",
+                      "lang": "bash",
+                      "regiao": "como",
+                      "conteudo": "docker exec sep-postgres psql -U sep -d sep_dev \\\n  -c \"SELECT tipo, data_evento FROM audit_log_seguranca\n      WHERE tipo LIKE 'KYC_FINALIZADO%' ORDER BY data_evento DESC LIMIT 3;\""
+                    }
+                  ],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 379,
+                  "ordem": 4
+                }
+              ]
+            }
+          ],
+          "assercoes": [],
+          "linha": 343,
+          "stats": {
+            "passos": 4,
+            "na": 0,
+            "assercoes": 0
+          }
+        },
+        {
+          "key": "ROTEIRO-03/J-051.M",
+          "id": "J-051.M",
+          "escopoId": "J-051.M",
+          "kind": "jornada",
+          "nivel": 3,
+          "titulo": "Resultado do webhook observado pelo mobile",
+          "anchor": "j-051m---resultado-do-webhook-observado-pelo-mobile",
+          "ordem": 5,
+          "meta": [
+            {
+              "chave": "ID",
+              "texto": "J-051.M",
+              "html": "<code>J-051.M</code>"
+            },
+            {
+              "chave": "Tipo",
+              "texto": "Positiva",
+              "html": "Positiva"
+            },
+            {
+              "chave": "Persona",
+              "texto": "Conta criada na J-003.M",
+              "html": "Conta criada na <a href=\"./ROTEIRO-01-ACESSO-E-SESSAO.md#j-003m---visitante-cria-conta-de-cliente\" rel=\"noreferrer\"><code>J-003.M</code></a>"
+            },
+            {
+              "chave": "Superfície",
+              "texto": "Mobile (PWA) + API para o disparo do webhook",
+              "html": "Mobile (PWA) + API para o disparo do webhook"
+            },
+            {
+              "chave": "Pré-condições",
+              "texto": "PRE-01 PRE-02 PRE-03 PRE-04 + J-003.M concluída",
+              "html": "<code>PRE-01</code> <code>PRE-02</code> <code>PRE-03</code> <code>PRE-04</code> + <code>J-003.M</code> concluída"
+            },
+            {
+              "chave": "Endpoints tocados",
+              "texto": "POST /onboarding/pessoa, POST /{id}/documentos, POST /{id}/verificar, GET /{id}, POST /webhooks/celcoin/kyc",
+              "html": "<code>POST /onboarding/pessoa</code>, <code>POST /{id}/documentos</code>, <code>POST /{id}/verificar</code>, <code>GET /{id}</code>, <code>POST /webhooks/celcoin/kyc</code>"
+            },
+            {
+              "chave": "Step-up",
+              "texto": "não",
+              "html": "não"
+            },
+            {
+              "chave": "Duração",
+              "texto": "12 min",
+              "html": "12 min"
+            },
+            {
+              "chave": "Automação equivalente",
+              "texto": "nenhuma — o MSW resolve o KYC sozinho, então nenhuma spec exercita a espera",
+              "html": "nenhuma — o MSW resolve o KYC sozinho, então nenhuma spec exercita a espera"
+            },
+            {
+              "chave": "Só o manual cobre",
+              "texto": "Ausência de polling, atualização por gesto e a rotulagem dos dois \"aprovado\"",
+              "html": "Ausência de polling, atualização por gesto e a rotulagem dos dois &quot;aprovado&quot;"
+            }
+          ],
+          "metaIndex": {
+            "ID": "J-051.M",
+            "Tipo": "Positiva",
+            "Persona": "Conta criada na J-003.M",
+            "Superfície": "Mobile (PWA) + API para o disparo do webhook",
+            "Pré-condições": "PRE-01 PRE-02 PRE-03 PRE-04 + J-003.M concluída",
+            "Endpoints tocados": "POST /onboarding/pessoa, POST /{id}/documentos, POST /{id}/verificar, GET /{id}, POST /webhooks/celcoin/kyc",
+            "Step-up": "não",
+            "Duração": "12 min",
+            "Automação equivalente": "nenhuma — o MSW resolve o KYC sozinho, então nenhuma spec exercita a espera",
+            "Só o manual cobre": "Ausência de polling, atualização por gesto e a rotulagem dos dois \"aprovado\""
+          },
+          "notas": [
+            "<strong>O mobile não dispara nem recebe o webhook.</strong> Ele é a superfície que <strong>observa o efeito</strong>: o provider resolve por fora e o app só descobre quando o usuário pede. Esta jornada mede exatamente esse intervalo — o que a tela faz enquanto o resultado não chegou, e o que ela mostra quando chega."
+          ],
+          "grupos": [
+            {
+              "id": "g1",
+              "tituloHtml": null,
+              "tela": null,
+              "implicito": true,
+              "passos": [
+                {
+                  "key": "ROTEIRO-03/J-051.M/P1",
+                  "id": "P1",
+                  "hash": "0f49ad76",
+                  "textoHtml": "Abrir uma solicitação PF nova no mobile e levá-la até <code>EM_VERIFICACAO</code>.",
+                  "comoHtml": "Em <code>http://localhost:8100</code>, emulação ligada, logado com a conta da <code>J-003.M</code>. Se o app retomar a jornada anterior, usar <strong>Ver status do cadastro</strong> &gt; <strong>Recomecar cadastro</strong> para voltar à escolha (isso só esquece a jornada local; ver <a href=\"#j-059m---onboarding-pj-no-mobile\" rel=\"noreferrer\"><code>J-059.M</code></a> P3). Escolher pessoa física, CPF <code>12345678909</code>, enviar identidade e selfie e, na etapa <strong>Status</strong>, tocar <strong>Iniciar verificacao</strong>. <strong>Anotar o id</strong> da solicitação.",
+                  "textoBusca": "abrir uma solicitação pf nova no mobile e levá-la até emverificacao. em http://localhost:8100, emulação ligada, logado com a conta da j-003.m. se o app retomar a jornada anterior, usar ver status do cadastro > recomecar cadastro para voltar à escolha (isso só esquece a jornada local; ver j-059.m p3). escolher pessoa física, cpf 12345678909, enviar identidade e selfie e, na etapa status, tocar iniciar verificacao. anotar o id da solicitação.",
+                  "esperadoHtml": "badge <strong>Em verificacao</strong>. &gt; O id não aparece na tela do mobile. Pegue-o na aba <strong>Network</strong>, na resposta do <code>POST</code> de &gt; criação (campo <code>id</code>) ou na URL das chamadas seguintes — o P5 precisa dele.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 412,
+                  "ordem": 1
+                },
+                {
+                  "key": "ROTEIRO-03/J-051.M/P2",
+                  "id": "P2",
+                  "hash": "d69249ec",
+                  "textoHtml": "Com o app <strong>aberto e parado</strong> na etapa Status, resolver o KYC por fora.",
+                  "comoHtml": "Sem tocar no aparelho emulado, disparar o webhook aprovado no terminal, com o id deste onboarding — mesmo procedimento da <a href=\"#j-051a---webhook-kyc-fecha-a-verificação-pf\" rel=\"noreferrer\"><code>J-051.A</code></a> P1. Depois <strong>esperar uns 30 segundos sem encostar na tela</strong>, de olho na aba Network.",
+                  "textoBusca": "com o app aberto e parado na etapa status, resolver o kyc por fora. sem tocar no aparelho emulado, disparar o webhook aprovado no terminal, com o id deste onboarding — mesmo procedimento da j-051.a p1. depois esperar uns 30 segundos sem encostar na tela, de olho na aba network.",
+                  "esperadoHtml": "o webhook responde <code>202</code> e <strong>a tela do mobile não muda</strong>. Nenhuma requisição nova aparece na Network nesses 30 segundos. &gt; <strong>Este é o passo que importa e ele passa não acontecendo nada.</strong> A tela mudar sozinha &gt; aqui significaria polling — carga desnecessária no backend e bateria no aparelho. A &gt; ausência de atualização automática é a decisão de projeto, não uma falha.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 422,
+                  "ordem": 2
+                },
+                {
+                  "key": "ROTEIRO-03/J-051.M/P3",
+                  "id": "P3",
+                  "hash": "ee3f6966",
+                  "textoHtml": "Atualizar por gesto.",
+                  "comoHtml": "Tocar <strong>Atualizar</strong>. &quot;Por gesto&quot; quer dizer que <strong>você</strong> pede; a tela não busca sozinha.",
+                  "textoBusca": "atualizar por gesto. tocar atualizar. \"por gesto\" quer dizer que você pede; a tela não busca sozinha.",
+                  "esperadoHtml": "uma única chamada <code>GET</code> na Network e o badge salta para <strong>Aprovado</strong>.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 432,
+                  "ordem": 3
+                },
+                {
+                  "key": "ROTEIRO-03/J-051.M/P4",
+                  "id": "P4",
+                  "hash": "eeaaf1f9",
+                  "textoHtml": "Ler o rótulo com atenção — são <strong>dois</strong> aprovados diferentes.",
+                  "comoHtml": "O mobile traduz o status, e a tradução distingue os dois estados: <code>APROVADO</code> (KYC feito, PLD pendente) aparece como <strong>&quot;Aprovado (KYC/KYB)&quot;</strong>, e <code>APROVADO_FINAL</code> aparece como <strong>&quot;Aprovado&quot;</strong>, sem sufixo. <strong>As duas usam a mesma cor</strong>, então o sufixo é o único sinal visual — e só o segundo libera crédito.",
+                  "textoBusca": "ler o rótulo com atenção — são dois aprovados diferentes. o mobile traduz o status, e a tradução distingue os dois estados: aprovado (kyc feito, pld pendente) aparece como \"aprovado (kyc/kyb)\", e aprovadofinal aparece como \"aprovado\", sem sufixo. as duas usam a mesma cor, então o sufixo é o único sinal visual — e só o segundo libera crédito.",
+                  "esperadoHtml": "badge exatamente <strong>&quot;Aprovado&quot;</strong>. Se aparecer <strong>&quot;Aprovado (KYC/KYB)&quot;</strong>, o PLD não rodou: é <code>APROVADO</code> puro, e a proposta de crédito vai recusar com <code>422</code>.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 436,
+                  "ordem": 4
+                },
+                {
+                  "key": "ROTEIRO-03/J-051.M/P5",
+                  "id": "P5",
+                  "hash": "22bb6e0b",
+                  "textoHtml": "Conferir a linha de resultado logo abaixo do badge.",
+                  "comoHtml": "Ela mostra o <code>statusFinal</code> <strong>cru</strong>, vindo do resultado da verificação, que é <strong>pré-PLD</strong>. Então a combinação correta nesta tela é badge traduzido dizendo &quot;Aprovado&quot; e a linha de baixo dizendo <code>APROVADO</code>. Parece contradição e não é: são dois campos com significados diferentes.",
+                  "textoBusca": "conferir a linha de resultado logo abaixo do badge. ela mostra o statusfinal cru, vindo do resultado da verificação, que é pré-pld. então a combinação correta nesta tela é badge traduzido dizendo \"aprovado\" e a linha de baixo dizendo aprovado. parece contradição e não é: são dois campos com significados diferentes.",
+                  "esperadoHtml": "<code>Resultado: APROVADO</code> sob o badge <strong>Aprovado</strong>. Registrar como ocorrência de usabilidade se você — que conhece a máquina de estados — precisar parar para interpretar.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 443,
+                  "ordem": 5
+                },
+                {
+                  "key": "ROTEIRO-03/J-051.M/P6",
+                  "id": "P6",
+                  "hash": "f7dd4772",
+                  "textoHtml": "Comparar com o web, que <strong>não</strong> traduz.",
+                  "comoHtml": "Em <code>http://localhost:4200</code>, com a <strong>mesma conta</strong>, abrir <code>/app/onboarding/pessoa/&lt;id&gt;</code> colando o id anotado no P1. O web renderiza o valor cru do backend.",
+                  "textoBusca": "comparar com o web, que não traduz. em http://localhost:4200, com a mesma conta, abrir /app/onboarding/pessoa/<id> colando o id anotado no p1. o web renderiza o valor cru do backend.",
+                  "esperadoHtml": "o web mostra <code>APROVADO_FINAL</code> e o mobile mostra <code>Aprovado</code>, <strong>para o mesmo dado</strong>. É divergência de apresentação deliberada, não defeito — mas quem lê relatório de teste precisa saber que o vocabulário muda com a superfície.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 450,
+                  "ordem": 6
+                },
+                {
+                  "key": "ROTEIRO-03/J-051.M/P7",
+                  "id": "P7",
+                  "hash": "4a87986a",
+                  "textoHtml": "Repetir o webhook e confirmar que a tela continua estável.",
+                  "comoHtml": "Disparar de novo o <strong>mesmo</strong> request do P2, sem mudar chave nem corpo, e tocar <strong>Atualizar</strong> no mobile.",
+                  "textoBusca": "repetir o webhook e confirmar que a tela continua estável. disparar de novo o mesmo request do p2, sem mudar chave nem corpo, e tocar atualizar no mobile.",
+                  "esperadoHtml": "<code>202</code> no webhook, <code>APROVADO_FINAL</code> inalterado no app. Entrega repetida de provider não pode mexer no que o usuário vê.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 457,
+                  "ordem": 7
+                },
+                {
+                  "key": "ROTEIRO-03/J-051.M/P8",
+                  "id": "P8",
+                  "hash": "075c7109",
+                  "textoHtml": "Conferir a trilha do lado do servidor.",
+                  "comoHtml": "Terminal do banco. O app é só a janela; a prova de que o encadeamento KYC → PLD aconteceu está no audit.",
+                  "textoBusca": "conferir a trilha do lado do servidor. terminal do banco. o app é só a janela; a prova de que o encadeamento kyc → pld aconteceu está no audit.",
+                  "esperadoHtml": "os três eventos, com hora posterior ao disparo do P2.",
+                  "blocos": [
+                    {
+                      "tipo": "codigo",
+                      "lang": "bash",
+                      "regiao": "como",
+                      "conteudo": "docker exec sep-postgres psql -U sep -d sep_dev \\\n  -c \"SELECT tipo, data_evento FROM audit_log_seguranca\n      WHERE tipo IN ('KYC_FINALIZADO_APROVADO','PLD_LIMPO','PLD_FINALIZADO')\n      ORDER BY data_evento DESC LIMIT 6;\""
+                    }
+                  ],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 462,
+                  "ordem": 8
+                }
+              ]
+            }
+          ],
+          "assercoes": [
+            {
+              "key": "ROTEIRO-03/J-051.M/#33cb5fc2",
+              "id": null,
+              "hash": "cf955891",
+              "textoHtml": "Mobile refletiu <code>APROVADO_FINAL</code> <strong>só depois do gesto</strong>, e sem nenhuma atualização automática",
+              "comoHtml": null,
+              "textoBusca": "mobile refletiu aprovadofinal só depois do gesto, e sem nenhuma atualização automática",
+              "esperadoHtml": null,
+              "blocos": [],
+              "na": false,
+              "naMotivo": null,
+              "marcadoNaFonte": false,
+              "linha": 475,
+              "ordem": 1
+            }
+          ],
+          "linha": 390,
+          "stats": {
+            "passos": 8,
+            "na": 0,
+            "assercoes": 1
+          }
+        },
+        {
+          "key": "ROTEIRO-03/J-051.M-N1",
+          "id": "J-051.M-N1",
+          "escopoId": "J-051.M-N1",
+          "kind": "jornada",
+          "nivel": 3,
+          "titulo": "Pendência de KYC é terminal e prende o CPF",
+          "anchor": "j-051m-n1---pendncia-de-kyc--terminal-e-prende-o-cpf",
+          "ordem": 6,
+          "meta": [
+            {
+              "chave": "ID",
+              "texto": "J-051.M-N1",
+              "html": "<code>J-051.M-N1</code>"
+            },
+            {
+              "chave": "Tipo",
+              "texto": "Negativa — desfecho sem saída",
+              "html": "Negativa — desfecho sem saída"
+            },
+            {
+              "chave": "Persona",
+              "texto": "Conta criada na J-003.M",
+              "html": "Conta criada na <a href=\"./ROTEIRO-01-ACESSO-E-SESSAO.md#j-003m---visitante-cria-conta-de-cliente\" rel=\"noreferrer\"><code>J-003.M</code></a>"
+            },
+            {
+              "chave": "Superfície",
+              "texto": "Mobile (PWA) + API",
+              "html": "Mobile (PWA) + API"
+            },
+            {
+              "chave": "Vetor",
+              "texto": "Provider devolve PENDING — nem aprovação, nem recusa",
+              "html": "Provider devolve <code>PENDING</code> — nem aprovação, nem recusa"
+            },
+            {
+              "chave": "Comportamento seguro esperado",
+              "texto": "Estado final honesto na tela, sem caminho de correção improvisado no cliente",
+              "html": "Estado final honesto na tela, sem caminho de correção improvisado no cliente"
+            },
+            {
+              "chave": "Pré-condições",
+              "texto": "PRE-01 PRE-03 PRE-04 + J-003.M concluída",
+              "html": "<code>PRE-01</code> <code>PRE-03</code> <code>PRE-04</code> + <code>J-003.M</code> concluída"
+            }
+          ],
+          "metaIndex": {
+            "ID": "J-051.M-N1",
+            "Tipo": "Negativa — desfecho sem saída",
+            "Persona": "Conta criada na J-003.M",
+            "Superfície": "Mobile (PWA) + API",
+            "Vetor": "Provider devolve PENDING — nem aprovação, nem recusa",
+            "Comportamento seguro esperado": "Estado final honesto na tela, sem caminho de correção improvisado no cliente",
+            "Pré-condições": "PRE-01 PRE-03 PRE-04 + J-003.M concluída"
+          },
+          "notas": [
+            "<strong>Esta jornada consome um CPF em definitivo.</strong> <code>PENDENCIA</code> é status <strong>final</strong> e ao mesmo tempo conta como <strong>ativo</strong>: não aceita documento novo, não aceita nova verificação e continua bloqueando o CPF, sem nenhum endpoint de reabertura. Use <strong><code>98765432100</code></strong>, que existe na massa só para isso. Se ele já tiver sido queimado numa execução anterior, use <code>24681357928</code> ou <code>13579246828</code> e anote qual foi no registro da execução. <strong>Não use o CPF do <code>cliente-a</code>.</strong>",
+            "<strong>O que esta jornada prova, e o que ela expõe.</strong> O backend se comporta como projetado: não reescreve decisão de KYC e não deixa o cliente contornar um estado final. O que falta é produto — <strong>não existe jornada de correção de pendência</strong>, nem no app nem no backoffice, e o CPF fica retido sem prazo. Registrar como ocorrência de produto, com esta jornada como evidência, e anotar no registro qual CPF foi consumido."
+          ],
+          "grupos": [
+            {
+              "id": "g1",
+              "tituloHtml": null,
+              "tela": null,
+              "implicito": true,
+              "passos": [
+                {
+                  "key": "ROTEIRO-03/J-051.M-N1/P1",
+                  "id": "P1",
+                  "hash": "da27fe8b",
+                  "textoHtml": "Abrir uma solicitação PF nova no mobile e levá-la até <code>EM_VERIFICACAO</code>.",
+                  "comoHtml": "Mesmo caminho da <a href=\"#j-051m---resultado-do-webhook-observado-pelo-mobile\" rel=\"noreferrer\"><code>J-051.M</code></a> P1 — <strong>Ver status do cadastro</strong> &gt; <strong>Recomecar cadastro</strong> se o app retomar a jornada anterior, pessoa física, identidade e selfie, <strong>Iniciar verificacao</strong>. CPF <strong><code>98765432100</code></strong>. <strong>Anotar o id</strong> na aba Network.",
+                  "textoBusca": "abrir uma solicitação pf nova no mobile e levá-la até emverificacao. mesmo caminho da j-051.m p1 — ver status do cadastro > recomecar cadastro se o app retomar a jornada anterior, pessoa física, identidade e selfie, iniciar verificacao. cpf 98765432100. anotar o id na aba network.",
+                  "esperadoHtml": "badge <strong>Em verificacao</strong>.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 499,
+                  "ordem": 1
+                },
+                {
+                  "key": "ROTEIRO-03/J-051.M-N1/P2",
+                  "id": "P2",
+                  "hash": "3eeca9ab",
+                  "textoHtml": "Resolver o KYC como pendência, com motivo.",
+                  "comoHtml": "Disparar o webhook com <code>\"status\":\"PENDING\"</code> e um <code>reason</code> reconhecível — o texto abaixo serve. O <code>reason</code> do provider vira o <code>motivo</code> persistido e precisa chegar à tela sem edição.",
+                  "textoBusca": "resolver o kyc como pendência, com motivo. disparar o webhook com \"status\":\"pending\" e um reason reconhecível — o texto abaixo serve. o reason do provider vira o motivo persistido e precisa chegar à tela sem edição.",
+                  "esperadoHtml": "<code>202</code>.",
+                  "blocos": [
+                    {
+                      "tipo": "codigo",
+                      "lang": "bash",
+                      "regiao": "como",
+                      "conteudo": "SOLICITACAO_ID=<id-do-P1>\nSECRET=dev-kyc-webhook-secret-change-me\nBODY=\"{\\\"verification_id\\\":\\\"fake-$SOLICITACAO_ID\\\",\\\"status\\\":\\\"PENDING\\\",\\\"reason\\\":\\\"selfie ilegivel\\\"}\"\nSIG=$(printf '%s' \"$BODY\" | openssl dgst -sha256 -hmac \"$SECRET\" -r | cut -d' ' -f1)\n\ncurl -i -X POST http://localhost:8080/api/v1/webhooks/celcoin/kyc \\\n  -H 'Content-Type: application/json' \\\n  -H \"Idempotency-Key: kyc-pend-$SOLICITACAO_ID\" \\\n  -H \"X-Webhook-Signature: $SIG\" \\\n  --data-binary \"$BODY\""
+                    }
+                  ],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 505,
+                  "ordem": 2
+                },
+                {
+                  "key": "ROTEIRO-03/J-051.M-N1/P3",
+                  "id": "P3",
+                  "hash": "687dbd13",
+                  "textoHtml": "Atualizar por gesto e ler o desfecho.",
+                  "comoHtml": "No mobile, tocar <strong>Atualizar</strong>.",
+                  "textoBusca": "atualizar por gesto e ler o desfecho. no mobile, tocar atualizar.",
+                  "esperadoHtml": "badge <strong>Pendencia</strong>, e a linha abaixo mostrando <code>Resultado: PENDENCIA - selfie ilegivel</code>. O motivo tem de aparecer <strong>na íntegra</strong>: pendência sem motivo visível deixa o usuário sem saber o que corrigir, e isso é ocorrência.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 522,
+                  "ordem": 3
+                },
+                {
+                  "key": "ROTEIRO-03/J-051.M-N1/P4",
+                  "id": "P4",
+                  "hash": "0cfcd743",
+                  "textoHtml": "Confirmar que o PLD <strong>não</strong> rodou.",
+                  "comoHtml": "Terminal do banco. O PLD só é disparado quando o KYC fecha em <code>APROVADO</code>; pendência não avança para triagem. Se houver evento de PLD posterior ao P2, a orquestração está avançando estado que não deveria.",
+                  "textoBusca": "confirmar que o pld não rodou. terminal do banco. o pld só é disparado quando o kyc fecha em aprovado; pendência não avança para triagem. se houver evento de pld posterior ao p2, a orquestração está avançando estado que não deveria.",
+                  "esperadoHtml": "nenhum evento de PLD com hora posterior ao disparo do P2.",
+                  "blocos": [
+                    {
+                      "tipo": "codigo",
+                      "lang": "bash",
+                      "regiao": "como",
+                      "conteudo": "docker exec sep-postgres psql -U sep -d sep_dev \\\n  -c \"SELECT tipo, data_evento FROM audit_log_seguranca\n      WHERE tipo LIKE 'PLD%' ORDER BY data_evento DESC LIMIT 5;\""
+                    }
+                  ],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 527,
+                  "ordem": 4
+                },
+                {
+                  "key": "ROTEIRO-03/J-051.M-N1/P5",
+                  "id": "P5",
+                  "hash": "88a372bd",
+                  "textoHtml": "Tentar corrigir enviando um documento novo.",
+                  "comoHtml": "É o que qualquer usuário tentaria depois de ler &quot;selfie ilegível&quot;. Na etapa <strong>Status</strong>, tocar <strong>Voltar aos documentos</strong> e enviar outra selfie.",
+                  "textoBusca": "tentar corrigir enviando um documento novo. é o que qualquer usuário tentaria depois de ler \"selfie ilegível\". na etapa status, tocar voltar aos documentos e enviar outra selfie.",
+                  "esperadoHtml": "recusado com <code>ONB-400-001</code>, e a mensagem de erro aparece no bloco de upload. <strong>Não existe correção de pendência</strong>: o estado é final.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 537,
+                  "ordem": 5
+                },
+                {
+                  "key": "ROTEIRO-03/J-051.M-N1/P6",
+                  "id": "P6",
+                  "hash": "0abdbf1a",
+                  "textoHtml": "Tentar reenviar para verificação.",
+                  "comoHtml": "Voltar à etapa <strong>Status</strong> e tocar <strong>Iniciar verificacao</strong> de novo.",
+                  "textoBusca": "tentar reenviar para verificação. voltar à etapa status e tocar iniciar verificacao de novo.",
+                  "esperadoHtml": "recusado com <code>ONB-400-001</code>. A tela <strong>oferece</strong> o botão mesmo num estado que não o aceita — registrar como ocorrência de usabilidade: ação impossível não deveria estar habilitada.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 542,
+                  "ordem": 6
+                },
+                {
+                  "key": "ROTEIRO-03/J-051.M-N1/P7",
+                  "id": "P7",
+                  "hash": "705db32f",
+                  "textoHtml": "Tentar recomeçar pelo próprio app.",
+                  "comoHtml": "<strong>Recomecar cadastro</strong> e iniciar um PF novo com o <strong>mesmo</strong> CPF <code>98765432100</code>. O botão limpa só a jornada local (ver <a href=\"#j-059m---onboarding-pj-no-mobile\" rel=\"noreferrer\"><code>J-059.M</code></a> P3), então o bloqueio do servidor continua de pé.",
+                  "textoBusca": "tentar recomeçar pelo próprio app. recomecar cadastro e iniciar um pf novo com o mesmo cpf 98765432100. o botão limpa só a jornada local (ver j-059.m p3), então o bloqueio do servidor continua de pé.",
+                  "esperadoHtml": "<code>409</code> com <code>ONB-409-001</code>. <strong>O CPF está queimado</strong>: o usuário não tem, por nenhum caminho de UI, como refazer o onboarding.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 547,
+                  "ordem": 7
+                },
+                {
+                  "key": "ROTEIRO-03/J-051.M-N1/P8",
+                  "id": "P8",
+                  "hash": "e3aed141",
+                  "textoHtml": "Tentar &quot;consertar&quot; por fora, com um webhook de aprovação.",
+                  "comoHtml": "Repetir o disparo do P2 com <code>\"status\":\"APPROVED\"</code>, <strong>chave de idempotência nova</strong> (<code>kyc-resgate-$SOLICITACAO_ID</code>) e assinatura recalculada. É a tentativa óbvia de resgate, e ela <strong>não pode</strong> funcionar: resultado já finalizado não se reescreve por callback tardio.",
+                  "textoBusca": "tentar \"consertar\" por fora, com um webhook de aprovação. repetir o disparo do p2 com \"status\":\"approved\", chave de idempotência nova (kyc-resgate-$solicitacaoid) e assinatura recalculada. é a tentativa óbvia de resgate, e ela não pode funcionar: resultado já finalizado não se reescreve por callback tardio.",
+                  "esperadoHtml": "<code>202</code> na resposta — o webhook aceita a entrega — mas o status <strong>continua <code>PENDENCIA</code></strong>. Se virar <code>APROVADO</code>, um callback tardio está reescrevendo decisão de KYC: ocorrência grave.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 554,
+                  "ordem": 8
+                },
+                {
+                  "key": "ROTEIRO-03/J-051.M-N1/P9",
+                  "id": "P9",
+                  "hash": "4c945a6f",
+                  "textoHtml": "Conferir estado e outbox.",
+                  "comoHtml": "Terminal do banco. A entrega do P8 tem de estar registrada como falha, com o motivo do conflito — aceitar a entrega e recusar o conteúdo são coisas diferentes.",
+                  "textoBusca": "conferir estado e outbox. terminal do banco. a entrega do p8 tem de estar registrada como falha, com o motivo do conflito — aceitar a entrega e recusar o conteúdo são coisas diferentes.",
+                  "esperadoHtml": "uma solicitação em <code>PENDENCIA</code>; no outbox, a chave do P2 em <code>PROCESSADO</code> e a do P8 em <code>FALHOU</code>, com o conflito descrito em <code>erro</code>.",
+                  "blocos": [
+                    {
+                      "tipo": "codigo",
+                      "lang": "bash",
+                      "regiao": "como",
+                      "conteudo": "docker exec sep-postgres psql -U sep -d sep_dev \\\n  -c \"SELECT status, id_verificacao_externa FROM solicitacao_onboarding\n      WHERE documento = '98765432100';\"\ndocker exec sep-postgres psql -U sep -d sep_dev \\\n  -c \"SELECT idempotency_key, status, erro FROM webhook_event_log\n      WHERE provider = 'celcoin-kyc' ORDER BY data_recebimento DESC LIMIT 3;\""
+                    }
+                  ],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 561,
+                  "ordem": 9
+                }
+              ]
+            }
+          ],
+          "assercoes": [
+            {
+              "key": "ROTEIRO-03/J-051.M-N1/#0b08a6a9",
+              "id": null,
+              "hash": "2586f1a3",
+              "textoHtml": "<code>PENDENCIA</code> confirmada como terminal, sem correção por UI e sem resgate por webhook",
+              "comoHtml": null,
+              "textoBusca": "pendencia confirmada como terminal, sem correção por ui e sem resgate por webhook",
+              "esperadoHtml": null,
+              "blocos": [],
+              "na": false,
+              "naMotivo": null,
+              "marcadoNaFonte": false,
+              "linha": 583,
+              "ordem": 1
+            }
+          ],
+          "linha": 479,
+          "stats": {
+            "passos": 9,
+            "na": 0,
+            "assercoes": 1
+          }
+        },
+        {
+          "key": "ROTEIRO-03/J-052.W-N1",
+          "id": "J-052.W-N1",
+          "escopoId": "J-052.W-N1",
+          "kind": "jornada",
+          "nivel": 3,
+          "titulo": "Verificação sem os documentos mínimos",
+          "anchor": "j-052w-n1---verificao-sem-os-documentos-mnimos",
+          "ordem": 7,
+          "meta": [
+            {
+              "chave": "ID",
+              "texto": "J-052.W-N1",
+              "html": "<code>J-052.W-N1</code>"
+            },
+            {
+              "chave": "Tipo",
+              "texto": "Negativa — regra de negócio",
+              "html": "Negativa — regra de negócio"
+            },
+            {
+              "chave": "Persona",
+              "texto": "cliente-b",
+              "html": "<code>cliente-b</code>"
+            },
+            {
+              "chave": "Superfície",
+              "texto": "Web + API",
+              "html": "Web + API"
+            },
+            {
+              "chave": "Vetor",
+              "texto": "Disparar KYC sem identidade ou sem selfie",
+              "html": "Disparar KYC sem identidade ou sem selfie"
+            },
+            {
+              "chave": "Comportamento seguro esperado",
+              "texto": "400 do backend, sem chamar o provider",
+              "html": "<code>400</code> do backend, sem chamar o provider"
+            },
+            {
+              "chave": "Pré-condições",
+              "texto": "PRE-01 PRE-02 PRE-04 PRE-09",
+              "html": "<code>PRE-01</code> <code>PRE-02</code> <code>PRE-04</code> <code>PRE-09</code>"
+            }
+          ],
+          "metaIndex": {
+            "ID": "J-052.W-N1",
+            "Tipo": "Negativa — regra de negócio",
+            "Persona": "cliente-b",
+            "Superfície": "Web + API",
+            "Vetor": "Disparar KYC sem identidade ou sem selfie",
+            "Comportamento seguro esperado": "400 do backend, sem chamar o provider",
+            "Pré-condições": "PRE-01 PRE-02 PRE-04 PRE-09"
+          },
+          "notas": [],
+          "grupos": [
+            {
+              "id": "g1",
+              "tituloHtml": null,
+              "tela": null,
+              "implicito": true,
+              "passos": [
+                {
+                  "key": "ROTEIRO-03/J-052.W-N1/P1",
+                  "id": "P1",
+                  "hash": "9d0d004f",
+                  "textoHtml": "Iniciar um onboarding para <code>cliente-b</code> e <strong>não</strong> enviar documento nenhum.",
+                  "comoHtml": "Entrar como <code>cliente-b@sep.test</code> — atenção: se você executou a <code>J-022.W-N1</code> no <code>ROTEIRO-01</code>, a senha dele mudou. CPF <code>39053344705</code>. Parar logo depois do <code>201</code>.",
+                  "textoBusca": "iniciar um onboarding para cliente-b e não enviar documento nenhum. entrar como cliente-b@sep.test — atenção: se você executou a j-022.w-n1 no roteiro-01, a senha dele mudou. cpf 39053344705. parar logo depois do 201.",
+                  "esperadoHtml": "solicitação em <code>INICIADO</code>.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 601,
+                  "ordem": 1
+                },
+                {
+                  "key": "ROTEIRO-03/J-052.W-N1/P2",
+                  "id": "P2",
+                  "hash": "8c87b785",
+                  "textoHtml": "Clicar <strong>Enviar para verificação</strong> sem documentos.",
+                  "comoHtml": "Ir direto ao bloco <strong>Verificação</strong>. O status ainda é <code>INICIADO</code>, e a verificação só pode sair de <code>DOCUMENTOS_RECEBIDOS</code>.",
+                  "textoBusca": "clicar enviar para verificação sem documentos. ir direto ao bloco verificação. o status ainda é iniciado, e a verificação só pode sair de documentosrecebidos.",
+                  "esperadoHtml": "recusado, código <code>ONB-400-001</code> (operação inválida no status atual).",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 605,
+                  "ordem": 2
+                },
+                {
+                  "key": "ROTEIRO-03/J-052.W-N1/P3",
+                  "id": "P3",
+                  "hash": "f3b21aeb",
+                  "textoHtml": "Enviar <strong>só</strong> a selfie e tentar de novo.",
+                  "comoHtml": "Tipo <code>SELFIE</code>, um arquivo. Agora o status é <code>DOCUMENTOS_RECEBIDOS</code>, então a regra que barra é outra: falta o documento de identidade. <strong>São dois erros diferentes</strong> e é isso que o passo separa.",
+                  "textoBusca": "enviar só a selfie e tentar de novo. tipo selfie, um arquivo. agora o status é documentosrecebidos, então a regra que barra é outra: falta o documento de identidade. são dois erros diferentes e é isso que o passo separa.",
+                  "esperadoHtml": "recusado por documentos mínimos ausentes, com mensagem citando RG/CNH/PASSAPORTE + SELFIE.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 609,
+                  "ordem": 3
+                },
+                {
+                  "key": "ROTEIRO-03/J-052.W-N1/P4",
+                  "id": "P4",
+                  "hash": "1f3d85e5",
+                  "textoHtml": "Repetir o P3 direto na API.",
+                  "comoHtml": "No Insomnia, <code>POST /api/v1/onboarding/pessoa/{id}/verificar</code> com o token do <code>cliente-b</code>. A tela pode estar apenas escondendo o botão; a recusa tem de vir do backend.",
+                  "textoBusca": "repetir o p3 direto na api. no insomnia, post /api/v1/onboarding/pessoa/{id}/verificar com o token do cliente-b. a tela pode estar apenas escondendo o botão; a recusa tem de vir do backend.",
+                  "esperadoHtml": "<code>400</code>, não <code>202</code>.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 615,
+                  "ordem": 4
+                },
+                {
+                  "key": "ROTEIRO-03/J-052.W-N1/P5",
+                  "id": "P5",
+                  "hash": "df3d781a",
+                  "textoHtml": "Conferir que nenhuma verificação externa foi disparada.",
+                  "comoHtml": "Terminal do banco. Se o provider tivesse sido chamado, haveria <code>id_verificacao_externa</code> preenchido e evento de disparo no audit.",
+                  "textoBusca": "conferir que nenhuma verificação externa foi disparada. terminal do banco. se o provider tivesse sido chamado, haveria idverificacaoexterna preenchido e evento de disparo no audit.",
+                  "esperadoHtml": "<code>DOCUMENTOS_RECEBIDOS</code> e <code>id_verificacao_externa</code> nulo.",
+                  "blocos": [
+                    {
+                      "tipo": "codigo",
+                      "lang": "bash",
+                      "regiao": "como",
+                      "conteudo": "docker exec sep-postgres psql -U sep -d sep_dev \\\n  -c \"SELECT status, id_verificacao_externa FROM solicitacao_onboarding\n      WHERE documento = '39053344705';\""
+                    }
+                  ],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 619,
+                  "ordem": 5
+                }
+              ]
+            }
+          ],
+          "assercoes": [],
+          "linha": 587,
+          "stats": {
+            "passos": 5,
+            "na": 0,
+            "assercoes": 0
+          }
+        },
+        {
+          "key": "ROTEIRO-03/J-052.W-N2",
+          "id": "J-052.W-N2",
+          "escopoId": "J-052.W-N2",
+          "kind": "jornada",
+          "nivel": 3,
+          "titulo": "Arquivo fora da política de upload",
+          "anchor": "j-052w-n2---arquivo-fora-da-poltica-de-upload",
+          "ordem": 8,
+          "meta": [
+            {
+              "chave": "ID",
+              "texto": "J-052.W-N2",
+              "html": "<code>J-052.W-N2</code>"
+            },
+            {
+              "chave": "Tipo",
+              "texto": "Negativa — validação",
+              "html": "Negativa — validação"
+            },
+            {
+              "chave": "Persona",
+              "texto": "cliente-b",
+              "html": "<code>cliente-b</code>"
+            },
+            {
+              "chave": "Superfície",
+              "texto": "Web + API",
+              "html": "Web + API"
+            },
+            {
+              "chave": "Vetor",
+              "texto": "Subir arquivo de tipo ou tamanho não permitido",
+              "html": "Subir arquivo de tipo ou tamanho não permitido"
+            },
+            {
+              "chave": "Comportamento seguro esperado",
+              "texto": "400 do backend, nada gravado",
+              "html": "<code>400</code> do backend, nada gravado"
+            },
+            {
+              "chave": "Pré-condições",
+              "texto": "PRE-01 PRE-02 PRE-04 + solicitação da J-052.W-N1",
+              "html": "<code>PRE-01</code> <code>PRE-02</code> <code>PRE-04</code> + solicitação da <code>J-052.W-N1</code>"
+            }
+          ],
+          "metaIndex": {
+            "ID": "J-052.W-N2",
+            "Tipo": "Negativa — validação",
+            "Persona": "cliente-b",
+            "Superfície": "Web + API",
+            "Vetor": "Subir arquivo de tipo ou tamanho não permitido",
+            "Comportamento seguro esperado": "400 do backend, nada gravado",
+            "Pré-condições": "PRE-01 PRE-02 PRE-04 + solicitação da J-052.W-N1"
+          },
+          "notas": [],
+          "grupos": [
+            {
+              "id": "g1",
+              "tituloHtml": null,
+              "tela": null,
+              "implicito": true,
+              "passos": [
+                {
+                  "key": "ROTEIRO-03/J-052.W-N2/P1",
+                  "id": "P1",
+                  "hash": "f0555e97",
+                  "textoHtml": "Tentar anexar um arquivo de tipo não aceito.",
+                  "comoHtml": "O campo de arquivo da tela filtra por PDF, JPEG e PNG, então <strong>o teste real é pela API</strong>: no Insomnia, <code>POST /{id}/documentos</code> em multipart com um <code>.txt</code> ou <code>.zip</code>. Filtro de <code>accept</code> no HTML é conveniência, não controle.",
+                  "textoBusca": "tentar anexar um arquivo de tipo não aceito. o campo de arquivo da tela filtra por pdf, jpeg e png, então o teste real é pela api: no insomnia, post /{id}/documentos em multipart com um .txt ou .zip. filtro de accept no html é conveniência, não controle.",
+                  "esperadoHtml": "<code>400</code>, código <code>ONB-400-003</code>, mensagem listando os MIMEs aceitos.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 645,
+                  "ordem": 1
+                },
+                {
+                  "key": "ROTEIRO-03/J-052.W-N2/P2",
+                  "id": "P2",
+                  "hash": "92040afd",
+                  "textoHtml": "Tentar anexar arquivo acima de 10MB.",
+                  "comoHtml": "Gerar um PDF/JPEG grande (<code>head -c 11000000 /dev/urandom &gt; grande.jpg</code> serve para testar o limite; o conteúdo não é analisado). Enviar pela tela ou pela API.",
+                  "textoBusca": "tentar anexar arquivo acima de 10mb. gerar um pdf/jpeg grande (head -c 11000000 /dev/urandom > grande.jpg serve para testar o limite; o conteúdo não é analisado). enviar pela tela ou pela api.",
+                  "esperadoHtml": "<code>400</code>, código <code>ONB-400-004</code>.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 650,
+                  "ordem": 2
+                },
+                {
+                  "key": "ROTEIRO-03/J-052.W-N2/P3",
+                  "id": "P3",
+                  "hash": "3029cba3",
+                  "textoHtml": "Tentar enviar o campo de arquivo vazio.",
+                  "comoHtml": "Pela API, multipart com <code>tipo=RG</code> e sem parte de arquivo, ou com arquivo de zero byte.",
+                  "textoBusca": "tentar enviar o campo de arquivo vazio. pela api, multipart com tipo=rg e sem parte de arquivo, ou com arquivo de zero byte.",
+                  "esperadoHtml": "<code>400</code>, código <code>ONB-400-007</code>.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 654,
+                  "ordem": 3
+                },
+                {
+                  "key": "ROTEIRO-03/J-052.W-N2/P4",
+                  "id": "P4",
+                  "hash": "a34b2fc9",
+                  "textoHtml": "Conferir que nada foi persistido.",
+                  "comoHtml": "Terminal do banco. O documento tem <code>conteudo</code> gravado como binário na tabela; um upload recusado não pode deixar linha.",
+                  "textoBusca": "conferir que nada foi persistido. terminal do banco. o documento tem conteudo gravado como binário na tabela; um upload recusado não pode deixar linha.",
+                  "esperadoHtml": "só a selfie da <code>J-052.W-N1</code>; nenhuma linha das tentativas acima.",
+                  "blocos": [
+                    {
+                      "tipo": "codigo",
+                      "lang": "bash",
+                      "regiao": "como",
+                      "conteudo": "docker exec sep-postgres psql -U sep -d sep_dev \\\n  -c \"SELECT tipo, mime_type, tamanho_bytes FROM documento_cadastral d\n      JOIN solicitacao_onboarding s ON s.id = d.solicitacao_id\n      WHERE s.documento = '39053344705';\""
+                    }
+                  ],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 658,
+                  "ordem": 4
+                }
+              ]
+            }
+          ],
+          "assercoes": [],
+          "linha": 631,
+          "stats": {
+            "passos": 4,
+            "na": 0,
+            "assercoes": 0
+          }
+        },
+        {
+          "key": "ROTEIRO-03/J-053.A-N1",
+          "id": "J-053.A-N1",
+          "escopoId": "J-053.A-N1",
+          "kind": "jornada",
+          "nivel": 3,
+          "titulo": "Leitura de onboarding alheio",
+          "anchor": "j-053a-n1---leitura-de-onboarding-alheio",
+          "ordem": 9,
+          "meta": [
+            {
+              "chave": "ID",
+              "texto": "J-053.A-N1",
+              "html": "<code>J-053.A-N1</code>"
+            },
+            {
+              "chave": "Tipo",
+              "texto": "Negativa — ownership",
+              "html": "Negativa — ownership"
+            },
+            {
+              "chave": "Persona",
+              "texto": "cliente-b tentando ler dados do cliente-a",
+              "html": "<code>cliente-b</code> tentando ler dados do <code>cliente-a</code>"
+            },
+            {
+              "chave": "Superfície",
+              "texto": "API",
+              "html": "API"
+            },
+            {
+              "chave": "Vetor",
+              "texto": "Trocar o id na URL para ver KYC de outra pessoa",
+              "html": "Trocar o id na URL para ver KYC de outra pessoa"
+            },
+            {
+              "chave": "Comportamento seguro esperado",
+              "texto": "403, sem vazar nome, CPF ou status",
+              "html": "<code>403</code>, sem vazar nome, CPF ou status"
+            },
+            {
+              "chave": "Pré-condições",
+              "texto": "PRE-01 PRE-04 PRE-09 + J-050.W concluída",
+              "html": "<code>PRE-01</code> <code>PRE-04</code> <code>PRE-09</code> + <code>J-050.W</code> concluída"
+            }
+          ],
+          "metaIndex": {
+            "ID": "J-053.A-N1",
+            "Tipo": "Negativa — ownership",
+            "Persona": "cliente-b tentando ler dados do cliente-a",
+            "Superfície": "API",
+            "Vetor": "Trocar o id na URL para ver KYC de outra pessoa",
+            "Comportamento seguro esperado": "403, sem vazar nome, CPF ou status",
+            "Pré-condições": "PRE-01 PRE-04 PRE-09 + J-050.W concluída"
+          },
+          "notas": [
+            "Onboarding guarda nome completo, CPF, data de nascimento e imagens de documento. Vazamento aqui é incidente de LGPD, não bug de tela."
+          ],
+          "grupos": [
+            {
+              "id": "g1",
+              "tituloHtml": null,
+              "tela": null,
+              "implicito": true,
+              "passos": [
+                {
+                  "key": "ROTEIRO-03/J-053.A-N1/P1",
+                  "id": "P1",
+                  "hash": "9c00170a",
+                  "textoHtml": "Como <code>cliente-b</code>, consultar a solicitação do <code>cliente-a</code>.",
+                  "comoHtml": "No Insomnia, login como <code>cliente-b</code>, e <code>GET /api/v1/onboarding/pessoa/{id}</code> com o id anotado na <code>J-050.W</code>.",
+                  "textoBusca": "como cliente-b, consultar a solicitação do cliente-a. no insomnia, login como cliente-b, e get /api/v1/onboarding/pessoa/{id} com o id anotado na j-050.w.",
+                  "esperadoHtml": "<code>403</code>. Nada do corpo pode conter nome, CPF ou status da solicitação alheia.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 688,
+                  "ordem": 1
+                },
+                {
+                  "key": "ROTEIRO-03/J-053.A-N1/P2",
+                  "id": "P2",
+                  "hash": "8cceff20",
+                  "textoHtml": "Tentar anexar documento na solicitação alheia.",
+                  "comoHtml": "<code>POST /{id}/documentos</code> com o token do <code>cliente-b</code>. Leitura negada e escrita permitida seria pior que o contrário.",
+                  "textoBusca": "tentar anexar documento na solicitação alheia. post /{id}/documentos com o token do cliente-b. leitura negada e escrita permitida seria pior que o contrário.",
+                  "esperadoHtml": "<code>403</code>; nenhum documento novo na solicitação do <code>cliente-a</code>.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 692,
+                  "ordem": 2
+                },
+                {
+                  "key": "ROTEIRO-03/J-053.A-N1/P3",
+                  "id": "P3",
+                  "hash": "43a010ae",
+                  "textoHtml": "Tentar disparar a verificação da solicitação alheia.",
+                  "comoHtml": "<code>POST /{id}/verificar</code> com o token do <code>cliente-b</code>.",
+                  "textoBusca": "tentar disparar a verificação da solicitação alheia. post /{id}/verificar com o token do cliente-b.",
+                  "esperadoHtml": "<code>403</code>.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 696,
+                  "ordem": 3
+                },
+                {
+                  "key": "ROTEIRO-03/J-053.A-N1/P4",
+                  "id": "P4",
+                  "hash": "8e341c28",
+                  "textoHtml": "Conferir pelo web que o <code>cliente-a</code> não perdeu nada.",
+                  "comoHtml": "Entrar como <code>cliente-a</code> e abrir a solicitação. Contar os documentos.",
+                  "textoBusca": "conferir pelo web que o cliente-a não perdeu nada. entrar como cliente-a e abrir a solicitação. contar os documentos.",
+                  "esperadoHtml": "<code>APROVADO_FINAL</code> e dois documentos, como no fim da <code>J-050.W</code>.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 699,
+                  "ordem": 4
+                },
+                {
+                  "key": "ROTEIRO-03/J-053.A-N1/P5",
+                  "id": "P5",
+                  "hash": "7bc7d31c",
+                  "textoHtml": "Confirmar que o <code>admin</code> <strong>pode</strong> ler.",
+                  "comoHtml": "Repetir o P1 com o token do <code>admin</code>. O backend admite ADMIN como leitor legítimo — é o contraponto que prova que o <code>403</code> do P1 veio da regra de dono e não de erro genérico.",
+                  "textoBusca": "confirmar que o admin pode ler. repetir o p1 com o token do admin. o backend admite admin como leitor legítimo — é o contraponto que prova que o 403 do p1 veio da regra de dono e não de erro genérico.",
+                  "esperadoHtml": "<code>200</code> com o status da solicitação.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 702,
+                  "ordem": 5
+                }
+              ]
+            }
+          ],
+          "assercoes": [],
+          "linha": 671,
+          "stats": {
+            "passos": 5,
+            "na": 0,
+            "assercoes": 0
+          }
+        },
+        {
+          "key": "ROTEIRO-03/J-054.W-N1",
+          "id": "J-054.W-N1",
+          "escopoId": "J-054.W-N1",
+          "kind": "jornada",
+          "nivel": 3,
+          "titulo": "KYC reprovado e liberação do CPF",
+          "anchor": "j-054w-n1---kyc-reprovado-e-liberao-do-cpf",
+          "ordem": 10,
+          "meta": [
+            {
+              "chave": "ID",
+              "texto": "J-054.W-N1",
+              "html": "<code>J-054.W-N1</code>"
+            },
+            {
+              "chave": "Tipo",
+              "texto": "Negativa — desfecho de negócio",
+              "html": "Negativa — desfecho de negócio"
+            },
+            {
+              "chave": "Persona",
+              "texto": "cliente-b",
+              "html": "<code>cliente-b</code>"
+            },
+            {
+              "chave": "Superfície",
+              "texto": "Web + API",
+              "html": "Web + API"
+            },
+            {
+              "chave": "Vetor",
+              "texto": "Resultado de KYC negativo do provider",
+              "html": "Resultado de KYC negativo do provider"
+            },
+            {
+              "chave": "Comportamento seguro esperado",
+              "texto": "REPROVADO, sem PLD, e o CPF volta a ficar disponível",
+              "html": "<code>REPROVADO</code>, sem PLD, e o CPF volta a ficar disponível"
+            },
+            {
+              "chave": "Pré-condições",
+              "texto": "PRE-01 PRE-02 PRE-04 PRE-09 + solicitação da J-052.W-N1",
+              "html": "<code>PRE-01</code> <code>PRE-02</code> <code>PRE-04</code> <code>PRE-09</code> + solicitação da <code>J-052.W-N1</code>"
+            }
+          ],
+          "metaIndex": {
+            "ID": "J-054.W-N1",
+            "Tipo": "Negativa — desfecho de negócio",
+            "Persona": "cliente-b",
+            "Superfície": "Web + API",
+            "Vetor": "Resultado de KYC negativo do provider",
+            "Comportamento seguro esperado": "REPROVADO, sem PLD, e o CPF volta a ficar disponível",
+            "Pré-condições": "PRE-01 PRE-02 PRE-04 PRE-09 + solicitação da J-052.W-N1"
+          },
+          "notas": [
+            "<strong>Deixe o <code>cliente-b</code> assim.</strong> O <code>ROTEIRO-04</code> usa essa persona exatamente por ela <strong>não</strong> estar em <code>APROVADO_FINAL</code> (<code>J-061.W-N1</code>). Não conclua o onboarding dele."
+          ],
+          "grupos": [
+            {
+              "id": "g1",
+              "tituloHtml": null,
+              "tela": null,
+              "implicito": true,
+              "passos": [
+                {
+                  "key": "ROTEIRO-03/J-054.W-N1/P1",
+                  "id": "P1",
+                  "hash": "2d9c338b",
+                  "textoHtml": "Completar os documentos do <code>cliente-b</code> e disparar a verificação.",
+                  "comoHtml": "Na solicitação criada na <code>J-052.W-N1</code>, que já tem a selfie, anexar um <code>RG</code> e clicar <strong>Enviar para verificação</strong>.",
+                  "textoBusca": "completar os documentos do cliente-b e disparar a verificação. na solicitação criada na j-052.w-n1, que já tem a selfie, anexar um rg e clicar enviar para verificação.",
+                  "esperadoHtml": "<code>202</code>; status <code>EM_VERIFICACAO</code>.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 724,
+                  "ordem": 1
+                },
+                {
+                  "key": "ROTEIRO-03/J-054.W-N1/P2",
+                  "id": "P2",
+                  "hash": "f2e47898",
+                  "textoHtml": "Disparar o webhook com resultado <strong>reprovado</strong>.",
+                  "comoHtml": "Mesmo procedimento da <a href=\"#j-051a---webhook-kyc-fecha-a-verificação-pf\" rel=\"noreferrer\"><code>J-051.A</code></a>, trocando o status do corpo para <code>REJECTED</code> e recalculando a assinatura, com o id da solicitação do <code>cliente-b</code>.",
+                  "textoBusca": "disparar o webhook com resultado reprovado. mesmo procedimento da j-051.a, trocando o status do corpo para rejected e recalculando a assinatura, com o id da solicitação do cliente-b.",
+                  "esperadoHtml": "<code>202</code>.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 728,
+                  "ordem": 2
+                },
+                {
+                  "key": "ROTEIRO-03/J-054.W-N1/P3",
+                  "id": "P3",
+                  "hash": "1c366b1d",
+                  "textoHtml": "Conferir o status e a <strong>ausência</strong> de PLD.",
+                  "comoHtml": "Atualizar a tela. Aqui o ponto não é só o <code>REPROVADO</code>: PLD <strong>não pode</strong> ter rodado, porque reprovado no KYC não avança para triagem.",
+                  "textoBusca": "conferir o status e a ausência de pld. atualizar a tela. aqui o ponto não é só o reprovado: pld não pode ter rodado, porque reprovado no kyc não avança para triagem.",
+                  "esperadoHtml": "<code>REPROVADO</code>, e a tela mostra o resultado com o motivo, quando houver. <em>Esperado:</em> nenhum evento de PLD com hora posterior ao P2.",
+                  "blocos": [
+                    {
+                      "tipo": "codigo",
+                      "lang": "bash",
+                      "regiao": "esperado",
+                      "conteudo": "docker exec sep-postgres psql -U sep -d sep_dev \\\n  -c \"SELECT tipo, data_evento FROM audit_log_seguranca\n      WHERE tipo LIKE 'PLD%' ORDER BY data_evento DESC LIMIT 5;\""
+                    }
+                  ],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 733,
+                  "ordem": 3
+                },
+                {
+                  "key": "ROTEIRO-03/J-054.W-N1/P4",
+                  "id": "P4",
+                  "hash": "41905c83",
+                  "textoHtml": "Iniciar um <strong>novo</strong> onboarding com o mesmo CPF.",
+                  "comoHtml": "Voltar a <code>/app/onboarding/pessoa</code> como <code>cliente-b</code> e enviar <code>39053344705</code> de novo. <code>REPROVADO</code> é status final mas <strong>libera</strong> o documento — é a regra que permite recomeçar depois de uma recusa, e ela é o oposto da do <code>409</code> na <code>J-050.W-N1</code>.",
+                  "textoBusca": "iniciar um novo onboarding com o mesmo cpf. voltar a /app/onboarding/pessoa como cliente-b e enviar 39053344705 de novo. reprovado é status final mas libera o documento — é a regra que permite recomeçar depois de uma recusa, e ela é o oposto da do 409 na j-050.w-n1.",
+                  "esperadoHtml": "<code>201</code>, nova solicitação em <code>INICIADO</code>. <strong>Não</strong> é <code>409</code>.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 743,
+                  "ordem": 4
+                },
+                {
+                  "key": "ROTEIRO-03/J-054.W-N1/P5",
+                  "id": "P5",
+                  "hash": "a5b6bd66",
+                  "textoHtml": "Conferir que agora existem duas solicitações para o CPF, uma só ativa.",
+                  "comoHtml": "Terminal do banco.",
+                  "textoBusca": "conferir que agora existem duas solicitações para o cpf, uma só ativa. terminal do banco.",
+                  "esperadoHtml": "duas linhas — <code>REPROVADO</code> e <code>INICIADO</code>.",
+                  "blocos": [
+                    {
+                      "tipo": "codigo",
+                      "lang": "bash",
+                      "regiao": "como",
+                      "conteudo": "docker exec sep-postgres psql -U sep -d sep_dev \\\n  -c \"SELECT status, data_criacao FROM solicitacao_onboarding\n      WHERE documento = '39053344705' ORDER BY data_criacao;\""
+                    }
+                  ],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 748,
+                  "ordem": 5
+                }
+              ]
+            }
+          ],
+          "assercoes": [],
+          "linha": 710,
+          "stats": {
+            "passos": 5,
+            "na": 0,
+            "assercoes": 0
+          }
+        },
+        {
+          "key": "ROTEIRO-03/J-055.M",
+          "id": "J-055.M",
+          "escopoId": "J-055.M",
+          "kind": "jornada",
+          "nivel": 3,
+          "titulo": "Onboarding PF no mobile",
+          "anchor": "j-055m---onboarding-pf-no-mobile",
+          "ordem": 11,
+          "meta": [
+            {
+              "chave": "ID",
+              "texto": "J-055.M",
+              "html": "<code>J-055.M</code>"
+            },
+            {
+              "chave": "Tipo",
+              "texto": "Positiva",
+              "html": "Positiva"
+            },
+            {
+              "chave": "Persona",
+              "texto": "Conta criada na J-003.M",
+              "html": "Conta criada na <a href=\"./ROTEIRO-01-ACESSO-E-SESSAO.md#j-003m---visitante-cria-conta-de-cliente\" rel=\"noreferrer\"><code>J-003.M</code></a>"
+            },
+            {
+              "chave": "Superfície",
+              "texto": "Mobile (PWA)",
+              "html": "Mobile (PWA)"
+            },
+            {
+              "chave": "Pré-condições",
+              "texto": "PRE-01 PRE-03 PRE-04 + J-003.M concluída",
+              "html": "<code>PRE-01</code> <code>PRE-03</code> <code>PRE-04</code> + <code>J-003.M</code> concluída"
+            },
+            {
+              "chave": "Endpoints tocados",
+              "texto": "os mesmos do PF",
+              "html": "os mesmos do PF"
+            },
+            {
+              "chave": "Step-up",
+              "texto": "não",
+              "html": "não"
+            },
+            {
+              "chave": "Duração",
+              "texto": "10 min",
+              "html": "10 min"
+            },
+            {
+              "chave": "Automação equivalente",
+              "texto": "onboarding-mobile.spec.ts (Playwright, contra MSW)",
+              "html": "<code>onboarding-mobile.spec.ts</code> (Playwright, contra MSW)"
+            },
+            {
+              "chave": "Só o manual cobre",
+              "texto": "Layout a 320px, backend real, paridade de contrato entre superfícies",
+              "html": "Layout a 320px, backend real, paridade de contrato entre superfícies"
+            }
+          ],
+          "metaIndex": {
+            "ID": "J-055.M",
+            "Tipo": "Positiva",
+            "Persona": "Conta criada na J-003.M",
+            "Superfície": "Mobile (PWA)",
+            "Pré-condições": "PRE-01 PRE-03 PRE-04 + J-003.M concluída",
+            "Endpoints tocados": "os mesmos do PF",
+            "Step-up": "não",
+            "Duração": "10 min",
+            "Automação equivalente": "onboarding-mobile.spec.ts (Playwright, contra MSW)",
+            "Só o manual cobre": "Layout a 320px, backend real, paridade de contrato entre superfícies"
+          },
+          "notas": [
+            "Persona separada de propósito: o <code>cliente-a</code> já tem onboarding ativo e receberia <code>409</code>. A conta da <code>J-003.M</code> é um CLIENTE limpo."
+          ],
+          "grupos": [
+            {
+              "id": "g1",
+              "tituloHtml": null,
+              "tela": null,
+              "implicito": true,
+              "passos": [
+                {
+                  "key": "ROTEIRO-03/J-055.M/P1",
+                  "id": "P1",
+                  "hash": "010aadf6",
+                  "textoHtml": "Abrir o onboarding no mobile.",
+                  "comoHtml": "Em <code>http://localhost:8100</code>, com a emulação de dispositivo ligada (<code>Ctrl+Shift+M</code>), logado com a conta da <code>J-003.M</code>. A navegação é por abas no rodapé; o onboarding fica sob a aba <strong>Início</strong>.",
+                  "textoBusca": "abrir o onboarding no mobile. em http://localhost:8100, com a emulação de dispositivo ligada (ctrl+shift+m), logado com a conta da j-003.m. a navegação é por abas no rodapé; o onboarding fica sob a aba início.",
+                  "esperadoHtml": "tela de onboarding com o indicador de etapas <strong>Dados → Documentos → Status</strong> e a escolha entre pessoa física e empresa.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 782,
+                  "ordem": 1
+                },
+                {
+                  "key": "ROTEIRO-03/J-055.M/P2",
+                  "id": "P2",
+                  "hash": "2c95f882",
+                  "textoHtml": "Conferir os tipos de documento oferecidos para pessoa física.",
+                  "comoHtml": "Escolher pessoa física, preencher CPF <code>11144477735</code>, nome e data, avançar até a etapa de documentos e abrir a lista de tipos.",
+                  "textoBusca": "conferir os tipos de documento oferecidos para pessoa física. escolher pessoa física, preencher cpf 11144477735, nome e data, avançar até a etapa de documentos e abrir a lista de tipos.",
+                  "esperadoHtml": "<code>RG</code>, <code>CNH</code>, <code>PASSAPORTE</code> e <code>SELFIE</code>. <strong>O mobile não oferece <code>COMPROVANTE_ENDERECO</code> para PF e o web oferece</strong> — divergência conhecida entre as superfícies. Nenhuma das duas quebra o backend (o comprovante não entra no mínimo exigido), mas confirme que a lista é essa; se mudou, é ocorrência de contrato.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 788,
+                  "ordem": 2
+                },
+                {
+                  "key": "ROTEIRO-03/J-055.M/P3",
+                  "id": "P3",
+                  "hash": "77ecfef0",
+                  "textoHtml": "Enviar identidade e selfie e disparar a verificação.",
+                  "comoHtml": "Mesmos dois documentos mínimos do web.",
+                  "textoBusca": "enviar identidade e selfie e disparar a verificação. mesmos dois documentos mínimos do web.",
+                  "esperadoHtml": "etapa <strong>Status</strong> com <code>EM_VERIFICACAO</code>.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 795,
+                  "ordem": 3
+                },
+                {
+                  "key": "ROTEIRO-03/J-055.M/P4",
+                  "id": "P4",
+                  "hash": "879950d2",
+                  "textoHtml": "Conferir o layout a 320px.",
+                  "comoHtml": "<strong>Este passo é sobre o layout mobile</strong>, que nenhum teste automatizado cobre. No DevTools, trocar o preset para 320px de largura e percorrer as três etapas. Procurar barra de rolagem <strong>horizontal</strong>, botão cortado na borda e rótulo truncado.",
+                  "textoBusca": "conferir o layout a 320px. este passo é sobre o layout mobile, que nenhum teste automatizado cobre. no devtools, trocar o preset para 320px de largura e percorrer as três etapas. procurar barra de rolagem horizontal, botão cortado na borda e rótulo truncado.",
+                  "esperadoHtml": "sem scroll horizontal e sem corte a 320px.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 798,
+                  "ordem": 4
+                },
+                {
+                  "key": "ROTEIRO-03/J-055.M/P5",
+                  "id": "P5",
+                  "hash": "c7dd30fa",
+                  "textoHtml": "Fechar pelo webhook e reconsultar por gesto.",
+                  "comoHtml": "Executar a <a href=\"#j-051a---webhook-kyc-fecha-a-verificação-pf\" rel=\"noreferrer\"><code>J-051.A</code></a> com o id desta solicitação. Voltar ao app e atualizar <strong>por gesto</strong> — recarregar ou reentrar na tela. A tela não busca sozinha.",
+                  "textoBusca": "fechar pelo webhook e reconsultar por gesto. executar a j-051.a com o id desta solicitação. voltar ao app e atualizar por gesto — recarregar ou reentrar na tela. a tela não busca sozinha.",
+                  "esperadoHtml": "<code>APROVADO_FINAL</code>; sem chamadas repetidas em intervalo fixo na aba Network.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 803,
+                  "ordem": 5
+                },
+                {
+                  "key": "ROTEIRO-03/J-055.M/P6",
+                  "id": "P6",
+                  "hash": "5daf0746",
+                  "textoHtml": "Conferir a consistência entre superfícies.",
+                  "comoHtml": "Abrir a <strong>mesma</strong> solicitação no web (<code>localhost:4200</code>) com a mesma conta, lado a lado com o mobile. As duas leem o mesmo backend e têm de concordar.",
+                  "textoBusca": "conferir a consistência entre superfícies. abrir a mesma solicitação no web (localhost:4200) com a mesma conta, lado a lado com o mobile. as duas leem o mesmo backend e têm de concordar.",
+                  "esperadoHtml": "mesmo status e mesma lista de documentos nas duas telas.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 808,
+                  "ordem": 6
+                }
+              ]
+            }
+          ],
+          "assercoes": [],
+          "linha": 762,
+          "stats": {
+            "passos": 6,
+            "na": 0,
+            "assercoes": 0
+          }
+        },
+        {
+          "key": "ROTEIRO-03/J-056.W",
+          "id": "J-056.W",
+          "escopoId": "J-056.W",
+          "kind": "jornada",
+          "nivel": 3,
+          "titulo": "Credora conclui o onboarding KYB PJ",
+          "anchor": "j-056w---credora-conclui-o-onboarding-kyb-pj",
+          "ordem": 12,
+          "meta": [
+            {
+              "chave": "ID",
+              "texto": "J-056.W",
+              "html": "<code>J-056.W</code>"
+            },
+            {
+              "chave": "Tipo",
+              "texto": "Positiva",
+              "html": "Positiva"
+            },
+            {
+              "chave": "Persona",
+              "texto": "credora — CLIENTE que ainda não é credora",
+              "html": "<code>credora</code> — CLIENTE que ainda não é credora"
+            },
+            {
+              "chave": "Superfície",
+              "texto": "Web",
+              "html": "Web"
+            },
+            {
+              "chave": "Pré-condições",
+              "texto": "PRE-01 PRE-02 PRE-04 PRE-05",
+              "html": "<code>PRE-01</code> <code>PRE-02</code> <code>PRE-04</code> <code>PRE-05</code>"
+            },
+            {
+              "chave": "Endpoints tocados",
+              "texto": "POST /onboarding/empresa, POST /{id}/documentos, POST /{id}/verificar, GET /{id}",
+              "html": "<code>POST /onboarding/empresa</code>, <code>POST /{id}/documentos</code>, <code>POST /{id}/verificar</code>, <code>GET /{id}</code>"
+            },
+            {
+              "chave": "Step-up",
+              "texto": "não",
+              "html": "não"
+            },
+            {
+              "chave": "Duração",
+              "texto": "10 min",
+              "html": "10 min"
+            },
+            {
+              "chave": "Automação equivalente",
+              "texto": "onboarding.spec.ts (parcial, contra MSW)",
+              "html": "<code>onboarding.spec.ts</code> (parcial, contra MSW)"
+            },
+            {
+              "chave": "Só o manual cobre",
+              "texto": "KYB síncrono real, consulta de CNPJ persistida, PLD multi-alvo",
+              "html": "KYB síncrono real, consulta de CNPJ persistida, PLD multi-alvo"
+            }
+          ],
+          "metaIndex": {
+            "ID": "J-056.W",
+            "Tipo": "Positiva",
+            "Persona": "credora — CLIENTE que ainda não é credora",
+            "Superfície": "Web",
+            "Pré-condições": "PRE-01 PRE-02 PRE-04 PRE-05",
+            "Endpoints tocados": "POST /onboarding/empresa, POST /{id}/documentos, POST /{id}/verificar, GET /{id}",
+            "Step-up": "não",
+            "Duração": "10 min",
+            "Automação equivalente": "onboarding.spec.ts (parcial, contra MSW)",
+            "Só o manual cobre": "KYB síncrono real, consulta de CNPJ persistida, PLD multi-alvo"
+          },
+          "notas": [
+            "Produz a <strong>base</strong> do <code>PRE-13</code>. Virar credora de fato exige também o cadastro em <code>/app/credora/cadastro</code>, que é jornada do roteiro de credora — até lá o <code>credoraPresenceGuard</code> continua bloqueando."
+          ],
+          "grupos": [
+            {
+              "id": "g1",
+              "tituloHtml": null,
+              "tela": null,
+              "implicito": true,
+              "passos": [
+                {
+                  "key": "ROTEIRO-03/J-056.W/P1",
+                  "id": "P1",
+                  "hash": "153db338",
+                  "textoHtml": "Abrir o onboarding de empresa.",
+                  "comoHtml": "Logado como <code>credora@sep.test</code>, menu <strong>Jornadas</strong> &gt; <strong>Onboarding</strong>, cartão de empresa.",
+                  "textoBusca": "abrir o onboarding de empresa. logado como credora@sep.test, menu jornadas > onboarding, cartão de empresa.",
+                  "esperadoHtml": "formulário em <code>/app/onboarding/empresa</code>.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 836,
+                  "ordem": 1
+                },
+                {
+                  "key": "ROTEIRO-03/J-056.W/P2",
+                  "id": "P2",
+                  "hash": "9664575c",
+                  "textoHtml": "Tentar iniciar com CNPJ de DV errado.",
+                  "comoHtml": "Enviar <code>11222333000180</code>. Mesma lógica do CPF: o DV é validado no backend.",
+                  "textoBusca": "tentar iniciar com cnpj de dv errado. enviar 11222333000180. mesma lógica do cpf: o dv é validado no backend.",
+                  "esperadoHtml": "recusado, código <code>ONB-400-006</code>.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 840,
+                  "ordem": 2
+                },
+                {
+                  "key": "ROTEIRO-03/J-056.W/P3",
+                  "id": "P3",
+                  "hash": "723a8a40",
+                  "textoHtml": "Iniciar com os dados válidos.",
+                  "comoHtml": "CNPJ <code>11222333000181</code>, razão social qualquer. <strong>Tipo societário e porte são opcionais</strong> — o formulário diz isso no rótulo; deixe pelo menos um em branco de propósito para confirmar que o <code>201</code> sai mesmo assim. <strong>Anotar o id.</strong>",
+                  "textoBusca": "iniciar com os dados válidos. cnpj 11222333000181, razão social qualquer. tipo societário e porte são opcionais — o formulário diz isso no rótulo; deixe pelo menos um em branco de propósito para confirmar que o 201 sai mesmo assim. anotar o id.",
+                  "esperadoHtml": "<code>201</code>; vai para o detalhe.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 843,
+                  "ordem": 3
+                },
+                {
+                  "key": "ROTEIRO-03/J-056.W/P4",
+                  "id": "P4",
+                  "hash": "1ea4740e",
+                  "textoHtml": "Enviar os dois documentos mínimos de PJ.",
+                  "comoHtml": "1 de identificação societária (<code>CONTRATO_SOCIAL</code> ou <code>CCMEI</code>) <strong>e</strong> 1 <code>COMPROVANTE_ENDERECO</code>. O mínimo de PJ é diferente do de PF; enviar dois contratos sociais não satisfaz.",
+                  "textoBusca": "enviar os dois documentos mínimos de pj. 1 de identificação societária (contratosocial ou ccmei) e 1 comprovanteendereco. o mínimo de pj é diferente do de pf; enviar dois contratos sociais não satisfaz.",
+                  "esperadoHtml": "<code>204</code> nos dois; status <code>DOCUMENTOS_RECEBIDOS</code>.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 848,
+                  "ordem": 4
+                },
+                {
+                  "key": "ROTEIRO-03/J-056.W/P5",
+                  "id": "P5",
+                  "hash": "67d33d11",
+                  "textoHtml": "Enviar para verificação e <strong>não</strong> disparar webhook nenhum.",
+                  "comoHtml": "Clicar <strong>Enviar para verificação</strong> e clicar <strong>Atualizar</strong> logo em seguida. Aqui é onde PJ se separa de PF: o KYB é <strong>síncrono</strong>, então a resposta do próprio <code>POST</code> já finalizou a verificação, e o PLD dos alvos rodou depois do commit.",
+                  "textoBusca": "enviar para verificação e não disparar webhook nenhum. clicar enviar para verificação e clicar atualizar logo em seguida. aqui é onde pj se separa de pf: o kyb é síncrono, então a resposta do próprio post já finalizou a verificação, e o pld dos alvos rodou depois do commit.",
+                  "esperadoHtml": "<strong><code>APROVADO_FINAL</code> sem nenhum webhook</strong>. Se parar em <code>EM_VERIFICACAO</code>, é ocorrência — no PJ isso não é estado estável.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 853,
+                  "ordem": 5
+                },
+                {
+                  "key": "ROTEIRO-03/J-056.W/P6",
+                  "id": "P6",
+                  "hash": "253d357c",
+                  "textoHtml": "Conferir os dados cadastrais que o provider devolveu.",
+                  "comoHtml": "Na tela de detalhe, ler o bloco de dados da empresa e a lista de representantes.",
+                  "textoBusca": "conferir os dados cadastrais que o provider devolveu. na tela de detalhe, ler o bloco de dados da empresa e a lista de representantes.",
+                  "esperadoHtml": "razão social preenchida e <strong>um</strong> representante legal listado — o fake devolve sempre um. CNPJ, razão social, nome fantasia, tipo societário e porte são os únicos dados de empresa expostos.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 859,
+                  "ordem": 6
+                },
+                {
+                  "key": "ROTEIRO-03/J-056.W/P7",
+                  "id": "P7",
+                  "hash": "60da15d1",
+                  "textoHtml": "Conferir a consulta de CNPJ persistida.",
+                  "comoHtml": "Terminal do banco. A consulta ao provider tem de deixar registro próprio, com a situação cadastral que motivou a decisão.",
+                  "textoBusca": "conferir a consulta de cnpj persistida. terminal do banco. a consulta ao provider tem de deixar registro próprio, com a situação cadastral que motivou a decisão.",
+                  "esperadoHtml": "<code>APROVADO_FINAL</code> e situação cadastral <code>ATIVA</code>.",
+                  "blocos": [
+                    {
+                      "tipo": "codigo",
+                      "lang": "bash",
+                      "regiao": "como",
+                      "conteudo": "docker exec sep-postgres psql -U sep -d sep_dev \\\n  -c \"SELECT k.cnpj, s.status, c.situacao_cadastral\n      FROM kyb_empresa k\n      JOIN solicitacao_onboarding s ON s.id = k.solicitacao_id\n      LEFT JOIN consulta_cnpj c ON c.kyb_empresa_id = k.id\n      WHERE k.cnpj = '11222333000181';\""
+                    }
+                  ],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 864,
+                  "ordem": 7
+                },
+                {
+                  "key": "ROTEIRO-03/J-056.W/P8",
+                  "id": "P8",
+                  "hash": "eafd5373",
+                  "textoHtml": "Conferir a trilha de KYB.",
+                  "comoHtml": "Terminal do banco.",
+                  "textoBusca": "conferir a trilha de kyb. terminal do banco.",
+                  "esperadoHtml": "<code>KYB_INICIADO</code> e <code>KYB_FINALIZADO_APROVADO</code>.",
+                  "blocos": [
+                    {
+                      "tipo": "codigo",
+                      "lang": "bash",
+                      "regiao": "como",
+                      "conteudo": "docker exec sep-postgres psql -U sep -d sep_dev \\\n  -c \"SELECT tipo, data_evento FROM audit_log_seguranca\n      WHERE tipo LIKE 'KYB%' ORDER BY data_evento DESC LIMIT 5;\""
+                    }
+                  ],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 876,
+                  "ordem": 8
+                }
+              ]
+            }
+          ],
+          "assercoes": [
+            {
+              "key": "ROTEIRO-03/J-056.W/#3ea39581",
+              "id": null,
+              "hash": "96b4283b",
+              "textoHtml": "<code>credora</code> com PJ em <code>APROVADO_FINAL</code>; anotar o id para o roteiro de credora",
+              "comoHtml": null,
+              "textoBusca": "credora com pj em aprovadofinal; anotar o id para o roteiro de credora",
+              "esperadoHtml": null,
+              "blocos": [],
+              "na": false,
+              "naMotivo": null,
+              "marcadoNaFonte": false,
+              "linha": 887,
+              "ordem": 1
+            }
+          ],
+          "linha": 815,
+          "stats": {
+            "passos": 8,
+            "na": 0,
+            "assercoes": 1
+          }
+        },
+        {
+          "key": "ROTEIRO-03/J-057.A",
+          "id": "J-057.A",
+          "escopoId": "J-057.A",
+          "kind": "jornada",
+          "nivel": 3,
+          "titulo": "Representantes legais com CPF mascarado",
+          "anchor": "j-057a---representantes-legais-com-cpf-mascarado",
+          "ordem": 13,
+          "meta": [
+            {
+              "chave": "ID",
+              "texto": "J-057.A",
+              "html": "<code>J-057.A</code>"
+            },
+            {
+              "chave": "Tipo",
+              "texto": "Positiva — minimização de dado pessoal",
+              "html": "Positiva — minimização de dado pessoal"
+            },
+            {
+              "chave": "Persona",
+              "texto": "credora",
+              "html": "<code>credora</code>"
+            },
+            {
+              "chave": "Superfície",
+              "texto": "API",
+              "html": "API"
+            },
+            {
+              "chave": "Pré-condições",
+              "texto": "PRE-01 PRE-04 + J-056.W concluída",
+              "html": "<code>PRE-01</code> <code>PRE-04</code> + <code>J-056.W</code> concluída"
+            },
+            {
+              "chave": "Endpoints tocados",
+              "texto": "GET /onboarding/empresa/{id}/representantes",
+              "html": "<code>GET /onboarding/empresa/{id}/representantes</code>"
+            },
+            {
+              "chave": "Step-up",
+              "texto": "não",
+              "html": "não"
+            },
+            {
+              "chave": "Duração",
+              "texto": "5 min",
+              "html": "5 min"
+            },
+            {
+              "chave": "Automação equivalente",
+              "texto": "ITs do backend",
+              "html": "ITs do backend"
+            },
+            {
+              "chave": "Só o manual cobre",
+              "texto": "Resposta real do endpoint, e não o mock",
+              "html": "Resposta real do endpoint, e não o mock"
+            }
+          ],
+          "metaIndex": {
+            "ID": "J-057.A",
+            "Tipo": "Positiva — minimização de dado pessoal",
+            "Persona": "credora",
+            "Superfície": "API",
+            "Pré-condições": "PRE-01 PRE-04 + J-056.W concluída",
+            "Endpoints tocados": "GET /onboarding/empresa/{id}/representantes",
+            "Step-up": "não",
+            "Duração": "5 min",
+            "Automação equivalente": "ITs do backend",
+            "Só o manual cobre": "Resposta real do endpoint, e não o mock"
+          },
+          "notas": [],
+          "grupos": [
+            {
+              "id": "g1",
+              "tituloHtml": null,
+              "tela": null,
+              "implicito": true,
+              "passos": [
+                {
+                  "key": "ROTEIRO-03/J-057.A/P1",
+                  "id": "P1",
+                  "hash": "2c3b05c1",
+                  "textoHtml": "Listar os representantes da empresa.",
+                  "comoHtml": "No Insomnia, login como <code>credora</code>, <code>GET /api/v1/onboarding/empresa/{id}/representantes</code>.",
+                  "textoBusca": "listar os representantes da empresa. no insomnia, login como credora, get /api/v1/onboarding/empresa/{id}/representantes.",
+                  "esperadoHtml": "<code>200</code> com um representante.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 908,
+                  "ordem": 1
+                },
+                {
+                  "key": "ROTEIRO-03/J-057.A/P2",
+                  "id": "P2",
+                  "hash": "b5ecbc38",
+                  "textoHtml": "Conferir que o CPF vem <strong>mascarado</strong>.",
+                  "comoHtml": "Ler o campo do CPF no JSON. A máscara mantém os 3 primeiros e os 2 últimos dígitos e esconde os 6 do meio (formato <code>529****4725</code>). CPF em claro aqui é ocorrência de LGPD, não de formatação.",
+                  "textoBusca": "conferir que o cpf vem mascarado. ler o campo do cpf no json. a máscara mantém os 3 primeiros e os 2 últimos dígitos e esconde os 6 do meio (formato 5294725). cpf em claro aqui é ocorrência de lgpd, não de formatação.",
+                  "esperadoHtml": "<code>cpfMascarado</code> no formato acima; <strong>nenhum campo</strong> com o CPF completo.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 912,
+                  "ordem": 2
+                },
+                {
+                  "key": "ROTEIRO-03/J-057.A/P3",
+                  "id": "P3",
+                  "hash": "1c554245",
+                  "textoHtml": "Conferir que o dado completo existe no banco, mas não na resposta.",
+                  "comoHtml": "Terminal do banco. O ponto do passo é separar &quot;não armazena&quot; de &quot;não expõe&quot;: o backend <strong>armazena</strong> o CPF e <strong>mascara na borda</strong>. Saber disso muda o que se checa numa auditoria.",
+                  "textoBusca": "conferir que o dado completo existe no banco, mas não na resposta. terminal do banco. o ponto do passo é separar \"não armazena\" de \"não expõe\": o backend armazena o cpf e mascara na borda. saber disso muda o que se checa numa auditoria.",
+                  "esperadoHtml": "11 dígitos no banco, mascarado na API.",
+                  "blocos": [
+                    {
+                      "tipo": "codigo",
+                      "lang": "bash",
+                      "regiao": "como",
+                      "conteudo": "docker exec sep-postgres psql -U sep -d sep_dev \\\n  -c \"SELECT nome, cargo, length(cpf) FROM representante_legal LIMIT 5;\""
+                    }
+                  ],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 917,
+                  "ordem": 3
+                },
+                {
+                  "key": "ROTEIRO-03/J-057.A/P4",
+                  "id": "P4",
+                  "hash": "d5843ee6",
+                  "textoHtml": "Repetir o P1 com o token do <code>cliente-b</code>.",
+                  "comoHtml": "Mesma URL, token de outra persona.",
+                  "textoBusca": "repetir o p1 com o token do cliente-b. mesma url, token de outra persona.",
+                  "esperadoHtml": "<code>403</code>. Lista de representantes é dado de terceiro.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 926,
+                  "ordem": 4
+                }
+              ]
+            }
+          ],
+          "assercoes": [],
+          "linha": 891,
+          "stats": {
+            "passos": 4,
+            "na": 0,
+            "assercoes": 0
+          }
+        },
+        {
+          "key": "ROTEIRO-03/J-058.A",
+          "id": "J-058.A",
+          "escopoId": "J-058.A",
+          "kind": "jornada",
+          "nivel": 3,
+          "titulo": "PLD consolidado e trilha de auditoria",
+          "anchor": "j-058a---pld-consolidado-e-trilha-de-auditoria",
+          "ordem": 14,
+          "meta": [
+            {
+              "chave": "ID",
+              "texto": "J-058.A",
+              "html": "<code>J-058.A</code>"
+            },
+            {
+              "chave": "Tipo",
+              "texto": "Positiva",
+              "html": "Positiva"
+            },
+            {
+              "chave": "Persona",
+              "texto": "Operação (leitura de banco)",
+              "html": "Operação (leitura de banco)"
+            },
+            {
+              "chave": "Superfície",
+              "texto": "API + banco",
+              "html": "API + banco"
+            },
+            {
+              "chave": "Pré-condições",
+              "texto": "PRE-01 + J-050.W e J-056.W concluídas",
+              "html": "<code>PRE-01</code> + <code>J-050.W</code> e <code>J-056.W</code> concluídas"
+            },
+            {
+              "chave": "Endpoints tocados",
+              "texto": "nenhum — PLD não tem endpoint de leitura pública",
+              "html": "nenhum — PLD não tem endpoint de leitura pública"
+            },
+            {
+              "chave": "Step-up",
+              "texto": "não",
+              "html": "não"
+            },
+            {
+              "chave": "Duração",
+              "texto": "8 min",
+              "html": "8 min"
+            },
+            {
+              "chave": "Automação equivalente",
+              "texto": "ITs do backend",
+              "html": "ITs do backend"
+            },
+            {
+              "chave": "Só o manual cobre",
+              "texto": "Cobertura de bases por alvo no fluxo real, e não em fixture",
+              "html": "Cobertura de bases por alvo no fluxo real, e não em fixture"
+            }
+          ],
+          "metaIndex": {
+            "ID": "J-058.A",
+            "Tipo": "Positiva",
+            "Persona": "Operação (leitura de banco)",
+            "Superfície": "API + banco",
+            "Pré-condições": "PRE-01 + J-050.W e J-056.W concluídas",
+            "Endpoints tocados": "nenhum — PLD não tem endpoint de leitura pública",
+            "Step-up": "não",
+            "Duração": "8 min",
+            "Automação equivalente": "ITs do backend",
+            "Só o manual cobre": "Cobertura de bases por alvo no fluxo real, e não em fixture"
+          },
+          "notas": [
+            "Os dois <code>N/A</code> acima são limitação de ambiente declarada, <strong>não</strong> cobertura assumida. Enquanto valerem, os desfechos negativos de PLD e de KYB estão provados apenas por teste automatizado do backend, nunca ponta a ponta."
+          ],
+          "grupos": [
+            {
+              "id": "g1",
+              "tituloHtml": null,
+              "tela": null,
+              "implicito": true,
+              "passos": [
+                {
+                  "key": "ROTEIRO-03/J-058.A/P1",
+                  "id": "P1",
+                  "hash": "bbff5c73",
+                  "textoHtml": "Conferir que o PLD rodou nos dois onboardings.",
+                  "comoHtml": "Terminal do banco. Cada consulta guarda o payload do provider.",
+                  "textoBusca": "conferir que o pld rodou nos dois onboardings. terminal do banco. cada consulta guarda o payload do provider.",
+                  "esperadoHtml": "quatro bases obrigatórias por alvo — <code>COAF</code>, <code>OFAC</code>, <code>INTERPOL</code> e <code>MTE</code> — todas com <code>hit = false</code>. Se faltar base, o backend deveria ter recusado a consolidação; base faltando <strong>com</strong> status <code>APROVADO_FINAL</code> é ocorrência grave.",
+                  "blocos": [
+                    {
+                      "tipo": "codigo",
+                      "lang": "bash",
+                      "regiao": "como",
+                      "conteudo": "docker exec sep-postgres psql -U sep -d sep_dev \\\n  -c \"SELECT alvo_tipo, base, hit FROM consulta_pld ORDER BY data_consulta DESC LIMIT 20;\""
+                    }
+                  ],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 949,
+                  "ordem": 1
+                },
+                {
+                  "key": "ROTEIRO-03/J-058.A/P2",
+                  "id": "P2",
+                  "hash": "daf72564",
+                  "textoHtml": "Conferir a contagem de alvos por tipo de onboarding.",
+                  "comoHtml": "O PF tem <strong>1</strong> alvo (<code>PESSOA</code>); o PJ tem <code>EMPRESA</code> <strong>mais um alvo por representante legal</strong> — com o fake, dois no total. É a diferença estrutural entre os dois fluxos e o lugar onde uma regressão passaria despercebida.",
+                  "textoBusca": "conferir a contagem de alvos por tipo de onboarding. o pf tem 1 alvo (pessoa); o pj tem empresa mais um alvo por representante legal — com o fake, dois no total. é a diferença estrutural entre os dois fluxos e o lugar onde uma regressão passaria despercebida.",
+                  "esperadoHtml": "para o PF, uma linha <code>PESSOA</code> com 4 bases (4 registros no total); para o PJ, uma linha <code>EMPRESA</code> e uma <code>REPRESENTANTE</code>, 4 bases cada — 8 no total. Representante sem consulta é falha de cobertura de PLD, mesmo com o onboarding <code>APROVADO_FINAL</code>.",
+                  "blocos": [
+                    {
+                      "tipo": "codigo",
+                      "lang": "bash",
+                      "regiao": "como",
+                      "conteudo": "docker exec sep-postgres psql -U sep -d sep_dev \\\n  -c \"SELECT s.tipo, c.alvo_tipo, count(*) AS bases\n      FROM consulta_pld c JOIN solicitacao_onboarding s ON s.id = c.solicitacao_id\n      GROUP BY s.tipo, c.alvo_tipo ORDER BY s.tipo;\""
+                    }
+                  ],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 958,
+                  "ordem": 2
+                },
+                {
+                  "key": "ROTEIRO-03/J-058.A/P3",
+                  "id": "P3",
+                  "hash": "f7daf451",
+                  "textoHtml": "Conferir os eventos de PLD no audit.",
+                  "comoHtml": "Terminal do banco. Repare que estes eventos têm <code>usuario_id</code> nulo — o PLD é ato da plataforma, não do usuário — então uma consulta filtrada por usuário não os encontra.",
+                  "textoBusca": "conferir os eventos de pld no audit. terminal do banco. repare que estes eventos têm usuarioid nulo — o pld é ato da plataforma, não do usuário — então uma consulta filtrada por usuário não os encontra.",
+                  "esperadoHtml": "<code>PLD_INICIADO</code> e <code>PLD_LIMPO</code> com usuário nulo; <code>PLD_FINALIZADO</code> com o usuário dono da solicitação.",
+                  "blocos": [
+                    {
+                      "tipo": "codigo",
+                      "lang": "bash",
+                      "regiao": "como",
+                      "conteudo": "docker exec sep-postgres psql -U sep -d sep_dev \\\n  -c \"SELECT tipo, usuario_id, data_evento FROM audit_log_seguranca\n      WHERE tipo LIKE 'PLD%' ORDER BY data_evento DESC LIMIT 10;\""
+                    }
+                  ],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 971,
+                  "ordem": 3
+                },
+                {
+                  "key": "ROTEIRO-03/J-058.A/P4",
+                  "id": "P4",
+                  "hash": "b0d2e6ef",
+                  "textoHtml": "Conferir que detalhe de hit não vaza para o audit.",
+                  "comoHtml": "Nenhum evento de PLD pode conter CPF/CNPJ completo no campo de detalhes. Ler os detalhes dos eventos do P3.",
+                  "textoBusca": "conferir que detalhe de hit não vaza para o audit. nenhum evento de pld pode conter cpf/cnpj completo no campo de detalhes. ler os detalhes dos eventos do p3.",
+                  "esperadoHtml": "documentos mascarados; nenhum documento completo.",
+                  "blocos": [
+                    {
+                      "tipo": "codigo",
+                      "lang": "bash",
+                      "regiao": "como",
+                      "conteudo": "docker exec sep-postgres psql -U sep -d sep_dev \\\n  -c \"SELECT tipo, detalhes FROM audit_log_seguranca\n      WHERE tipo LIKE 'PLD%' ORDER BY data_evento DESC LIMIT 5;\""
+                    }
+                  ],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 981,
+                  "ordem": 4
+                },
+                {
+                  "key": "ROTEIRO-03/J-058.A/P5",
+                  "id": "P5",
+                  "hash": "7a5486b7",
+                  "textoHtml": "Provar o desfecho <code>REPROVADO_PLD</code> com hit em base restritiva",
+                  "comoHtml": null,
+                  "textoBusca": "provar o desfecho reprovadopld com hit em base restritiva",
+                  "esperadoHtml": null,
+                  "blocos": [],
+                  "na": true,
+                  "naMotivo": "não alcançável com provider fake por HTTP. O FakeBackgroundCheckProvider só produz hit por um gancho estático de teste, sem rota; e o webhook de PLD não serve de atalho, porque quando ele chega a solicitação já consolidou em APROVADOFINAL e o callback tardio é descartado por idempotência. Reativa quando houver app.pld.provider=celcoin com WireMock ou sandbox, cenário previsto na suíte de IT do backend.",
+                  "marcadoNaFonte": true,
+                  "linha": 990,
+                  "ordem": 5
+                },
+                {
+                  "key": "ROTEIRO-03/J-058.A/P6",
+                  "id": "P6",
+                  "hash": "80be08d5",
+                  "textoHtml": "Provar o desfecho <code>REPROVADO</code> de KYB com situação cadastral não ativa",
+                  "comoHtml": null,
+                  "textoBusca": "provar o desfecho reprovado de kyb com situação cadastral não ativa",
+                  "esperadoHtml": null,
+                  "blocos": [],
+                  "na": true,
+                  "naMotivo": "mesma limitação. O fake devolve ATIVA para qualquer CNPJ, exceto por gancho estático de teste. Reativa com provider real ou WireMock.",
+                  "marcadoNaFonte": true,
+                  "linha": 996,
+                  "ordem": 6
+                }
+              ]
+            }
+          ],
+          "assercoes": [],
+          "linha": 932,
+          "stats": {
+            "passos": 6,
+            "na": 2,
+            "assercoes": 0
+          }
+        },
+        {
+          "key": "ROTEIRO-03/J-059.M",
+          "id": "J-059.M",
+          "escopoId": "J-059.M",
+          "kind": "jornada",
+          "nivel": 3,
+          "titulo": "Onboarding PJ no mobile",
+          "anchor": "j-059m---onboarding-pj-no-mobile",
+          "ordem": 15,
+          "meta": [
+            {
+              "chave": "ID",
+              "texto": "J-059.M",
+              "html": "<code>J-059.M</code>"
+            },
+            {
+              "chave": "Tipo",
+              "texto": "Positiva",
+              "html": "Positiva"
+            },
+            {
+              "chave": "Persona",
+              "texto": "Conta criada na J-003.M — a mesma da J-055.M",
+              "html": "Conta criada na <a href=\"./ROTEIRO-01-ACESSO-E-SESSAO.md#j-003m---visitante-cria-conta-de-cliente\" rel=\"noreferrer\"><code>J-003.M</code></a> — a mesma da <code>J-055.M</code>"
+            },
+            {
+              "chave": "Superfície",
+              "texto": "Mobile (PWA)",
+              "html": "Mobile (PWA)"
+            },
+            {
+              "chave": "Pré-condições",
+              "texto": "PRE-01 PRE-03 PRE-04 + J-055.M concluída",
+              "html": "<code>PRE-01</code> <code>PRE-03</code> <code>PRE-04</code> + <code>J-055.M</code> concluída"
+            },
+            {
+              "chave": "Endpoints tocados",
+              "texto": "POST /onboarding/empresa, POST /{id}/documentos, POST /{id}/verificar, GET /{id}",
+              "html": "<code>POST /onboarding/empresa</code>, <code>POST /{id}/documentos</code>, <code>POST /{id}/verificar</code>, <code>GET /{id}</code>"
+            },
+            {
+              "chave": "Step-up",
+              "texto": "não",
+              "html": "não"
+            },
+            {
+              "chave": "Duração",
+              "texto": "12 min",
+              "html": "12 min"
+            },
+            {
+              "chave": "Automação equivalente",
+              "texto": "onboarding-mobile.spec.ts (parcial, contra MSW)",
+              "html": "<code>onboarding-mobile.spec.ts</code> (parcial, contra MSW)"
+            },
+            {
+              "chave": "Só o manual cobre",
+              "texto": "KYB síncrono real, representantes vindos do provider, jornada local sobrevivendo entre PF e PJ",
+              "html": "KYB síncrono real, representantes vindos do provider, jornada local sobrevivendo entre PF e PJ"
+            }
+          ],
+          "metaIndex": {
+            "ID": "J-059.M",
+            "Tipo": "Positiva",
+            "Persona": "Conta criada na J-003.M — a mesma da J-055.M",
+            "Superfície": "Mobile (PWA)",
+            "Pré-condições": "PRE-01 PRE-03 PRE-04 + J-055.M concluída",
+            "Endpoints tocados": "POST /onboarding/empresa, POST /{id}/documentos, POST /{id}/verificar, GET /{id}",
+            "Step-up": "não",
+            "Duração": "12 min",
+            "Automação equivalente": "onboarding-mobile.spec.ts (parcial, contra MSW)",
+            "Só o manual cobre": "KYB síncrono real, representantes vindos do provider, jornada local sobrevivendo entre PF e PJ"
+          },
+          "notas": [
+            "<strong>O mobile não abre solicitação criada em outra superfície.</strong> Não existe endpoint de listagem por usuário — só <code>GET /{id}</code> —, e o app descobre o id apenas pelo que ele mesmo gravou em <code>Preferences</code> (chave <code>sep.onboarding.journey</code>). Por isso esta jornada <strong>cria</strong> um PJ próprio no mobile, com CNPJ diferente do usado na <code>J-056.W</code>, em vez de reaproveitar aquele."
+          ],
+          "grupos": [
+            {
+              "id": "g1",
+              "tituloHtml": null,
+              "tela": null,
+              "implicito": true,
+              "passos": [
+                {
+                  "key": "ROTEIRO-03/J-059.M/P1",
+                  "id": "P1",
+                  "hash": "618ef66e",
+                  "textoHtml": "Abrir o onboarding e reparar que ele <strong>não pergunta o tipo</strong>.",
+                  "comoHtml": "Em <code>http://localhost:8100</code>, emulação ligada, logado com a conta da <code>J-003.M</code>, aba <strong>Início</strong> &gt; onboarding. Como a <code>J-055.M</code> deixou uma jornada PF gravada, o app a retoma e abre direto na etapa <strong>Documentos</strong>. <strong>A escolha &quot;Pessoa fisica / Empresa&quot; some</strong> — a chave do <code>Preferences</code> é <strong>uma só</strong>, então só existe uma jornada local por vez.",
+                  "textoBusca": "abrir o onboarding e reparar que ele não pergunta o tipo. em http://localhost:8100, emulação ligada, logado com a conta da j-003.m, aba início > onboarding. como a j-055.m deixou uma jornada pf gravada, o app a retoma e abre direto na etapa documentos. a escolha \"pessoa fisica / empresa\" some — a chave do preferences é uma só, então só existe uma jornada local por vez.",
+                  "esperadoHtml": "etapa <strong>Documentos</strong> da jornada PF, sem a tela de escolha. &gt; Se você não executou a <code>J-055.M</code>, a tela já mostra a escolha: pule para o <strong>P4</strong>.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 1028,
+                  "ordem": 1
+                },
+                {
+                  "key": "ROTEIRO-03/J-059.M/P2",
+                  "id": "P2",
+                  "hash": "3a44fae1",
+                  "textoHtml": "Recomeçar o cadastro.",
+                  "comoHtml": "O botão <strong>Recomecar cadastro</strong> só existe na etapa <strong>Status</strong> — tocar em <strong>Ver status do cadastro</strong> primeiro, depois em <strong>Recomecar cadastro</strong>.",
+                  "textoBusca": "recomeçar o cadastro. o botão recomecar cadastro só existe na etapa status — tocar em ver status do cadastro primeiro, depois em recomecar cadastro.",
+                  "esperadoHtml": "volta para a escolha entre pessoa física e empresa.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 1035,
+                  "ordem": 2
+                },
+                {
+                  "key": "ROTEIRO-03/J-059.M/P3",
+                  "id": "P3",
+                  "hash": "60020073",
+                  "textoHtml": "Confirmar que &quot;recomeçar&quot; <strong>não</strong> cancelou nada no backend.",
+                  "comoHtml": "Este é o passo que importa do bloco. <code>Recomecar cadastro</code> apaga a chave local e nada mais: a solicitação PF continua viva e continua prendendo o CPF. Conferir no banco e, em seguida, tentar iniciar um PF novo com <code>11144477735</code> pelo próprio app.",
+                  "textoBusca": "confirmar que \"recomeçar\" não cancelou nada no backend. este é o passo que importa do bloco. recomecar cadastro apaga a chave local e nada mais: a solicitação pf continua viva e continua prendendo o cpf. conferir no banco e, em seguida, tentar iniciar um pf novo com 11144477735 pelo próprio app.",
+                  "esperadoHtml": "<code>PESSOA</code> / <code>APROVADO_FINAL</code> no banco, e a tentativa de novo PF recusada com <code>409</code>. Se o <code>409</code> não vier, o botão está apagando dado do servidor — ocorrência grave.",
+                  "blocos": [
+                    {
+                      "tipo": "codigo",
+                      "lang": "bash",
+                      "regiao": "como",
+                      "conteudo": "docker exec sep-postgres psql -U sep -d sep_dev \\\n  -c \"SELECT tipo, status FROM solicitacao_onboarding WHERE documento = '11144477735';\""
+                    }
+                  ],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 1039,
+                  "ordem": 3
+                },
+                {
+                  "key": "ROTEIRO-03/J-059.M/P4",
+                  "id": "P4",
+                  "hash": "8b5d686a",
+                  "textoHtml": "Escolher <strong>Empresa</strong>.",
+                  "comoHtml": "No cartão de escolha, ler a descrição antes de tocar. Ela anuncia o escopo do KYB.",
+                  "textoBusca": "escolher empresa. no cartão de escolha, ler a descrição antes de tocar. ela anuncia o escopo do kyb.",
+                  "esperadoHtml": "cartão descreve &quot;dados da empresa, representantes e documentos&quot;; abre o formulário de PJ na etapa <strong>Dados</strong>.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 1049,
+                  "ordem": 4
+                },
+                {
+                  "key": "ROTEIRO-03/J-059.M/P5",
+                  "id": "P5",
+                  "hash": "008681e1",
+                  "textoHtml": "Enviar um CNPJ com dígito verificador errado.",
+                  "comoHtml": "CNPJ <code>33344455000180</code> e uma razão social qualquer. <strong>A máscara do formulário só confere o formato</strong> (14 dígitos, pontuação opcional) — ela não calcula DV. Então o botão libera o envio e a recusa precisa vir do backend. É exatamente o que o passo mede: o mobile não decide validade de documento.",
+                  "textoBusca": "enviar um cnpj com dígito verificador errado. cnpj 33344455000180 e uma razão social qualquer. a máscara do formulário só confere o formato (14 dígitos, pontuação opcional) — ela não calcula dv. então o botão libera o envio e a recusa precisa vir do backend. é exatamente o que o passo mede: o mobile não decide validade de documento.",
+                  "esperadoHtml": "formulário aceita enviar; backend recusa com <code>ONB-400-006</code> e a mensagem aparece abaixo do formulário. Nenhuma solicitação criada.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 1053,
+                  "ordem": 5
+                },
+                {
+                  "key": "ROTEIRO-03/J-059.M/P6",
+                  "id": "P6",
+                  "hash": "997db90a",
+                  "textoHtml": "Enviar os dados válidos.",
+                  "comoHtml": "CNPJ <code>33344455000183</code>, razão social qualquer. <strong>Deixar tipo societário e porte sem tocar</strong> — são opcionais e o <code>201</code> tem de sair mesmo assim.",
+                  "textoBusca": "enviar os dados válidos. cnpj 33344455000183, razão social qualquer. deixar tipo societário e porte sem tocar — são opcionais e o 201 tem de sair mesmo assim.",
+                  "esperadoHtml": "<code>201</code>; avança para a etapa <strong>Documentos</strong>. &gt; <strong>Sem volta nos dois selects.</strong> Diferente do web, que tem a opção <strong>Selecione</strong>, os &gt; selects de tipo societário e porte do mobile não têm entrada vazia: uma vez escolhido um &gt; valor, não há como voltar a &quot;não informado&quot; sem recomeçar. Registrar como ocorrência de &gt; usabilidade se atrapalhar a execução.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 1060,
+                  "ordem": 6
+                },
+                {
+                  "key": "ROTEIRO-03/J-059.M/P7",
+                  "id": "P7",
+                  "hash": "dd91c63f",
+                  "textoHtml": "Conferir que os tipos de documento <strong>mudaram</strong> com o tipo de cadastro.",
+                  "comoHtml": "Abrir a lista de tipos no bloco de upload. A lista de PJ é outra, e é o ponto onde um bug de estado apareceria: se sobrar <code>RG</code> ou <code>SELFIE</code> aqui, a tela ficou com o tipo da jornada anterior.",
+                  "textoBusca": "conferir que os tipos de documento mudaram com o tipo de cadastro. abrir a lista de tipos no bloco de upload. a lista de pj é outra, e é o ponto onde um bug de estado apareceria: se sobrar rg ou selfie aqui, a tela ficou com o tipo da jornada anterior.",
+                  "esperadoHtml": "exatamente <code>CONTRATO_SOCIAL</code>, <code>CCMEI</code> e <code>COMPROVANTE_ENDERECO</code>.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 1068,
+                  "ordem": 7
+                },
+                {
+                  "key": "ROTEIRO-03/J-059.M/P8",
+                  "id": "P8",
+                  "hash": "0824dcd9",
+                  "textoHtml": "Enviar os dois documentos mínimos de PJ.",
+                  "comoHtml": "1 de identificação societária (<code>CONTRATO_SOCIAL</code> ou <code>CCMEI</code>) <strong>e</strong> 1 <code>COMPROVANTE_ENDERECO</code> — dois contratos sociais não satisfazem o mínimo.",
+                  "textoBusca": "enviar os dois documentos mínimos de pj. 1 de identificação societária (contratosocial ou ccmei) e 1 comprovanteendereco — dois contratos sociais não satisfazem o mínimo.",
+                  "esperadoHtml": "<code>204</code> nos dois; os dois aparecem em <strong>Documentos enviados</strong>.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 1073,
+                  "ordem": 8
+                },
+                {
+                  "key": "ROTEIRO-03/J-059.M/P9",
+                  "id": "P9",
+                  "hash": "df4fc879",
+                  "textoHtml": "Disparar a verificação e conferir que ela fecha <strong>sem webhook</strong>.",
+                  "comoHtml": "Tocar <strong>Ver status do cadastro</strong> e, na etapa <strong>Status</strong>, <strong>Iniciar verificacao</strong>. Repare que no mobile o botão mora na etapa de status, não na de documentos. Não dispare webhook nenhum: o KYB é síncrono e o PLD roda logo depois do commit.",
+                  "textoBusca": "disparar a verificação e conferir que ela fecha sem webhook. tocar ver status do cadastro e, na etapa status, iniciar verificacao. repare que no mobile o botão mora na etapa de status, não na de documentos. não dispare webhook nenhum: o kyb é síncrono e o pld roda logo depois do commit.",
+                  "esperadoHtml": "<strong><code>APROVADO_FINAL</code></strong> já na primeira leitura. Parar em <code>EM_VERIFICACAO</code> é ocorrência — no PJ esse não é estado estável.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 1077,
+                  "ordem": 9
+                },
+                {
+                  "key": "ROTEIRO-03/J-059.M/P10",
+                  "id": "P10",
+                  "hash": "094a6abe",
+                  "textoHtml": "Conferir o bloco <strong>Representantes</strong>.",
+                  "comoHtml": "Ler o card do representante que o provider devolveu. O ponto do passo é o que <strong>não</strong> pode estar ali: motivo de hit, severidade e CPF. O resumo público de PLD expõe só o status consolidado e a data da consulta.",
+                  "textoBusca": "conferir o bloco representantes. ler o card do representante que o provider devolveu. o ponto do passo é o que não pode estar ali: motivo de hit, severidade e cpf. o resumo público de pld expõe só o status consolidado e a data da consulta.",
+                  "esperadoHtml": "um representante com nome, cargo e <code>PLD: LIMPO</code>. <strong>Nenhum CPF</strong> e nenhum detalhe de PLD na tela.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 1083,
+                  "ordem": 10
+                },
+                {
+                  "key": "ROTEIRO-03/J-059.M/P11",
+                  "id": "P11",
+                  "hash": "879950d2",
+                  "textoHtml": "Conferir o layout a 320px.",
+                  "comoHtml": "<strong>Este passo é sobre o layout mobile</strong>, que nenhum teste automatizado cobre. No DevTools, 320px de largura, percorrer as três etapas e o bloco de representantes. Procurar rolagem <strong>horizontal</strong>, texto cortado na borda e nome de representante estourando o card.",
+                  "textoBusca": "conferir o layout a 320px. este passo é sobre o layout mobile, que nenhum teste automatizado cobre. no devtools, 320px de largura, percorrer as três etapas e o bloco de representantes. procurar rolagem horizontal, texto cortado na borda e nome de representante estourando o card.",
+                  "esperadoHtml": "sem scroll horizontal e sem corte a 320px.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 1089,
+                  "ordem": 11
+                },
+                {
+                  "key": "ROTEIRO-03/J-059.M/P12",
+                  "id": "P12",
+                  "hash": "858ec9fc",
+                  "textoHtml": "Recarregar o app e confirmar que a jornada PJ é retomada.",
+                  "comoHtml": "<code>F5</code> na aba. A jornada fica no <code>Preferences</code>, que sobrevive ao reload — agora com a PJ no lugar da PF.",
+                  "textoBusca": "recarregar o app e confirmar que a jornada pj é retomada. f5 na aba. a jornada fica no preferences, que sobrevive ao reload — agora com a pj no lugar da pf.",
+                  "esperadoHtml": "volta na jornada <strong>PJ</strong>, não na PF nem na tela de escolha.",
+                  "blocos": [],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 1094,
+                  "ordem": 12
+                },
+                {
+                  "key": "ROTEIRO-03/J-059.M/P13",
+                  "id": "P13",
+                  "hash": "428d4e4e",
+                  "textoHtml": "Conferir o estado persistido das duas jornadas do mesmo usuário.",
+                  "comoHtml": "Terminal do banco. O <code>409</code> é por documento, não por usuário, então a mesma conta termina com um PF e um PJ — e os dois precisam ter consolidado.",
+                  "textoBusca": "conferir o estado persistido das duas jornadas do mesmo usuário. terminal do banco. o 409 é por documento, não por usuário, então a mesma conta termina com um pf e um pj — e os dois precisam ter consolidado.",
+                  "esperadoHtml": "duas linhas, <code>EMPRESA</code> e <code>PESSOA</code>, ambas <code>APROVADO_FINAL</code>.",
+                  "blocos": [
+                    {
+                      "tipo": "codigo",
+                      "lang": "bash",
+                      "regiao": "como",
+                      "conteudo": "docker exec sep-postgres psql -U sep -d sep_dev \\\n  -c \"SELECT s.tipo, s.documento, s.status FROM solicitacao_onboarding s\n      WHERE s.documento IN ('11144477735', '33344455000183') ORDER BY s.tipo;\""
+                    }
+                  ],
+                  "na": false,
+                  "naMotivo": null,
+                  "marcadoNaFonte": false,
+                  "linha": 1098,
+                  "ordem": 13
+                }
+              ]
+            }
+          ],
+          "assercoes": [
+            {
+              "key": "ROTEIRO-03/J-059.M/#14d1e9bd",
+              "id": null,
+              "hash": "04fb4653",
+              "textoHtml": "PJ criado no mobile em <code>APROVADO_FINAL</code>, com representante <code>LIMPO</code> e sem webhook",
+              "comoHtml": null,
+              "textoBusca": "pj criado no mobile em aprovadofinal, com representante limpo e sem webhook",
+              "esperadoHtml": null,
+              "blocos": [],
+              "na": false,
+              "naMotivo": null,
+              "marcadoNaFonte": false,
+              "linha": 1110,
+              "ordem": 1
+            }
+          ],
+          "linha": 1006,
+          "stats": {
+            "passos": 13,
+            "na": 0,
+            "assercoes": 1
+          }
+        }
+      ],
+      "ocorrenciasColunas": [
+        "#",
+        "Jornada",
+        "Passo",
+        "O que aconteceu",
+        "Esperado",
+        "Issue"
+      ],
+      "registroCampos": [
+        {
+          "chave": "executado_por",
+          "rotulo": "Executado por",
+          "tipo": "texto"
+        },
+        {
+          "chave": "data_hora",
+          "rotulo": "Data / hora",
+          "tipo": "texto"
+        },
+        {
+          "chave": "commit_sep_api",
+          "rotulo": "Commit sep-api",
+          "tipo": "texto"
+        },
+        {
+          "chave": "commit_sep_app",
+          "rotulo": "Commit sep-app",
+          "tipo": "texto"
+        },
+        {
+          "chave": "commit_sep_mobile",
+          "rotulo": "Commit sep-mobile",
+          "tipo": "texto"
+        },
+        {
+          "chave": "solicitacaoid_pf_cliente_a_usado",
+          "rotulo": "solicitacaoId PF (cliente-a) usado",
+          "tipo": "texto"
+        },
+        {
+          "chave": "solicitacaoid_pj_credora_usado",
+          "rotulo": "solicitacaoId PJ (credora) usado",
+          "tipo": "texto"
+        },
+        {
+          "chave": "cpf_consumido_pela_j_051_m_n1",
+          "rotulo": "CPF consumido pela J-051.M-N1",
+          "tipo": "texto"
+        },
+        {
+          "chave": "jornadas_ok",
+          "rotulo": "Jornadas OK",
+          "tipo": "texto"
+        },
+        {
+          "chave": "jornadas_nok",
+          "rotulo": "Jornadas NOK",
+          "tipo": "texto"
+        },
+        {
+          "chave": "jornadas_bloqueado",
+          "rotulo": "Jornadas BLOQUEADO",
+          "tipo": "texto"
+        },
+        {
+          "chave": "observacoes",
+          "rotulo": "Observações",
+          "tipo": "textarea"
+        }
+      ]
+    },
+    {
       "id": "ROTEIRO-04",
       "arquivo": "ROTEIRO-04-CREDITO-FORMALIZACAO.md",
-      "hash": "34aebb6e",
+      "hash": "50bf528d",
       "titulo": "Roteiro 04 - Crédito e formalização",
       "tipo": "jornadas",
       "ordem": 14,
@@ -4309,7 +9175,7 @@ window.SEP_DADOS = {
             "Família <code>J-060</code> a <code>J-079</code>: proposta, motor de regras, parecer, Open Finance, contrato, aceite, assinatura, CCB e cancelamento. Requer <a href=\"./ROTEIRO-00-AMBIENTE-E-MASSA.md\" rel=\"noreferrer\"><code>ROTEIRO-00</code></a> concluído. Hub: <a href=\"./CENARIOS-TESTE-JORNADAS-USUARIO.md\" rel=\"noreferrer\"><code>CENARIOS-TESTE-JORNADAS-USUARIO.md</code></a>.",
             "<strong>Execute pelo <a href=\"./app/index.html\" rel=\"noreferrer\">app</a></strong>, não editando este arquivo — as caixas aqui ficam sempre vazias. Desvio não vira caixa marcada: vira <strong>ocorrência</strong> registrada no passo.",
             "<strong>Divergência documental conhecida.</strong> O <a href=\"../docs-SEP/repos/sep-api/CONTRATOS.md\" rel=\"noreferrer\"><code>CONTRATOS.md</code></a> ainda descreve o aceite com <code>@RequireStepUp</code> (texto da Sprint 10). O <code>ContratoController</code> usa <code>@RequireStepUpEstrito</code> desde a Sprint 27. O <strong>código</strong> e a referência; o doc operacional precisa de correção.",
-            "<strong>Esta jornada exige <code>PRE-11</code></strong> — <code>cliente-a</code> com onboarding aprovado, que é produzido pelo roteiro de onboarding, não pelo preparo do ROTEIRO-00. Sem isso, o comportamento correto é o da <a href=\"#j-061w-n1---proposta-sem-onboarding-aprovado\" rel=\"noreferrer\"><code>J-061.W-N1</code></a>: a UI manda você para o onboarding. Se for esse o caso, execute o onboarding antes e volte."
+            "<strong>Esta jornada exige <code>PRE-11</code></strong> — <code>cliente-a</code> em <code>APROVADO_FINAL</code>, que é produzido pelo <a href=\"./ROTEIRO-03-ONBOARDING.md\" rel=\"noreferrer\"><code>ROTEIRO-03</code></a>, não pelo preparo do ROTEIRO-00. Sem isso, o comportamento correto é o da <a href=\"#j-061w-n1---proposta-sem-onboarding-aprovado\" rel=\"noreferrer\"><code>J-061.W-N1</code></a>: a UI manda você para o onboarding. Se for esse o caso, execute o onboarding antes e volte."
           ],
           "grupos": [
             {
